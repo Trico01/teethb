@@ -1,8 +1,10 @@
 <!--pages/cal/cal.wxml-->
-<text>pages/cal/cal.wxml</text>
-<van-calendar
-  title="日历"
-  :poppable="false"
-  :show-confirm="false"
+
+<calendar
+  id="calendar"
+  config="{{calendarConfig}}"
+  bind:afterCalendarRender="afterCalendarRender"
+  bind:afterTapDate="afterTapDate"
+  bind:whenChangeMonth="whenChangeMonth"
 />
 

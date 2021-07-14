@@ -1,1 +1,11 @@
 /* pages/cal/cal.wxss */
+
+.good-date {
+  background-color: #4FC3F7;
+  color: #ffffff;
+}
+
+.normal-date {
+  background-color: #B3E5FC;
+  color: #ffffff;
+}
