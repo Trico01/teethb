@@ -1,14 +1,143 @@
 // pages/cal/cal.js
 import plugin from '../../components/calendar/plugins/index'
 import selectable from '../../components/calendar/plugins/selectable'
+import * as echarts from '../../components/ec-canvas/echarts'
+
 plugin
   .use(selectable)
 
-Page({
+let chart = null;
 
-  /**
-   * 页面的初始数据
-   */
+function initChart(canvas, width, height, dpr) {
+  chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // new
+  });
+  canvas.setChart(chart);
+  
+  var option = {
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      },
+      confine: true
+    },
+    legend: {
+      data: ['早', '晚'],
+      top: 5,
+      itemHeight: 4,
+      itemWidth: 20,
+      itemGap: 20
+    },
+    grid: {
+      left: 20,
+      right: 20,
+      bottom: 15,
+      top: 40,
+      containLabel: true
+    },
+    yAxis: [
+      {
+        type: 'value',
+        splitLine: { show:false }, 
+        axisLine: {
+          lineStyle: {
+            color: '#999'
+          }
+        },
+        axisLabel: {
+          color: '#666'
+        }
+      }
+    ],
+    xAxis: [
+      {
+        type: 'category',
+        axisTick: { show: false },
+        data: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
+        axisLine: {
+          show: false,
+        },
+        axisLabel: {
+          color: '#666'
+        }
+      }
+    ],
+    series: [
+      {
+        name: '早',
+        type: 'bar',
+        barWidth: 7,
+        label: {
+          normal: {
+            show: false,
+          }
+        },
+        data: [2, 2.7, 2.5, 2.8, 2.8, 2.4, 2.5],
+        itemStyle: {
+          normal: {
+            barBorderRadius: 6,
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [{
+                offset: 0, color: '#a8ff78' // 0% 处的颜色
+              }, {
+                offset: 1, color: '#78ffd6' // 100% 处的颜色
+              }],
+              globalCoord: true // 缺省为 false
+            },
+          }, 
+          emphasis: {
+            color: '#37a2da'
+          }
+        }
+      },
+      {
+        name: '晚',
+        type: 'bar',
+        barWidth: 7,
+        label: {
+          normal: {
+            show: false,
+          }
+        },
+        data: [2.7, 3, 3, 2.8, 2.8, 2.7, 3],
+        itemStyle: {
+          normal: {
+            barBorderRadius: 6,
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [{
+                offset: 0, color: '#be93c5' // 0% 处的颜色
+              }, {
+                offset: 1, color: '#7bc6cc' // 100% 处的颜色
+              }],
+              globalCoord: true // 缺省为 false
+            },
+          }, 
+          emphasis: {
+            color: '#37a2da'
+          }
+        }
+      }
+    ]
+  };
+  chart.setOption(option);
+  return chart;
+}
+
+
+Page({
   data: {
     calendarConfig:{
       theme: 'elegant',
@@ -78,11 +207,10 @@ Page({
     ],
     selectedYear:0,
     selectedMonth:0,
-    selectedDate:0
-  },
-
-  doSometing() {
-    
+    selectedDate:0,
+    ec: {
+      onInit: initChart
+    }
   },
 
   /**
@@ -108,12 +236,6 @@ Page({
       selectedDate:e.date
     })
   },
-  // /**
-  //  * 当日历滑动时触发
-  //  */
-  // onSwipe(e) {
-  //   console.log('onSwipe', e.detail)
-  // },
   /**
    * 当改变月份时触发
    * => current 当前年月 / next 切换后的年月
@@ -136,7 +258,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    setTimeout(function () {
+      // 获取 chart 实例的方式
+      // console.log(chart)
+    }, 2000);
   },
 
   /**
