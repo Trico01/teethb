@@ -1,0 +1,50 @@
+<!--custom-tab-bar/index.wxml-->
+<text>custom-tab-bar/index.wxml</text>
+
+<van-tabbar 
+  v-model="{{active}}" 
+  bind:change="onChange"
+  inactive-color="#7d7e80"
+  active-color="#1989fa"
+>
+  <van-tabbar-item>
+    <view style="display: flex; flex-direction: column; align-items: center">
+      <van-icon name="home-o" color="{{active===0?'#1989fa':'#c4c4c4'}}"/>      
+      <view
+        style="margin-top:10rpx;color:{{active===0?'#1989fa':'#c4c4c4'}};font-size:24rpx;"
+      >
+        {{tabBarItemList[0].text}}
+      </view>
+    </view>
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <view style="display: flex; flex-direction: column; align-items: center">
+      <van-icon name="search" color="{{active===1?'#1989fa':'#c4c4c4'}}"/>
+      <view
+        style="margin-top:10rpx;color:{{active===1?'#1989fa':'#c4c4c4'}};font-size:24rpx;"
+      >
+        {{tabBarItemList[1].text}}
+      </view>
+    </view>
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <view style="display: flex; flex-direction: column; align-items: center">
+      <van-icon name="friends-o" color="{{active===2?'#1989fa':'#c4c4c4'}}"/>
+      <view
+        style="margin-top:10rpx;color:{{active===2?'#1989fa':'#c4c4c4'}};font-size:24rpx;"
+      >
+        {{tabBarItemList[2].text}}
+      </view>
+    </view>
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <view style="display: flex; flex-direction: column; align-items: center">
+      <van-icon name="setting-o" color="{{active===3?'#1989fa':'#c4c4c4'}}"/>
+      <view
+        style="margin-top:10rpx;color:{{active===3?'#1989fa':'#c4c4c4'}};font-size:24rpx;"
+      >
+        {{tabBarItemList[3].text}}
+      </view>
+    </view>
+  </van-tabbar-item>
+</van-tabbar>

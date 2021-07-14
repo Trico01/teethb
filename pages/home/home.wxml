@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+
+<van-button round size="normal" icon="play" type="primary" />
