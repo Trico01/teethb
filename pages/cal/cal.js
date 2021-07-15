@@ -7,6 +7,11 @@ plugin
   .use(selectable)
 
 let chart = null;
+// 条形图所用数据
+// 不设为全局的方法？
+let amData=[2,2.2,2.1,2.5,2.1,2.8,2.9];
+let pmData=[3,2.8,3,3,2.7,2.8,2.8];
+// 日历所需标注数据在page.data.toSet
 
 function initChart(canvas, width, height, dpr) {
   chart = echarts.init(canvas, null, {
@@ -75,7 +80,7 @@ function initChart(canvas, width, height, dpr) {
             show: false,
           }
         },
-        data: [2, 2.7, 2.5, 2.8, 2.8, 2.4, 2.5],
+        data: amData,
         itemStyle: {
           normal: {
             barBorderRadius: 6,
@@ -107,7 +112,7 @@ function initChart(canvas, width, height, dpr) {
             show: false,
           }
         },
-        data: [2.7, 3, 3, 2.8, 2.8, 2.7, 3],
+        data: pmData,
         itemStyle: {
           normal: {
             barBorderRadius: 6,
@@ -210,7 +215,7 @@ Page({
     selectedDate:0,
     ec: {
       onInit: initChart
-    }
+    },
   },
 
   /**
@@ -224,17 +229,21 @@ Page({
     })
     // 获取日历组件上的 calendar 对象
     const calendar = this.selectComponent('#calendar').calendar
+    // 加function2:获取selected年月的标注数据
     calendar.setDateStyle(this.data.toSet)
+    // 加function1:获取selected日期所在周的条形图数据
+
   },
    /**
    * 选择日期后执行的事件
    */
   afterTapDate(e) {
     this.setData({
-      selectedYear:e.year,
-      selectedMonth:e.month,
-      selectedDate:e.date
+      selectedYear:e.detail.year,
+      selectedMonth:e.detail.month,
+      selectedDate:e.detail.date
     })
+    // 加function1:获取selected日期所在周的条形图数据
   },
   /**
    * 当改变月份时触发
@@ -242,8 +251,10 @@ Page({
    */
   whenChangeMonth(e) {
     console.log('whenChangeMonth', e.detail)
-    // => { current: { month: 3, ... }, next: { month: 4, ... }}
+    let curYear=e.detail.current.year
+    let curMonth=e.detail.current.month
     const calendar = this.selectComponent('#calendar').calendar
+    // 加function2:获取curYear、curMonth的标注数据
     calendar.setDateStyle(this.data.toSet)
   },
 
