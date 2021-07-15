@@ -1,4 +1,6 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="container">
+  <image src="../../image/test.jpg" mode="aspectFit"></image>
+</view>
+<van-button style="" round size="normal" icon="play" type="primary" />
 
-<van-button round size="normal" icon="play" type="primary" />

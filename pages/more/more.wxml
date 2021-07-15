@@ -1,2 +1,25 @@
 <!--pages/more/more.wxml-->
-<text>pages/more/more.wxml</text>
+
+<van-cell-group title="个人资料">
+<van-cell title="出生日期" is-link url="../more_quchi/index">
+  <view
+    slot="right-icon"
+    class="iconfont icon-tixing"
+  ></view>
+</van-cell>
+<van-cell title="常用手" icon="calendar-o" is-link url="../more_quchi/index" />
+<van-cell title="龋齿" is-link url="../more_quchi/index" />
+<van-cell title="正畸" is-link url="../more_quchi/index" />
+<van-cell title="牙刷类型" is-link url="../more_quchi/index" />
+<van-cell title="牙膏类型" is-link url="../more_quchi/index" />
+</van-cell-group>
+
+<van-cell-group title="个性化">
+<van-cell title="儿童模式" is-link url="../more_quchi/index" />
+<van-cell title="自定义时间" is-link url="../more_quchi/index" />
+<van-cell title="牙刷更换提醒" is-link url="../more_quchi/index" />
+<van-cell title="播放音乐" is-link url="../more_quchi/index" />
+
+</van-cell-group>
+
+
