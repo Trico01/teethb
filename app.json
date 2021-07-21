@@ -1,12 +1,18 @@
 {
-  "pages": [
+  "pages": [    
+
+
     "pages/more/more",
     "pages/home/home",
-    "pages/cal/cal",
     "pages/find/find",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/more_quchi/index"
+    "pages/cal/cal",
+    "pages/more/zhengji/index",
+    "pages/more/remind/index",
+    "pages/more/paste/index",
+    "pages/more/brush/usetime/index",
+    "pages/more/brush/index",
+    "pages/more/brush/brushtype/index",
+    "pages/more/quchi/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

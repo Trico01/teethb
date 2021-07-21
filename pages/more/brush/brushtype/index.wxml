@@ -1,0 +1,36 @@
+<!--pages/more_paste/index.wxml-->
+<view class="intro">
+  <view class="msg">选择您所使用的牙刷种类</view>
+</view>
+
+
+<view class="imagelist">
+  <view style="display: flex; flex-direction: row; align-items:center;">
+    <view class="item">
+      <image class="{{selectedHard===0?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwepIH.png" bindtap="bindtapBrushHard" data-id="{{0}}"></image>
+      <view class="itemname">软毛</view>
+    </view>
+    <view class="item">
+      <image class="{{selectedHard===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WweCid.png" bindtap="bindtapBrushHard" data-id="{{1}}"></image>
+      <view class="itemname">硬毛</view>
+    </view>
+    <image class="dent1" src="https://z3.ax1x.com/2021/07/21/WwePJA.png" ></image>
+  </view>
+
+  <view style="display: flex; flex-direction: row; align-items:center">
+    <image class="dent2" src="https://z3.ax1x.com/2021/07/21/WweiRI.png" ></image>
+    <view class="item">
+      <image class="{{selectedSize===0?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WweSde.png" bindtap="bindtapBrushSize" data-id="{{0}}"></image>
+      <view class="itemname">小刷头</view>
+    </view>
+    <view class="item">
+      <image class="{{selectedSize===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwZzZD.png" bindtap="bindtapBrushSize" data-id="{{1}}"></image>
+      <view class="itemname">大刷头</view>
+    </view>
+  </view>
+</view>
+
+<view class="bttnlist">
+  <van-button type="default" round="true" size="small" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn">确认</van-button>
+  <van-button type="default" round="true" size="small" color="#D6E7F2" customClass="bttn" bind:click="bindclickCancel">取消</van-button>
+</view>

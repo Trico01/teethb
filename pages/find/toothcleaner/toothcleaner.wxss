@@ -1,0 +1,54 @@
+/* pages/find/toothcleaner/toothcleaner.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: rgb(240, 243, 252);  
+}
+.container {
+  padding: 0rpx;
+  margin: 30rpx;
+}
+.myInput {
+  margin: 30rpx;
+  width:93%;
+  height:66rpx;
+  background-color: rgb(255, 255, 255);
+  border-radius: 33rpx;
+  border-style: solid;
+  border-color: rgb(203, 203, 211);
+  display: flex;
+  flex-direction: row;
+}
+.findImg {
+  margin-top: 13rpx;
+  margin-left: 10rpx;
+  width:40rpx;
+  height:40rpx;
+}
+.inputs {
+  width:75%;
+  margin-top: 13rpx;
+  height:40rpx;
+}
+.divLine {
+  width:4rpx;
+  height:66rpx;
+  background-color: rgb(203, 203, 211);
+}
+.moreImg {
+  margin-top: 13rpx;
+  margin-left: 20rpx;
+  width:40rpx;
+  height:40rpx;
+}
+.cleaner {
+  width:100%;
+  position: relative;
+  top:-30rpx;
+}
+.element {
+  position: relative;
+  top: -30rpx;
+  width:30%;
+  margin: 1.66%;
+}

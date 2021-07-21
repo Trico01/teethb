@@ -1,0 +1,15 @@
+<!--pages/find/toothcleaner/toothcleaner.wxml-->
+<view class="container">
+  <view class="myInput">
+    <image class="findImg" src="../image/find.png"></image>
+    <input placeholder-class="plas" class="inputs" type="text"></input>
+    <view class="divLine"></view>
+    <image class="moreImg" mode="aspectFill" src="../image/more.png"></image>
+  </view>
+</view>
+<image class="cleaner" mode="widthFix" src="../image/teethCleaner.png"></image>
+<view class="elements">
+  <image class="element" mode="widthFix" bindtap="toYashua" src="../image/yashua2.png"></image>
+  <image class="element" mode="widthFix" bindtap="toYagao" src="../image/yagao2.png"></image>
+  <image class="element" mode="widthFix" bindtap="toBeizi" src="../image/yabei.png"></image>
+</view>

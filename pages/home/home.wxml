@@ -1,6 +1,145 @@
 <!--pages/home/home.wxml-->
-<view class="container">
-  <image src="../../image/test.jpg" mode="aspectFit"></image>
-</view>
-<van-button style="" round size="normal" icon="play" type="primary" />
 
+<!-- 成人模式 -->
+<view class="home" wx:if="{{brush_mode == 0}}">
+
+  <view class="brushteeth" >
+    <view class="top">
+      <view class="section_switch">
+      <view class="switch_content">自动</view>
+      <view class="switch_content">/手动</view>
+      <view class="model_switch">
+          <switch checked="{{model_switch}}" bindchange="model_switch"/>
+      </view>
+      </view>
+      <text class="title">开始刷牙吧！</text>
+    </view>
+    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waq45d.png" wx:if="{{brush_state == 0}}"></image>
+    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waqo8I.png" wx:if="{{brush_state == 1}}"></image>
+    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqIPA.png" wx:if="{{brush_state == 2}}"></image>
+    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqT2t.png" wx:if="{{brush_state == 3}}"></image>
+    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqhUH.png" wx:if="{{brush_state == 4}}"></image>
+    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqbKf.png" wx:if="{{brush_state == 5}}"></image>
+    <view class='time'>
+      <text>{{time}}</text>
+    </view>
+    <view class="brush_gif">
+      <image src="https://i.loli.net/2021/07/21/r84M56qpHhdXIES.gif" class="gif1" wx:if="{{brush_state == 0}}"></image>
+      <image src="https://i.loli.net/2021/07/21/yeGaSHPuL9oRI3k.gif" class="gif2" wx:if="{{brush_state == 1}}"></image>
+      <image src="https://i.loli.net/2021/07/21/kywIAf83B5ig2CY.gif" class="gif3" wx:if="{{brush_state == 2}}"></image>
+      <image src="https://i.loli.net/2021/07/21/RKW6VSeZD7fsBnh.gif" class="gif4" wx:if="{{brush_state == 3}}"></image>
+      <image src="https://i.loli.net/2021/07/21/utlnVvi8GQ4CrSI.gif" class="gif5" wx:if="{{brush_state == 4}}"></image>
+      <image src="https://i.loli.net/2021/07/21/zIMu5nVeZCpGdJo.gif" class="gif6" wx:if="{{brush_state == 5}}"></image>
+    </view>
+    <view class="button3">
+      <image src="https://i.loli.net/2021/07/21/OqLBjaH79mMbRkX.png" class="play" bindtap="play"></image>
+      <image src="https://i.loli.net/2021/07/21/2Ol54Dr38IFxyGw.png" class="stop" bindtap="stop"></image>
+      <image src="https://i.loli.net/2021/07/21/b9dDMAe58EPhJp1.png" class="reset" bindtap="reset"></image>
+    </view>
+  </view>
+
+  <!-- <view class="shukou" wx:if="{{funcFlag == 1}}">
+  
+  </view>
+
+  <view class="tiya" wx:if="{{funcFlag == 2}}">
+  
+  </view> -->
+
+  <view class="choose">
+    <view class="left" bindtap="change_L">
+      <view class="lwai">
+        <view class="lnei">
+          <image class="p1" src="./img/brush_{{funcFlag}}.png"></image>
+        </view> 
+      </view>
+    </view>
+    <view class="mid" bindtap="myFunc">
+      <view class="midwai">
+        <view class="midnei">
+          <image class="p2" src="./img/brush_{{(funcFlag+1)%3}}.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="right" bindtap="change_R">
+      <view class="rwai">
+        <view class="rnei">
+          <image class="p1" src="./img/brush_{{(funcFlag+2)%3}}.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <van-count-down :time="time" />
+</view>
+
+<!-- 儿童模式 -->
+<view class="child" wx:if="{{brush_mode == 1}}">
+
+<view class="brushteeth" >
+  <view class="top">
+    <view class="section_switch">
+    <view class="switch_content">自动</view>
+    <view class="switch_content">/手动</view>
+    <view class="model_switch">
+        <switch checked="{{model_switch}}" bindchange="model_switch"/>
+    </view>
+    </view>
+    <text class="title">开始刷牙吧！</text>
+  </view>
+  <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waq45d.png" wx:if="{{brush_state == 0}}"></image>
+  <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waqo8I.png" wx:if="{{brush_state == 1}}"></image>
+  <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqIPA.png" wx:if="{{brush_state == 2}}"></image>
+  <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqT2t.png" wx:if="{{brush_state == 3}}"></image>
+  <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqhUH.png" wx:if="{{brush_state == 4}}"></image>
+  <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqbKf.png" wx:if="{{brush_state == 5}}"></image>
+  <view class='time'>
+    <text>{{time}}</text>
+  </view>
+  <view class="brush_gif">
+      <image src="https://i.loli.net/2021/07/21/r84M56qpHhdXIES.gif" class="gif1" wx:if="{{brush_state == 0}}"></image>
+      <image src="https://i.loli.net/2021/07/21/yeGaSHPuL9oRI3k.gif" class="gif2" wx:if="{{brush_state == 1}}"></image>
+      <image src="https://i.loli.net/2021/07/21/kywIAf83B5ig2CY.gif" class="gif3" wx:if="{{brush_state == 2}}"></image>
+      <image src="https://i.loli.net/2021/07/21/RKW6VSeZD7fsBnh.gif" class="gif4" wx:if="{{brush_state == 3}}"></image>
+      <image src="https://i.loli.net/2021/07/21/utlnVvi8GQ4CrSI.gif" class="gif5" wx:if="{{brush_state == 4}}"></image>
+      <image src="https://i.loli.net/2021/07/21/zIMu5nVeZCpGdJo.gif" class="gif6" wx:if="{{brush_state == 5}}"></image>
+    </view>
+    <view class="button3">
+      <image src="https://i.loli.net/2021/07/21/OqLBjaH79mMbRkX.png" class="play" bindtap="play"></image>
+      <image src="https://i.loli.net/2021/07/21/2Ol54Dr38IFxyGw.png" class="stop" bindtap="stop"></image>
+      <image src="https://i.loli.net/2021/07/21/b9dDMAe58EPhJp1.png" class="reset" bindtap="reset"></image>
+    </view>
+</view>
+
+<!-- <view class="shukou" wx:if="{{funcFlag == 1}}">
+
+</view>
+
+<view class="tiya" wx:if="{{funcFlag == 2}}">
+
+</view> -->
+
+<view class="choose">
+  <view class="left" bindtap="change_L">
+    <view class="lwai">
+      <view class="lnei">
+        <image class="p1" src="./img/brush_{{funcFlag}}.png"></image>
+      </view> 
+    </view>
+  </view>
+  <view class="mid" bindtap="myFunc">
+    <view class="midwai">
+      <view class="midnei">
+        <image class="p2" src="./img/brush_{{(funcFlag+1)%3}}.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="right" bindtap="change_R">
+    <view class="rwai">
+      <view class="rnei">
+        <image class="p1" src="./img/brush_{{(funcFlag+2)%3}}.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<van-count-down :time="time" />
+</view>

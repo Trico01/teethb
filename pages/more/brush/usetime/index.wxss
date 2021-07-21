@@ -1,0 +1,69 @@
+/* pages/more_paste/index.wxss */
+page{
+  background-color: #2A6DBE;
+}
+
+.pagecontain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:200rpx;
+  text-align: center;
+
+}
+
+.intro{
+
+  margin-bottom: 50rpx;
+}
+
+.title{
+  font-size: larger;
+  color:white;
+}
+.label{
+  color:white;
+  margin-top:10rpx;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 550rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  color: white;
+  background-color: #498ED1;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  font-size: large;
+}
+
+.item_highlight{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 550rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  margin-bottom: 30rpx;
+  color: white;
+  background-color: #F2F2F7;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  font-size: large;
+}
+
+.myicon{
+  width: 70rpx;
+  color: white;
+  margin: 0 20rpx 0 40rpx
+}
+
+.bttn{
+  margin-top: 40rpx !important;
+  width: 160rpx !important;
+  color: #2A6DBE !important;
+}

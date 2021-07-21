@@ -1,0 +1,86 @@
+/* pages/find/achievement/achievement.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: rgb(240, 243, 252);  
+}
+.container {
+  padding: 0rpx;
+  margin: 30rpx;
+}
+.block {
+  margin-top: 40rpx;
+  padding: 30rpx;
+}
+.title {
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+  width:440rpx;
+  height:90rpx;
+  position:absolute;
+  left:0rpx;
+  margin-bottom: 0rpx;
+  display:flex;
+  align-items: left;
+  font-weight: 700;
+  font-size: 60rpx;
+}
+.gap {
+  flex-wrap: wrap;
+  height: 30rpx;
+  width:100%;
+}
+.title2 {
+  padding: 0 30rpx;
+  width:440rpx;
+  height:50rpx;
+  position:absolute;
+  left:0rpx;
+  margin-bottom: 0rpx;
+  display:flex;
+  align-items: left;
+  font-weight: 500;
+  font-size: 40rpx;
+}
+.elements {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.element {
+  flex: 0 0 auto;
+  text-align: center;
+  width:33.3333%;
+  height:160rpx;
+  padding: 40rpx 0;
+  font-size: 30rpx;
+}
+.elementImg{
+  width:150rpx;
+  height:150rpx;
+}
+.elementNum{
+  position: relative;
+  top:-120rpx;
+  font-size: 37rpx;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+}
+.elementNum2{
+  position: relative;
+  top:-80rpx;
+  font-size: 37rpx;
+  font-weight: 700;
+  color: white;
+}
+.elementNum3{
+  position: relative;
+  top:-120rpx;
+  font-size: 37rpx;
+  font-weight: 700;
+  color: white;
+}

@@ -1,0 +1,85 @@
+/* pages/more_paste/index.wxss */
+page{
+  background-color: #2A6DBE;
+}
+.intro{
+  display: flex;
+  flex-direction: row;
+  margin-top: 90rpx;
+}
+
+.dent{
+  width:410rpx;
+  height:450rpx;
+  margin-left: 10rpx;
+}
+.msg{
+  width:250rpx;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  margin-bottom: auto;
+  margin-top: 100rpx;
+  margin-left: 10rpx;
+  background-color: #D6E7F2;
+  color: #2A6DBE;
+  text-align: center;
+  border-radius: 10px;
+  border: 20rpx solid #D6E7F2;
+}
+
+.imagelist{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 0rpx;
+  border-radius: 10px;
+  background-color: #95B6DF;
+  text-align: center;
+  align-content: center;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+}
+.im{
+  margin:auto;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius:50%;
+  background-color: #498ED1;
+  border: 15rpx solid #498ED1;
+}
+.im_highlight{
+  margin:auto;
+  height: 100rpx;
+  width: 100rpx;
+  border-radius:50%;
+  background-color: #F2F2F7;
+  border: 15rpx solid #F2F2F7;
+}
+.txt{
+  width:230rpx;
+  text-align: center;
+  align-content: center;
+  font-size: small;
+}
+.imagename{
+  margin:auto;
+  color: #ffffff;
+  padding-bottom: 20rpx;
+}
+
+.imagelist{
+  padding-left: 27rpx;
+}
+
+.bttnlist{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+
+.bttn{
+  width: 100rpx !important;
+  margin-left: 12rpx !important;
+  margin-right: 12rpx !important;
+  color: #2A6DBE !important;
+}

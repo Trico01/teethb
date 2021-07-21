@@ -1,0 +1,64 @@
+/* pages/more/brush/index.wxss */
+page{
+  background-color: #f1f4fb;
+}
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2676400 */
+  src: url('//at.alicdn.com/t/font_2676400_abwfs5gxey.woff2?t=1626849965214') format('woff2'),
+       url('//at.alicdn.com/t/font_2676400_abwfs5gxey.woff?t=1626849965214') format('woff'),
+       url('//at.alicdn.com/t/font_2676400_abwfs5gxey.ttf?t=1626849965214') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-xiugai:before {
+  content: "\e60e";
+}
+
+.icon-yashualiebiao:before {
+  content: "\e60d";
+}
+
+.icon-a-tixing1:before {
+  content: "\e604";
+}
+
+.icon-a-rili:before {
+  content: "\e608";
+}
+
+.wx-switch-input {
+  zoom: .7;
+}
+
+.container{
+  margin:10rpx 0 0 0;
+  height:650rpx;
+  width:750rpx;
+  background-color: #ffffff;
+}
+
+.bttnbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.resetbutton{
+  text-align: center !important;
+  margin-top: 50rpx !important;
+}
+
+.buttonlabel{
+  color:gray;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top:10rpx;
+}

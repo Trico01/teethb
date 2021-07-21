@@ -1,0 +1,4 @@
+/* pages/find/tips/tip/tip.wxss */
+.img{
+  width: 100%; 
+}

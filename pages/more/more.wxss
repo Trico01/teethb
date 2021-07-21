@@ -2,11 +2,53 @@
 page{
   background-color: #f1f4fb;
 }
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+}
+
+.name{
+  margin: 10rpx 0 0 0;
+}
+
+.avatar{
+  width: 190rpx;
+  height: 190rpx;
+  margin: 30rpx 0 0 0;
+  border-radius: 50%;
+  overflow:hidden;
+  border: 10rpx solid hsl(222, 77%, 88%);
+}
+
+.bg{
+  background-color: #ffffff;
+  position: relative;
+  top: 0;
+  height: 320rpx;
+  text-align: center;
+}
+
+.wx-switch-input {
+  zoom: .7;
+}
+
 @font-face {
   font-family: "iconfont"; /* Project id 2676400 */
-  src: url('//at.alicdn.com/t/font_2676400_ogx5wwsepx.woff2?t=1626328974106') format('woff2'),
-       url('//at.alicdn.com/t/font_2676400_ogx5wwsepx.woff?t=1626328974106') format('woff'),
-       url('//at.alicdn.com/t/font_2676400_ogx5wwsepx.ttf?t=1626328974106') format('truetype');
+  src: url('//at.alicdn.com/t/font_2676400_q4fvm4pijmm.woff2?t=1626332029904') format('woff2'),
+       url('//at.alicdn.com/t/font_2676400_q4fvm4pijmm.woff?t=1626332029904') format('woff'),
+       url('//at.alicdn.com/t/font_2676400_q4fvm4pijmm.ttf?t=1626332029904') format('truetype');
 }
 
 .iconfont {
@@ -17,6 +59,50 @@ page{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-tixing:before {
-  content: "\e601";
+.icon-yashua:before {
+  content: "\e60a";
+}
+
+.icon-a-yagao1:before {
+  content: "\e60b";
+}
+
+.icon-yagao:before {
+  content: "\e60c";
+}
+
+.icon-yashualiebiao:before {
+  content: "\e60d";
+}
+
+.icon-a-yachibayazhuyateeth:before {
+  content: "\e602";
+}
+
+.icon-a-yinle:before {
+  content: "\e603";
+}
+
+.icon-a-tixing1:before {
+  content: "\e604";
+}
+
+.icon-woshou:before {
+  content: "\e605";
+}
+
+.icon-a-yachiyakeyayi:before {
+  content: "\e606";
+}
+
+.icon-ertong:before {
+  content: "\e607";
+}
+
+.icon-a-rili:before {
+  content: "\e608";
+}
+
+.icon-a-shijian1:before {
+  content: "\e609";
 }

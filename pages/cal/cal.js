@@ -9,8 +9,8 @@ plugin
 let chart = null;
 // 条形图所用数据
 // 不设为全局的方法？
-let amData=[2,2.2,2.1,2.5,2.1,2.8,2.9];
-let pmData=[3,2.8,3,3,2.7,2.8,2.8];
+let amData = [2, 2.2, 2.1, 2.5, 2.1, 2.8, 2.9];
+let pmData = [3, 2.8, 3, 3, 2.7, 2.8, 2.8];
 // 日历所需标注数据在page.data.toSet
 
 function initChart(canvas, width, height, dpr) {
@@ -20,7 +20,7 @@ function initChart(canvas, width, height, dpr) {
     devicePixelRatio: dpr // new
   });
   canvas.setChart(chart);
-  
+
   var option = {
     tooltip: {
       trigger: 'axis',
@@ -40,13 +40,13 @@ function initChart(canvas, width, height, dpr) {
       left: 20,
       right: 20,
       bottom: 15,
-      top: 40,
+      top: 60,
       containLabel: true
     },
     yAxis: [
       {
         type: 'value',
-        splitLine: { show:false }, 
+        splitLine: { show: false },
         axisLine: {
           lineStyle: {
             color: '#999'
@@ -97,7 +97,7 @@ function initChart(canvas, width, height, dpr) {
               }],
               globalCoord: true // 缺省为 false
             },
-          }, 
+          },
           emphasis: {
             color: '#37a2da'
           }
@@ -129,7 +129,7 @@ function initChart(canvas, width, height, dpr) {
               }],
               globalCoord: true // 缺省为 false
             },
-          }, 
+          },
           emphasis: {
             color: '#37a2da'
           }
@@ -144,7 +144,7 @@ function initChart(canvas, width, height, dpr) {
 
 Page({
   data: {
-    calendarConfig:{
+    calendarConfig: {
       theme: 'elegant',
       markToday: "今",
       highlightToday: true,
@@ -154,7 +154,7 @@ Page({
         date: 'false'
       },
     },
-    toSet :[
+    toSet: [
       {
         year: 2021,
         month: 7,
@@ -210,9 +210,9 @@ Page({
         class: 'good-date'
       },
     ],
-    selectedYear:0,
-    selectedMonth:0,
-    selectedDate:0,
+    selectedYear: 0,
+    selectedMonth: 0,
+    selectedDate: 0,
     ec: {
       onInit: initChart
     },
@@ -223,9 +223,9 @@ Page({
    */
   afterCalendarRender(e) {
     this.setData({
-      selectedYear:e.detail.calendar.curYear,
-      selectedMonth:e.detail.calendar.curMonth,
-      selectedDate:e.detail.calendar.curDate
+      selectedYear: e.detail.calendar.curYear,
+      selectedMonth: e.detail.calendar.curMonth,
+      selectedDate: e.detail.calendar.curDate
     })
     // 获取日历组件上的 calendar 对象
     const calendar = this.selectComponent('#calendar').calendar
@@ -234,14 +234,14 @@ Page({
     // 加function1:获取selected日期所在周的条形图数据
 
   },
-   /**
-   * 选择日期后执行的事件
-   */
+  /**
+  * 选择日期后执行的事件
+  */
   afterTapDate(e) {
     this.setData({
-      selectedYear:e.detail.year,
-      selectedMonth:e.detail.month,
-      selectedDate:e.detail.date
+      selectedYear: e.detail.year,
+      selectedMonth: e.detail.month,
+      selectedDate: e.detail.date
     })
     // 加function1:获取selected日期所在周的条形图数据
   },
@@ -251,8 +251,8 @@ Page({
    */
   whenChangeMonth(e) {
     console.log('whenChangeMonth', e.detail)
-    let curYear=e.detail.current.year
-    let curMonth=e.detail.current.month
+    let curYear = e.detail.current.year
+    let curMonth = e.detail.current.month
     const calendar = this.selectComponent('#calendar').calendar
     // 加function2:获取curYear、curMonth的标注数据
     calendar.setDateStyle(this.data.toSet)

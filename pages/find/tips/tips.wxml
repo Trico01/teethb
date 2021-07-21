@@ -1,0 +1,19 @@
+<!--pages/find/tips/tips.wxml-->
+<image src="../image/suan.png" mode="aspectFill" class="suan"></image>
+<view class="white"></view>
+<view class="container">
+  <view class="myInput">
+    <image class="findImg" src="../image/find.png"></image>
+    <input placeholder-class="plas" class="inputs" type="text"></input>
+    <view class="divLine"></view>
+    <image class="moreImg" mode="aspectFill" src="../image/more.png"></image>
+  </view>
+</view>
+
+<view class="tips">
+  <image class="tip" bindtap="toTip1" src="../image/tip1.png"></image>
+  <image class="tip" bindtap="toTip2" src="../image/tip2.png"></image>
+  <image class="tip" bindtap="toTip3" src="../image/tip3.png"></image>
+  <image class="tip" bindtap="toTip4" src="../image/tip4.png"></image>
+  <image class="tip" bindtap="toTip5" src="../image/tip5.png"></image>
+</view>

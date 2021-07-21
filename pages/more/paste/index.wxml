@@ -1,0 +1,17 @@
+<!--pages/more_paste/index.wxml-->
+<view class="intro">
+  <image src="https://z3.ax1x.com/2021/07/21/WwVBN9.png" class="dent"></image>
+<view class="msg">选择您所使用的牙膏类型</view>
+</view>
+
+<view class="imagelist">
+  <view class="txt" wx:for="{{yagaoList}}" wx:key="{{index}}">
+    <image class="{{index===selected?'im_highlight':'im'}}" src="{{item.url}}" bindtap="bindtapYagao" data-id="{{index}}"></image>
+    <view class="imagename">{{item.name}}</view>
+  </view>
+</view>
+
+<view class="bttnlist">
+<van-button type="default" round="true" size="small" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn">确认</van-button>
+<van-button type="default" round="true" size="small" color="#D6E7F2" customClass="bttn" bind:click="bindclickCancel">取消</van-button>
+</view>

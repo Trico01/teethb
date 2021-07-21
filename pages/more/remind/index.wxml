@@ -1,0 +1,16 @@
+<!--pages/more_remind/index.wxml-->
+
+<van-cell title="更换刷头提醒">
+  <view slot="icon" class="icon-a-tixing11" style="margin:0 20rpx 0 0; color:#549EE7"></view>
+  <view slot="extra">
+    <switch checked="{{checked}}" color="#1989FA" bindchange="bindchangeChecked" />
+  </view>
+</van-cell>
+
+<picker mode="selector" range="timeList">
+  <van-cell title="上次更换刷头时间" is-link>
+    <view slot="icon" class="iconfont icon-a-rili" style="margin:0 20rpx 0 0; color:#549EE7"></view>
+  </van-cell>
+</picker>
+
+<view>预计更换日期：{{}}</view>

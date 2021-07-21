@@ -1,0 +1,29 @@
+<!--pages/more_paste/index.wxml-->
+<view class="pagecontain">
+
+  <view class="intro">
+    <view class="title">设置使用时间</view>
+    <view class="label">一般来说，一只牙刷最多使用3个月。您的牙刷使用多久了？</view>
+  </view>
+
+  <view class="{{selectedTime===1?'item_highlight':'item'}}" data-id="{{1}}" bindtap="bindtapTime">
+    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    这是新的牙刷
+  </view>
+  <view class="{{selectedTime===2?'item_highlight':'item'}}" data-id="{{2}}" bindtap="bindtapTime">
+    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    已使用14天
+  </view>
+  <view class="{{selectedTime===3?'item_highlight':'item'}}" data-id="{{3}}" bindtap="bindtapTime">
+    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    已使用30天
+  </view>
+  <view class="{{selectedTime===4?'item_highlight':'item'}}" data-id="{{4}}" bindtap="bindtapTime">
+    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    已使用60天
+  </view>
+
+  <van-button type="default" round="true" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn">确认
+  </van-button>
+
+</view>

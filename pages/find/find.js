@@ -62,5 +62,21 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  toAchievement(){
+    wx.navigateTo({
+      url: 'achievement/achievement',
+    })
+  },
+  toToothcleaner(){
+    wx.navigateTo({
+      url: 'toothcleaner/toothcleaner',
+    })
+  },
+  toTips(){
+    wx.navigateTo({
+      url: 'tips/tips',
+    })
+  },
 })

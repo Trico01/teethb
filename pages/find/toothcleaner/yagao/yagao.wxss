@@ -1,0 +1,4 @@
+/* pages/find/toothcleaner/yagao/yagao.wxss */
+.full{
+  width:100%;  
+}

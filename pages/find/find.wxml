@@ -1,2 +1,77 @@
 <!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<!-- <text>pages/find/find.wxml</text> -->
+<view class="container">
+  <view class="block">
+    <view class="head">
+      <image class="headImg" src="image/medal2.png"></image>
+      <view class="headTitle">成就勋章</view>
+      <image class="rightArrow" bindtap="toAchievement" src="image/arrow-right-solid.svg"></image> 
+    </view>
+    <view class="divLine"></view>
+    <view class="myList">
+      <view  class="listElement">
+        <image class="listImg" src="image/shanliangxingxing.png"></image>
+        <view class="listTitle">连续打卡</view>
+      </view>
+      <view  class="listElement">
+        <image class="listImg" src="image/zhouniankuaile.png"></image>
+        <view class="listTitle">累计刷牙次数</view>
+      </view>
+      <view  class="listElement">
+        <image class="listImg" src="image/shizhongruyi.png"></image>
+        <view class="listTitle">达标天数</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="gap"></view>
+
+  <view class="block">
+    <view class="head">
+      <image class="headImg" src="image/gouwuche-4.png"></image>
+      <view class="headTitle">牙具种草</view>
+      <image class="rightArrow" bindtap="toToothcleaner" src="image/arrow-right-solid.svg"></image>
+    </view>
+    <view class="divLine"></view>
+    <view class="myList">
+      <view  class="listElement">
+        <image class="listImg" src="image/yashua.png"></image>
+        <view class="listTitle">牙刷</view>
+      </view>
+      <view  class="listElement">
+        <image class="listImg" src="image/yagao.png"></image>
+        <view class="listTitle">牙膏</view>
+      </view>
+      <view  class="listElement">
+        <image class="listImg" src="image/beizi.png"></image>
+        <view class="listTitle">牙杯</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="gap"></view>
+
+  <view class="block">
+    <view class="head">
+      <image class="headImg" src="image/wenda.png"></image>
+      <view class="headTitle">你知道吗</view>
+      <image class="rightArrow" bindtap="toTips" src="image/arrow-right-solid.svg"></image>
+    </view>
+    <view class="divLine"></view>
+    <view class="myList">
+      <view  class="listElement">
+        <image class="listImg" src="image/gantanhao.png"></image>
+        <view class="listTitle">孩子总爱惹事生非？他或许只是牙痛……</view>
+      </view>
+      <view  class="listElement">
+        <image class="listImg" src="image/gantanhao.png"></image>
+        <view class="listTitle">震惊！用薄荷糖或漱口水是起不到护牙作用的！</view>
+      </view>
+      <view  class="listElement">
+        <image class="listImg" src="image/gantanhao.png"></image>
+        <view class="listTitle">照常刷牙，牙却不白？可能是牙膏出了错！</view>
+      </view>
+    </view>
+  </view>
+
+</view>

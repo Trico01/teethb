@@ -1,16 +1,26 @@
 /* pages/cal/cal.wxss */
 
 .good-date {
-  background-color: #4FC3F7;
-  color: #ffffff;
+  border-radius: 100%;
+  border:6rpx solid #5cc6f7;
+  color: #000000;
 }
 
 .normal-date {
-  background-color: #B3E5FC;
-  color: #ffffff;
+  border-radius: 100%;
+  border:6rpx solid #5cc6f7;
+  color: #000000;
+  border-bottom-color: white;
+  border-left-color: white;
 }
 
 ec-canvas {
   width: 100%;
   height: 100%;
 }
+
+.contain {
+  width:750rpx;
+  height:650rpx;
+  margin-top:20rpx
+} 

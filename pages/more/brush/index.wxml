@@ -1,0 +1,41 @@
+<!--pages/more/brush/index.wxml-->
+
+<van-cell title="您的牙刷" size="large" label="类型" is-link url="./brushtype/index"
+  value="{{yashuaHardList[yashuaHard]+yashuaSizeList[yashuaSize]}}">
+  <view slot="icon" class="iconfont icon-yashualiebiao" style="margin:0 20rpx 0 0; color:#549EE7"></view>
+</van-cell>
+
+<van-cell title="牙刷提醒" size="large" label="我们将提醒您更换牙刷">
+  <view slot="icon" class="iconfont icon-a-tixing1" style="margin:0 20rpx 0 0; color:#549EE7"></view>
+  <view slot="extra">
+    <switch checked="{{useReminder}}" color="#1989FA" bindchange="bindchangeReminder" />
+  </view>
+</van-cell>
+
+<view wx:if="{{useReminder}}">
+  <view class="container">
+    <van-cell center title="使用情况" size="large" label="牙刷的平均使用寿命为3个月">
+      <view slot="icon" class="iconfont icon-a-rili" style="margin:0 20rpx 0 0; color:#549EE7"></view>
+      <view slot="right-icon" class="iconfont icon-a-xiugai" style="margin:0 20rpx 0 0; color:#549EE7"
+        bindtap="bindtapEdit"></view>
+    </van-cell>
+    <van-cell title="使用时间" value="已使用{{useTime}}天">
+      <view slot="icon" class="" style="margin:0 20rpx 0 35rpx; color:#549EE7"></view>
+    </van-cell>
+    <van-cell title="已刷时间" value="0分钟">
+      <view slot="icon" class="" style="margin:0 20rpx 0 35rpx; color:#549EE7"></view>
+    </van-cell>
+    <van-cell title="预计更换时间" value="{{dueDate}}">
+      <view slot="icon" class="" style="margin:0 20rpx 0 35rpx; color:#549EE7"></view>
+    </van-cell>
+<view class="bttnbox">
+  <van-button round class="resetbutton" color="#1989FA" size="small" bindtap="bindtapReset">重新启动提醒</van-button>
+  <view class="buttonlabel">如果您已经更换了刷头，请重新启动提醒</view>
+</view>
+
+
+  </view>
+
+
+
+</view>

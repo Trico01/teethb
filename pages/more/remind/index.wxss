@@ -1,0 +1,20 @@
+/* pages/more_remind/index.wxss */
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2683007 */
+  src: url('//at.alicdn.com/t/font_2683007_c8isb4f3jxs.woff2?t=1626614870594') format('woff2'),
+       url('//at.alicdn.com/t/font_2683007_c8isb4f3jxs.woff?t=1626614870594') format('woff'),
+       url('//at.alicdn.com/t/font_2683007_c8isb4f3jxs.ttf?t=1626614870594') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-tixing11:before {
+  content: "\e609";
+}
