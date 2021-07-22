@@ -4,11 +4,11 @@ Page({
   data: {
    index:0, 
    imgUrls:[
-    '../../image/tip_1.png',
-    '../../image/tip_2.png',
-    '../../image/tip_3.png',
-    '../../image/tip_4.png',
-    '../../image/tip_5.png',
+    'https://z3.ax1x.com/2021/07/22/W0Pviq.png',
+    'https://z3.ax1x.com/2021/07/22/WwyRrq.png',
+    'https://z3.ax1x.com/2021/07/22/WwyWq0.png',
+    'https://z3.ax1x.com/2021/07/22/W0iPL4.png',
+    'https://z3.ax1x.com/2021/07/22/W0iCyF.png',
    ]
   },
   onLoad: function(options){

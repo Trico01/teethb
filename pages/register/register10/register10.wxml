@@ -1,0 +1,33 @@
+<!--pages/register/register10/register10.wxml-->
+<view class="contain">
+  <view class="title">做更好的自己</view>
+  <view class="tip">能够提供的帮助</view>
+  <view bindtap="toNext" class="next">
+    <view class="jixu">开始护牙之旅</view>
+    <image class="arrow" src="https://z3.ax1x.com/2021/07/21/WwB311.png"></image>
+  </view>
+  <view class="Tip">
+    <view class="tip2">所有个性化设置均可在“我的”更改</view>
+  </view>
+  <view class="lists">
+   <view class="list">
+    <image class="listImg" src="https://z3.ax1x.com/2021/07/21/WwB86x.png"></image>
+    <view class="listText">个性化定制方案</view>
+   </view>
+   <view class="list">
+    <image class="listImg" src="https://z3.ax1x.com/2021/07/21/WwB86x.png"></image>
+    <view class="listText">关注口腔健康</view>
+   </view>
+   <view class="list">
+    <image class="listImg" src="https://z3.ax1x.com/2021/07/21/WwB86x.png"></image>
+    <view class="listText">持续记录数据</view>
+   </view>
+   <view class="list">
+    <image class="listImg" src="https://z3.ax1x.com/2021/07/21/WwB86x.png"></image>
+    <view class="listText">培养良好习惯</view>
+   </view>
+  </view>
+
+  <image src="https://z3.ax1x.com/2021/07/21/WwBn7F.png" class="image1"></image>
+  <image src="https://z3.ax1x.com/2021/07/22/WBSXSU.jpg" class="image2"></image>
+</view>

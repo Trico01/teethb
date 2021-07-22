@@ -1,19 +1,35 @@
 <!--pages/find/tips/tips.wxml-->
-<image src="../image/suan.png" mode="aspectFill" class="suan"></image>
+<swiper circular="yes" autoplay="yes" style="height:600rpx">
+  <swiper-item>
+    <image src="https://z3.ax1x.com/2021/07/22/W0POds.png" indicator-dots="yes" mode="aspectFill" class="suan"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://z3.ax1x.com/2021/07/22/W0xx9U.png" indicator-dots="yes" mode="aspectFill" class="suan"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://z3.ax1x.com/2021/07/22/W0xjhT.png" indicator-dots="yes" mode="aspectFill" class="suan"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://z3.ax1x.com/2021/07/22/W0xXNV.png" indicator-dots="yes" mode="aspectFill" class="suan"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://z3.ax1x.com/2021/07/22/W0xOA0.png" indicator-dots="yes" mode="aspectFill" class="suan"></image>
+  </swiper-item>
+</swiper>
 <view class="white"></view>
-<view class="container">
+<view class="contain">
   <view class="myInput">
-    <image class="findImg" src="../image/find.png"></image>
+    <image class="findImg" src="https://z3.ax1x.com/2021/07/22/W0Pcse.png"></image>
     <input placeholder-class="plas" class="inputs" type="text"></input>
     <view class="divLine"></view>
-    <image class="moreImg" mode="aspectFill" src="../image/more.png"></image>
+    <image class="moreImg" mode="aspectFill" src="https://z3.ax1x.com/2021/07/22/W0P7QS.png"></image>
   </view>
 </view>
 
 <view class="tips">
-  <image class="tip" bindtap="toTip1" src="../image/tip1.png"></image>
-  <image class="tip" bindtap="toTip2" src="../image/tip2.png"></image>
-  <image class="tip" bindtap="toTip3" src="../image/tip3.png"></image>
-  <image class="tip" bindtap="toTip4" src="../image/tip4.png"></image>
-  <image class="tip" bindtap="toTip5" src="../image/tip5.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip1" src="https://z3.ax1x.com/2021/07/22/W0ikw9.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip2" src="https://z3.ax1x.com/2021/07/22/W0iAoR.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip3" src="https://z3.ax1x.com/2021/07/22/W0iVF1.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip4" src="https://z3.ax1x.com/2021/07/22/W0iZJx.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip5" src="https://z3.ax1x.com/2021/07/22/W0inSK.png"></image>
 </view>

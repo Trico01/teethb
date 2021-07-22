@@ -1,0 +1,18 @@
+<!--pages/register/register6/register6.wxml-->
+<view class="contain">
+  <view class="title">你来到地球的这一天是</view>
+  <view class="tip">欢迎来到这个世界</view>
+  <view class="content">
+    <picker class="picker" mode="date" value="{{date}}" start="1950-10-01" end="2021-12-30" bindchange="changeDate">
+      <view class="dateBlock">
+        <view class="dateNum">{{date}}</view>
+        <image class="dateImg" src="https://z3.ax1x.com/2021/07/21/WwBGX6.png"></image>
+      </view>
+    </picker>
+  </view> 
+  <image class="image" src="https://z3.ax1x.com/2021/07/21/WwBKk4.png"></image>
+  <view bindtap="toNext" class="next">
+    <view class="jixu">继续</view>
+    <image class="arrow" src="https://z3.ax1x.com/2021/07/21/WwB311.png"></image>
+  </view>
+</view>

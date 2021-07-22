@@ -1,5 +1,5 @@
 <!--pages/find/achievement/achievement.wxml-->
-<view class="container">
+<view class="contain">
   <view class="title">成就勋章</view>
   <view>\n</view>
   <view class="gap"></view>
@@ -9,38 +9,38 @@
     <text>\n</text>
     <view class="elements">
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka1.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
         <view class="elementNum">1天</view>     
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">3天</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>  <view class="elementNum">5天</view>   
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>  <view class="elementNum">5天</view>   
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">7天</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src=https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">10天</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">20天</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">30天</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">50天</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudaka0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
         <view class="elementNum">100天</view>        
       </view>
     </view>
@@ -50,38 +50,38 @@
     <text>\n</text>
     <view class="elements">
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya1.png"></image>
+        <image class="elementImg" src=https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
         <view class="elementNum2">1</view>     
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">9</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>  <view class="elementNum2">29</view>   
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>  <view class="elementNum2">29</view>   
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">39</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">59</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">99</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">129</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">159</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/leijishuaya0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
         <view class="elementNum2">199</view>        
       </view>
     </view>  
@@ -91,38 +91,38 @@
     <text>\n</text>
     <view class="elements">
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao1.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
         <view class="elementNum3">3</view>     
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">7</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>  <view class="elementNum3">14</view>   
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>  <view class="elementNum3">14</view>   
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">30</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">50</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">80</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">120</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">200</view>        
       </view>
       <view class="element">
-        <image class="elementImg" src="../image/lianxudabiao0.png"></image>
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
         <view class="elementNum3">365</view>        
       </view>
     </view>  

@@ -1,5 +1,7 @@
 /* pages/cal/cal.wxss */
-
+page{
+  height:2500rpx;
+}
 .good-date {
   border-radius: 100%;
   border:6rpx solid #5cc6f7;
@@ -22,5 +24,12 @@ ec-canvas {
 .contain {
   width:750rpx;
   height:650rpx;
-  margin-top:20rpx
+  margin-top:20rpx;
+
 } 
+
+.mydivider{
+  margin: 0rpx !important;
+  justify-content: center !important;
+  color: #cacaca
+}

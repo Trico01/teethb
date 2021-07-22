@@ -1,18 +1,34 @@
 {
   "pages": [    
-
-
+    "pages/cal/cal",
+    "pages/register/register",
+    "pages/register/register1/register1",
+    "pages/register/register2/register2",
+    "pages/register/register3/register3",
+    "pages/register/register4/register4",
+    "pages/register/register5/register5",
+    "pages/register/register6/register6",
+    "pages/register/register7/register7",
+    "pages/register/register8/register8",
+    "pages/register/register9/register9",
+    "pages/register/register10/register10",
     "pages/more/more",
     "pages/home/home",
     "pages/find/find",
-    "pages/cal/cal",
     "pages/more/zhengji/index",
     "pages/more/remind/index",
     "pages/more/paste/index",
     "pages/more/brush/usetime/index",
     "pages/more/brush/index",
     "pages/more/brush/brushtype/index",
-    "pages/more/quchi/index"
+    "pages/more/quchi/index",
+    "pages/find/achievement/achievement",
+    "pages/find/toothcleaner/toothcleaner",
+    "pages/find/tips/tips",
+    "pages/find/toothcleaner/yashua/yashua",
+    "pages/find/toothcleaner/yagao/yagao",
+    "pages/find/toothcleaner/beizi/beizi",
+    "pages/find/tips/tip/tip"
   ],
   "window": {
     "backgroundTextStyle": "light",

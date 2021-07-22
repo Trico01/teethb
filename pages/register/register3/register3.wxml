@@ -1,0 +1,17 @@
+<!--pages/register/register3/register3.wxml-->
+<view class="contain">
+  <view class="title">现在，为自己取个名字吧</view>
+  <view class="tip">一个新的名字，带来新的开始</view>
+  <view class="myInput">
+    <view class="name">你的名字</view>
+    <view class="Input">
+      <input value="{{name}}" bindinput="inputName" class="input"></input>
+    </view>
+  </view>
+  <image class="image" src="https://z3.ax1x.com/2021/07/21/WwBm0U.png"></image>
+  <view bindtap="toNext" class="next">
+    <view class="jixu">继续</view>
+    <image class="arrow" src="https://z3.ax1x.com/2021/07/21/WwB311.png"></image>
+  </view>
+</view>
+

@@ -1,14 +1,47 @@
 <!--pages/cal/cal.wxml-->
-<view style="display:flex; flex-direction:column">
-  <calendar
-  id="calendar"
-  config="{{calendarConfig}}"
-  bind:afterCalendarRender="afterCalendarRender"
-  bind:afterTapDate="afterTapDate"
-  bind:whenChangeMonth="whenChangeMonth"
-/>
-<view class="contain">
-  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
-</view>
+<view style="display:flex; flex-direction:column;">
+  <calendar id="calendar" config="{{calendarConfig}}" bind:afterCalendarRender="afterCalendarRender"
+    bind:afterTapDate="afterTapDate" bind:whenChangeMonth="whenChangeMonth" />
+
+  <van-divider class="mydivider">刷牙时间</van-divider>
+
+  <van-tabs type="card" color="#5cc6f7" bindchange="bindchangeTab1">
+    <van-tab title="周"></van-tab>
+    <van-tab title="月"></van-tab>
+    <van-tab title="年"></van-tab>
+  </van-tabs>
+
+  <view wx:if="{{tab1==0}}">
+    <view class="contain">
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec1 }}"></ec-canvas>
+    </view>
+  </view>
+  <view wx:elif="{{tab1==1}}">
+    <view class="contain">
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>
+    </view>
+  </view>
+  <view wx:elif="{{tab1==2}}">
+    <view class="contain">
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec3 }}"></ec-canvas>
+    </view>
+  </view>
 </view>
 
+<van-divider>牙龈出血</van-divider>
+
+<van-tabs type="card" color="#5cc6f7" bindchange="bindchangeTab2">
+  <van-tab title="周"></van-tab>
+  <van-tab title="月"></van-tab>
+</van-tabs>
+
+<view wx:if="{{tab2==0}}">
+  <view class="contain">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec4 }}"></ec-canvas>
+  </view>
+</view>
+<view wx:elif="{{tab2==1}}">
+  <view class="contain">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec5 }}"></ec-canvas>
+  </view>
+</view>

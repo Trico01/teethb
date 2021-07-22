@@ -1,15 +1,27 @@
 <!--pages/find/toothcleaner/toothcleaner.wxml-->
-<view class="container">
+<view class="contain">
   <view class="myInput">
-    <image class="findImg" src="../image/find.png"></image>
+    <image class="findImg" src="https://z3.ax1x.com/2021/07/22/W0Pcse.png"></image>
     <input placeholder-class="plas" class="inputs" type="text"></input>
     <view class="divLine"></view>
-    <image class="moreImg" mode="aspectFill" src="../image/more.png"></image>
+    <image class="moreImg" mode="aspectFill" src="https://z3.ax1x.com/2021/07/22/W0P7QS.png"></image>
   </view>
 </view>
-<image class="cleaner" mode="widthFix" src="../image/teethCleaner.png"></image>
+<image class="cleaner" mode="widthFix" src="https://z3.ax1x.com/2021/07/22/W0aLgx.png"></image>
+<swiper  style="height:500rpx" next-margin="70rpx" previous-margin="20rpx">
+  <swiper-item>
+    <image class="tuijian" src="https://z3.ax1x.com/2021/07/22/W0ajKK.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="tuijian" src="https://z3.ax1x.com/2021/07/22/W0aq81.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="tuijian" src="https://z3.ax1x.com/2021/07/22/W0a759.png"></image>
+  </swiper-item>
+</swiper>
+<image class="cleaner" mode="widthFix" src="https://z3.ax1x.com/2021/07/22/W0abCR.png"></image>
 <view class="elements">
-  <image class="element" mode="widthFix" bindtap="toYashua" src="../image/yashua2.png"></image>
-  <image class="element" mode="widthFix" bindtap="toYagao" src="../image/yagao2.png"></image>
-  <image class="element" mode="widthFix" bindtap="toBeizi" src="../image/yabei.png"></image>
+  <image class="element" mode="widthFix" bindtap="toYashua" src="https://z3.ax1x.com/2021/07/22/W0iGFI.png"></image>
+  <image class="element" mode="widthFix" bindtap="toYagao" src="https://z3.ax1x.com/2021/07/22/W0i1wd.png"></image>
+  <image class="element" mode="widthFix" bindtap="toBeizi" src="https://z3.ax1x.com/2021/07/22/W0iMOe.png"></image>
 </view>

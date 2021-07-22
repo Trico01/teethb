@@ -1,0 +1,15 @@
+<!--pages/register/register9/register9.wxml-->
+<view class="contain">
+  <view class="title">谁是你心头挚爱？</view>
+  <view class="tip">Toothbrush and toothpaste</view>
+  <view class="gap"></view>
+  <view class="option">
+    <view bindtap="yashua" class="option1">点击选择牙刷</view>
+    <view bindtap="yagao" class="option2">点击选择牙膏</view>
+  </view>
+  <image class="image" src="https://z3.ax1x.com/2021/07/22/WBS3L9.png"></image>
+  <view bindtap="toNext" class="next">
+    <view class="jixu">继续</view>
+    <image class="arrow" src="https://z3.ax1x.com/2021/07/21/WwB311.png"></image>
+  </view>
+</view>

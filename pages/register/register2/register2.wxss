@@ -1,0 +1,55 @@
+/* pages/register/register2/register2.wxss */
+/* pages/register/register1/register1.wxss */
+/* pages/register/register.wxss */
+page {  
+  display: block;  
+  position: fixed;
+  height: 100%;  
+  background-color: rgb(240, 243, 252);  
+}
+.contain {
+  padding: 0rpx;
+  /* margin: 30rpx; */
+}
+.title {
+  position: absolutes;
+  margin-top: 150rpx;
+  margin-left: 30rpx;
+  color: rgb(84,158,231);
+  font-size: 60rpx;
+  font-weight: 700;
+}
+.tip {
+  position: relative;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.image {
+  height: 600rpx;
+  width: 600rpx;
+  margin: 70rpx;
+  border-radius: 300rpx;
+}
+.next {
+  position: relative;
+  top: 50rpx;
+  left: 15%;
+  height: 80rpx;
+  width: 70%;
+  border-radius: 40rpx;
+  background-color: rgb(73,142,209);
+}
+.jixu {
+  color: white;
+  position: relative;
+  top: 10rpx;
+  left: 40%;
+  font-size: 40rpx;
+}
+.arrow {
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  width: 40rpx;
+  height: 40rpx;
+}

@@ -1,6 +1,9 @@
 {
   "usingComponents": {
     "calendar":"../../components/calendar/index",
-    "ec-canvas": "../../components/ec-canvas/ec-canvas"
+    "ec-canvas": "../../components/ec-canvas/ec-canvas",
+    "van-tabs":"../../miniprogram_npm/vant-weapp/tabs",
+    "van-tab":"../../miniprogram_npm/vant-weapp/tab",
+    "van-divider":"../../miniprogram_npm/vant-weapp/divider"
   }
 }
