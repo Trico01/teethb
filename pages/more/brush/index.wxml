@@ -1,7 +1,7 @@
 <!--pages/more/brush/index.wxml-->
 
 <van-cell title="您的牙刷" size="large" label="类型" is-link url="./brushtype/index"
-  value="{{yashuaHardList[yashuaHard]+yashuaSizeList[yashuaSize]}}">
+  value="{{yashuaHardList[yashuaType[0]]+yashuaSizeList[yashuaType[1]]}}">
   <view slot="icon" class="iconfont icon-yashualiebiao" style="margin:0 20rpx 0 0; color:#549EE7"></view>
 </van-cell>
 

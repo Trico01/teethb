@@ -1,5 +1,14 @@
 // pages/more/brush/index.js
-var app=getApp()
+const AV = require('../../../libs/av-core-min.js');
+const adapters = require('../../../libs/leancloud-adapters-weapp.js');
+
+AV.setAdapters(adapters);
+// 改为自己的，在leancloud控制台-设置-应用凭证中
+AV.init({
+  appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+  appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+  serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+});
 Page({
   /**
    * 页面的初始数据
@@ -7,8 +16,7 @@ Page({
   data: {
     yashuaHardList:["软毛","硬毛"],
     yashuaSizeList:["小刷头","大刷头"],
-    yashuaHard: 0,
-    yashuaSize: 0,
+    yashuaType:[0,0],
     useReminder: false,
     useDate:'',
     dueDate:'',
@@ -19,7 +27,9 @@ Page({
     this.setData({
       useReminder:e.detail.value
     })
-    app.globalData.useReminder=e.detail.value
+    const currentUser = AV.User.current();
+    currentUser.set('brushReminder',e.detail.value)
+    currentUser.save()
     if(e.detail.value==true){
       wx.navigateTo({
         url: './usetime/index',
@@ -34,14 +44,18 @@ Page({
   },
   bindtapReset:function(e){
     var today=new Date()
-    app.globalData.useDate=today.toLocaleDateString()
-    today.setTime(today.getTime()+24*60*60*1000*90)
-    app.globalData.dueDate=today.toLocaleDateString()
+    const currentUser = AV.User.current();
+    currentUser.set('useDate',today.toLocaleDateString())
     this.setData({
-      useDate:app.globalData.useDate,
-      dueDate:app.globalData.dueDate,
+      useDate:today.toLocaleDateString()
+    })
+    today.setTime(today.getTime()+24*60*60*1000*90)
+    currentUser.set('dueDate',today.toLocaleDateString())
+    this.setData({
+      dueDate:today.toLocaleDateString(),
       useTime:0,
     })
+    currentUser.save()
   },
 
   /**
@@ -62,12 +76,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const currentUser = AV.User.current();
     this.setData({
-      yashuaHard:app.globalData.brushHard,
-      yashuaSize:app.globalData.brushSize,
-      useReminder:app.globalData.useReminder,
-      useDate:app.globalData.useDate,
-      dueDate:app.globalData.dueDate,
+      yashuaType:currentUser.attributes.brushType,
+      useReminder:currentUser.attributes.brushReminder,
+      useDate:currentUser.attributes.useDate,
+      dueDate:currentUser.attributes.dueDate,
     })
     var date1=new Date()
     var date2=new Date(this.data.useDate)

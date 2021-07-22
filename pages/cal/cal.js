@@ -328,15 +328,15 @@ function initChart4(canvas, width, height, dpr) {
     },
     legend: {
       data: [{
-        name:'早',
+        name:'出血',
         icon:'rect'
       },{
-        name:'晚',
+        name:'正常',
         icon:'rect'
       }],
       itemWidth: 25, //矩形宽度
-      itemHeight: 3, //矩形高度
-      top: 15,
+      itemHeight: 6, //矩形高度
+      top: 25,
       left: 'center',
       z: 100,
     },
@@ -372,26 +372,21 @@ function initChart4(canvas, width, height, dpr) {
             color: '#999'
           }
         },
+        max:1.2,
+        min:-1.2,
         axisLabel: {
-          show: false
+          formatter: function (value) {
+            var texts = [];
+            if(value>0&&value<1)
+              texts.push('晚')
+            else if(value<0&&value>-1)
+              texts.push('早')
+            return texts;
+          }
         }
       }
     ],
     series: [
-      {
-        name: '空白',
-        type: 'bar',
-        stack: '总量',
-        label: {
-          normal: {
-            show: false
-          }
-        },
-        data: [10, 10, 10, 10, 10, 10, 10],
-        itemStyle: {
-
-        }
-      },
       {
         name: '空',
         type: 'bar',
@@ -401,13 +396,10 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [-10, -10, -10, -10, -10, -10, -10],
-        itemStyle: {
-
-        }
+        data: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
       },
       {
-        name: '正面',
+        name: '白',
         type: 'bar',
         stack: '总量',
         label: {
@@ -415,13 +407,10 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [250, 0, 250, 250, 250, 0, 250],
-        itemStyle: {
-
-        }
+        data: [-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05],
       },
       {
-        name: '正',
+        name: '晚T',
         type: 'bar',
         stack: '总量',
         label: {
@@ -429,13 +418,10 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0, 250, 0, 0, 0, 250, 0],
-        itemStyle: {
-
-        }
+        data: [1, 0, 1, 1, 1, 0, 1],
       },
       {
-        name: '负面',
+        name: '晚F',
         type: 'bar',
         stack: '总量',
         label: {
@@ -443,13 +429,10 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [-250, -250, -250, -250, -250, 0, -250],
-        itemStyle: {
-
-        }
+        data: [0, 1, 0, 0, 0, 1, 0],
       },
       {
-        name: '负',
+        name: '出血',
         type: 'bar',
         stack: '总量',
         label: {
@@ -457,10 +440,18 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0, 0, 0, 0, 0, -250, 0],
-        itemStyle: {
-
-        }
+        data: [-1, -1, -1, -1, -1, 0, -1],
+      },
+      {
+        name: '正常',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [0, 0, 0, 0, 0, -1, 0],
       },
 
     ]
@@ -470,6 +461,159 @@ function initChart4(canvas, width, height, dpr) {
   return chart;
 }
 
+function initChart5(canvas, width, height, dpr) {
+  chart = echarts.init(canvas, null, {
+    width: width,
+    height: height,
+    devicePixelRatio: dpr // new
+  });
+  canvas.setChart(chart);
+
+  var option = {
+    color:['white','white','#fa4747','#cacaca','#fa4747','#cacaca'],
+    tooltip: {
+      show: false
+    },
+    legend: {
+      data: [{
+        name:'出血',
+        icon:'rect'
+      },{
+        name:'正常',
+        icon:'rect'
+      }],
+      itemWidth: 25, //矩形宽度
+      itemHeight: 6, //矩形高度
+      top: 25,
+      left: 'center',
+      z: 100,
+    },
+    grid: {
+      left: 25,
+      right: 25,
+      bottom: 30,
+      top: 60,
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        axisTick: { show: false },
+        data: [22,23,24,25,26,27,28,29,30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+        axisLine: {
+          lineStyle: {
+            color: '#ffffff',
+            width: 5,
+          }
+        },
+        axisLabel: {
+          color: '#666',
+          formatter: function (value) {
+            var texts = [];
+            if(value%3==0)
+              texts.push(value)
+            else
+              texts.push('')
+            return texts;
+          }
+        }
+      }
+    ],
+    yAxis: [
+      {
+        splitLine: { show: false },
+        type: 'value',
+        axisLine: {
+          lineStyle: {
+            color: '#999'
+          }
+        },
+        max:1.2,
+        min:-1.2,
+        axisLabel: {
+          formatter: function (value) {
+            var texts = [];
+            if(value>0&&value<1)
+              texts.push('晚')
+            else if(value<0&&value>-1)
+              texts.push('早')
+            return texts;
+          }
+        }
+      }
+    ],
+    series: [
+      {
+        name: '空',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05,0.05],
+      },
+      {
+        name: '白',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05,-0.05],
+      },
+      {
+        name: '晚T',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1],
+      },
+      {
+        name: '晚F',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [0,1,0,0,0,1,0,0,0,1,0,1,1,1,1,0,1,0,1,1,0,0,1,1,1,1,0,1,1,0],
+      },
+      {
+        name: '出血',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [-1, -1, -1, -1, -1, 0, -1, 0, -1, -1, 0, 0, 0, -1, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, -1, -1, 0, 0, -1, 0],
+      },
+      {
+        name: '正常',
+        type: 'bar',
+        stack: '总量',
+        label: {
+          normal: {
+            show: false
+          }
+        },
+        data: [0,0,0,0,0,-1,0,-1,0,0,-1,-1,-1,0,-1,-1,0,0,-1,-1,-1,-1,-1,-1,0,0,-1,-1,0,-1],
+      },
+    ]
+  };
+  chart.setOption(option);
+  return chart;
+}
 
 Page({
   data: {
@@ -553,6 +697,9 @@ Page({
     },
     ec4: {
       onInit: initChart4
+    },
+    ec5: {
+      onInit: initChart5
     },
     tab1:0,
     tab2:0,

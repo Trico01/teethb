@@ -1,14 +1,4 @@
 // app.js
-// const AV = require('./libs/av-core-min.js');
-// const adapters = require('./libs/leancloud-adapters-weapp.js');
-
-// AV.setAdapters(adapters);
-// AV.init({
-//   appId: "vqvxFtXlzyM0R3X2j3pDtWSJ-gzGzoHsz",
-//   appKey: "cByY3sxv8znJvFlJYXkwXwpz",
-//   serverURL: "https://vqvxftxl.lc-cn-n1-shared.com"
-// });
-
 
 App({
   onLaunch() {
@@ -26,12 +16,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    brushHard: 0,
-    brushSize: 0,
-    paste:0,
-    yatao: 0,
-    useReminder: false,
-    useDate:'', // 表示上次更换牙刷的时间
-    dueDate:'', // 表示预计更换时间
+    signedIn: false,
   }
 })

@@ -1,6 +1,5 @@
 // pages/more_remind/index.js
 
-var app = getApp()
 Page({
 
   /**

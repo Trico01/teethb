@@ -1,5 +1,13 @@
+const AV = require('../../../libs/av-core-min.js');
+const adapters = require('../../../libs/leancloud-adapters-weapp.js');
 
-const app = getApp()
+AV.setAdapters(adapters);
+// 改为自己的，在leancloud控制台-设置-应用凭证中
+AV.init({
+  appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+  appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+  serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+});
 Page({
 
   /**
@@ -62,7 +70,9 @@ Page({
         this.data.downright
       ]
     })
-    console.log(this.data.quchi)
+    const currentUser = AV.User.current();
+    currentUser.set('quchi',this.data.quchi)
+    currentUser.save()
   },
 
   reset(){
@@ -77,7 +87,9 @@ Page({
         0,0,0,0,0,0
       ]
     })
-    console.log(this.data.quchi)
+    const currentUser = AV.User.current();
+    currentUser.set('quchi',[0,0,0,0,0,0])
+    currentUser.save()
   },
 
   /**
@@ -98,6 +110,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const currentUser = AV.User.current();
+    this.setData({
+      quchi:currentUser.attributes.quchi
+    })
+    console.log(this.data.quchi)
   },
 
   /**

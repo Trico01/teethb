@@ -1,11 +1,65 @@
 // pages/register/register3/register3.js
+const AV = require('../../../libs/av-core-min.js');
+const adapters = require('../../../libs/leancloud-adapters-weapp.js');
+
+AV.setAdapters(adapters);
+// 改为自己的，在leancloud控制台-设置-应用凭证中
+AV.init({
+  appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+  appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+  serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+});
+
+var app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
+  },
+  getUserProfile(e) {
+    // 弹窗授权
+    wx.getUserProfile({
+      desc: '展示用户信息',
+      success: (res) => {
+        app.globalData.signedIn=true
+        var nickName=res.userInfo.nickName
+        var avatarUrl=res.userInfo.avatarUrl
+        this.setData({
+          hasUserInfo: true
+        })
+        //leancloud一键登录，并导入授权获得的头像、昵称信息
+        AV.User.loginWithMiniApp().then(user => { // user即为数据表中的一行（实例）
+          console.log(user)
+          user.set('nickName',nickName) // 更改实例属性的值，若不存在该属性，则添加
+          user.set('avatarUrl',avatarUrl)
+          user.set('birth',"2001-07-25")
+          user.set('hand','0')
+          user.set('quchi',[0,0,0,0,0,0])
+          user.set('zhengji',0)
+          user.set('brushType',[0,0])
+          user.set('brushReminder',false)
+          user.set('pasteType',0)
+          user.set('prsnl_1',false)
+          user.set('prsnl_2',false)
+          user.set('prsnl_3',false)
+          user.set('prsnl_4',false)
+          user.set('useDate','')
+          user.set('dueDate','')
+          user.save() // 别忘了save
+        }).catch(console.error);
+        wx.switchTab({
+          url: '../../home/home',
+        })
+      }
+    })
+  },
+
+  bindtapEnter:function(e){
+    wx.switchTab({
+      url: '../../home/home',
+    })
   },
 
   /**

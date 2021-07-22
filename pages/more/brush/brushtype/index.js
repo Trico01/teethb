@@ -1,5 +1,14 @@
 // pages/more_paste/index.js
-var app=getApp()
+const AV = require('../../../../libs/av-core-min.js');
+const adapters = require('../../../../libs/leancloud-adapters-weapp.js');
+
+AV.setAdapters(adapters);
+// 改为自己的，在leancloud控制台-设置-应用凭证中
+AV.init({
+  appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+  appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+  serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+});
 Page({
   /**
    * 页面的初始数据
@@ -31,8 +40,9 @@ Page({
     })    
   },
   bindclickOK: function(e){
-    app.globalData.brushHard=this.data.selectedHard
-    app.globalData.brushSize=this.data.selectedSize
+    const currentUser = AV.User.current();
+    currentUser.set('brushType',[this.data.selectedHard,this.data.selectedSize])
+    currentUser.save()
     wx.navigateBack()
   },
   bindclickCancel: function(e){
@@ -43,9 +53,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const currentUser = AV.User.current();
     this.setData({
-      selectedHard:app.globalData.brushHard,
-      selectedSize:app.globalData.brushSize
+      selectedHard:currentUser.attributes.brushType[0],
+      selectedSize:currentUser.attributes.brushType[1]
     })
   },
 

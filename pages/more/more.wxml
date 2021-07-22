@@ -1,7 +1,7 @@
 <!--pages/more/more.wxml-->
 <view class="bg">
-  <image src="../../image/test.jpg" mode="aspectFit" class="avatar" bindtap="bindtapAvatar"></image>
-  <view class="name">Trico</view>
+  <image src="{{avatarUrl}}" mode="aspectFit" class="avatar" bindtap="bindtapAvatar"></image>
+  <view class="name">{{nickName}}</view>
   <!-- <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar">
@@ -46,7 +46,7 @@
     style="margin:0 20rpx 0 0; color:#549EE7"
   ></view>
 </van-cell>
-<van-cell title="您的牙刷" is-link url="../more/brush/index" value="{{yashuaHardList[yashuaHard]+yashuaSizeList[yashuaSize]}}">
+<van-cell title="您的牙刷" is-link url="../more/brush/index">
   <view
     slot="icon"
     class="iconfont icon-yashualiebiao"
@@ -90,6 +90,18 @@
   </picker>
   </view>
 </van-cell>
+<van-cell title="牙龈出血询问">
+  <view
+    slot="icon"
+    class="iconfont icon-a-jiankang1"
+    style="margin:0 20rpx 0 0; color:#549EE7"
+  ></view>
+  <view
+    slot="extra"
+  >
+  <switch checked="{{prsnl_4}}" color="#1989FA" bindchange="bindPrsnlChange4"/>
+  </view>
+</van-cell>
 <van-cell title="播放音乐">
   <view
     slot="icon"
@@ -102,5 +114,6 @@
   <switch checked="{{prsnl_3}}" color="#1989FA" bindchange="bindPrsnlChange3"/>
   </view>
 </van-cell>
+
 
 </van-cell-group>

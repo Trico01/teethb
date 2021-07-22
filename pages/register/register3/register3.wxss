@@ -14,7 +14,7 @@ page {
   margin-top: 150rpx;
   margin-left: 30rpx;
   color: rgb(84,158,231);
-  font-size: 60rpx;
+  font-size: 58rpx;
   font-weight: 700;
 }
 .tip {
@@ -76,4 +76,19 @@ page {
   position: relative;
   top: 10rpx;
   font-size: 40rpx;
+}
+.bttn{
+  position: relative;
+  top: 50rpx;
+  border-radius: 40rpx;
+  background-color: rgb(73,142,209);
+  color: white;
+  font-size: 40rpx;
+}
+
+.enter{
+  text-decoration-line: underline;
+  color: gray;
+  text-align: center;
+  margin-top:80rpx;
 }
