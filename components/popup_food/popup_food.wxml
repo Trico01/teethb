@@ -1,0 +1,23 @@
+<!--components/popup/popup.wxml-->
+<view class="wx-popup" hidden="{{flag}}">
+  <view class='popup-container'>
+    <view class="title">
+      <image class="smile" src="https://z3.ax1x.com/2021/07/23/WswLAf.png"></image>
+      <view class="wx-popup-title">今天吃了......</view>
+      <image class="cross" src="https://z3.ax1x.com/2021/07/23/WsByo6.png" bindtap="_error"></image>
+    </view>
+
+    <view class="imagelist">
+      <view class="txt" wx:for="{{foodList}}" wx:key="index">
+        <image class="im" src="{{item.url}}" bindtap="bindtapfood" data-id="{{index}}" wx:if="{{highlight[index]==0}}"></image>
+        <image class="im_highlight" src="{{item.url}}" bindtap="bindtapfood" data-id="{{index}}" wx:if="{{highlight[index]==1}}"></image>
+        <view class="imagename">{{item.name}}</view>
+      </view>
+    </view>
+
+    <view class="button_2">
+      <button class="reset" bindtap='reset'>重置</button>
+      <button class="confirm" bindtap='_success'>确定</button>
+    </view>
+  </view>
+</view>

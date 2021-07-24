@@ -1,0 +1,23 @@
+<!--components/popup_brush/popup_brush.wxml-->
+<view class="wx-popup" hidden="{{flag}}">
+  <view class='popup-container'>
+    <text class="notice">提示</text>
+    <view class="title">
+      <image class="smile" src="https://z3.ax1x.com/2021/07/23/WswLAf.png"></image>
+      <view class="wx-popup-title">牙膏今日推荐：</view>
+    </view>
+    <view class="recommend">
+      <text wx:if="{{brush[0]==1}}">防蛀</text>
+      <text wx:if="{{brush[1]==1}}">多效</text>
+      <text wx:if="{{brush[2]==1}}">清新</text>
+      <text wx:if="{{brush[3]==1}}">美白</text>
+      <text wx:if="{{brush[4]==1}}">抗敏感</text>
+      <text wx:if="{{brush[5]==1}}">药用</text>
+      <text>类牙膏</text>
+    </view>
+
+    <view class="button_2">
+      <button class="confirm" bindtap='_error'>OK! 开始刷牙！</button>
+    </view>
+  </view>
+</view>

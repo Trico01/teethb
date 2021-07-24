@@ -10,10 +10,10 @@ page{
 
 .normal-date {
   border-radius: 100%;
-  border:6rpx solid #5cc6f7;
+  border:6rpx solid white;
   color: #000000;
-  border-bottom-color: white;
-  border-left-color: white;
+  border-top-color: #5cc6f7;
+  border-right-color: #5cc6f7;
 }
 
 ec-canvas {

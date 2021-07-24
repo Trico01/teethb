@@ -1,4 +1,15 @@
 // pages/cal/cal.js
+const AV = require('../../libs/av-core-min.js');
+const adapters = require('../../libs/leancloud-adapters-weapp.js');
+
+AV.setAdapters(adapters);
+// 改为自己的，在leancloud控制台-设置-应用凭证中
+AV.init({
+  appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+  appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+  serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+});
+
 import plugin from '../../components/calendar/plugins/index'
 import selectable from '../../components/calendar/plugins/selectable'
 import * as echarts from '../../components/ec-canvas/echarts'
@@ -627,62 +638,7 @@ Page({
         date: 'false'
       },
     },
-    toSet: [
-      {
-        year: 2021,
-        month: 7,
-        date: 3,
-        class: 'good-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 4,
-        class: 'normal-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 6,
-        class: 'good-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 7,
-        class: 'good-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 8,
-        class: 'good-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 10,
-        class: 'normal-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 11,
-        class: 'normal-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 12,
-        class: 'good-date'
-      },
-      {
-        year: 2021,
-        month: 7,
-        date: 13,
-        class: 'good-date'
-      },
-    ],
+    toSet: [],
     selectedYear: 0,
     selectedMonth: 0,
     selectedDate: 0,
@@ -725,10 +681,11 @@ Page({
     })
     // 获取日历组件上的 calendar 对象
     const calendar = this.selectComponent('#calendar').calendar
-    // 加function2:获取selected年月的标注数据
-    calendar.setDateStyle(this.data.toSet)
-    // 加function1:获取selected日期所在周的条形图数据
-
+    const query = new AV.Query('Mock');
+    query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
+      const tmp=mockInfo.get('toSet')
+      calendar.setDateStyle(tmp)
+    });
   },
   /**
   * 选择日期后执行的事件
@@ -751,7 +708,11 @@ Page({
     let curMonth = e.detail.current.month
     const calendar = this.selectComponent('#calendar').calendar
     // 加function2:获取curYear、curMonth的标注数据
-    calendar.setDateStyle(this.data.toSet)
+    const query = new AV.Query('Mock');
+    query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
+      const tmp=mockInfo.get('toSet')
+      calendar.setDateStyle(tmp)
+    });
   },
 
   /**

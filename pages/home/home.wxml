@@ -2,7 +2,6 @@
 
 <!-- 成人模式 -->
 <view class="home" wx:if="{{brush_mode == 0}}">
-
   <view class="brushteeth" >
     <view class="top">
       <view class="section_switch">
@@ -70,6 +69,15 @@
     </view>
   </view>
   <van-count-down :time="time" />
+  
+  <popup_food id='popup_food' 
+      bind:error="_error"  
+      bind:success="_success">
+  </popup_food>
+
+  <popup_brush id='popup_brush'
+      bind:error="_error" >
+  </popup_brush>
 </view>
 
 <!-- 儿童模式 -->

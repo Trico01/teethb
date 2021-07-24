@@ -20,7 +20,7 @@ page{
 }
 
 .name{
-  margin: 10rpx 0 0 0;
+  margin: 8rpx 0 0 0;
 }
 
 .avatar{

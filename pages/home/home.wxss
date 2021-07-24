@@ -7,6 +7,7 @@
     #86A8E7,
     #91EAE4
   );
+  /* background: #F0F3FC; */
 }
 
 .brushteeth
@@ -80,7 +81,6 @@
 
 .brush_gif{
   position: absolute;
-  z-index: 2;
 }
 
 .gif1{
@@ -339,7 +339,6 @@
 .child
 .button3{
   position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

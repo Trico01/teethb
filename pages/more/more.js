@@ -1,5 +1,6 @@
 // pages/more/more.js
 
+
 const AV = require('../../libs/av-core-min.js');
 const adapters = require('../../libs/leancloud-adapters-weapp.js');
 
@@ -29,7 +30,6 @@ Page({
     zhengjiList:["无","唇侧金属托槽","唇侧陶瓷托槽","舌侧托槽","隐形矫正牙套"],
     multiIndex:[2,0], // 默认3:00
     multiArray:[["1分","2分","3分","4分","5分"],["0秒","10秒","20秒","30秒","40秒","50秒"]],
-
   },
 
   bindBirthChange(e){
@@ -89,7 +89,7 @@ Page({
 
   bindMultiPickerChange: function (e) {
     this.setData({
-      multiIndex: e.detail.value
+      multiIndex: e.detail.value,
     })
   },
   bindcancelTime: function (e) {

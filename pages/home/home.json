@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "van-button":"../../miniprogram_npm/vant-weapp/button/index"
+    "van-button":"../../miniprogram_npm/vant-weapp/button/index",
+    "popup_food": "../../components/popup_food/popup_food",
+    "popup_brush": "../../components/popup_brush/popup_brush"
   }
 }
