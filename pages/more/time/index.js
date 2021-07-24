@@ -1,4 +1,4 @@
-// pages/more_paste/index.js
+// pages/more/brush/index.js
 const AV = require('../../../libs/av-core-min.js');
 const adapters = require('../../../libs/leancloud-adapters-weapp.js');
 
@@ -9,51 +9,44 @@ AV.init({
   appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
   serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
 });
-
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    yagaoList:[
-      { url: "https://z3.ax1x.com/2021/07/21/WwV3hn.png", name: '美白',id:"0"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVYcV.png", name: '清新',id:"1"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVGpq.png", name: '防蛀',id:"2"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVtXT.png", name: '固齿',id:"3"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVJ10.png", name: '抗敏感',id:"4"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVUnU.png", name: '护龈' ,id:"5"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVaBF.png", name: '竹盐',id:"6"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVd74.png", name: '药用',id:"7"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwV0AJ.png", name: '多效',id:"8"},
-    ],
-    selected:0
+    prsnl_2:false,
+    multiIndex:[2,0], // 默认3:00
+    multiArray:[["1分","2分","3分","4分","5分"],["0秒","10秒","20秒","30秒","40秒","50秒"]],
   },
-  bindtapYagao: function (e) {
+  bindPrsnlChange2(e){
     this.setData({
-      selected: e.currentTarget.dataset.id
-    })    
-  },
-  bindclickOK: function(e){
+      prsnl_2: e.detail.value
+    })
     const currentUser = AV.User.current();
-    currentUser.set('pasteType',this.data.selected)
+    currentUser.set('prsnl_2',e.detail.value)
     currentUser.save()
-    wx.navigateBack()
+    if (this.data.prsnl_2==false){
+      this.setData({
+        multiIndex:[2,0]
+      })
+      currentUser.set('setTimeIndex',[2,0])
+      currentUser.save()
+    }
   },
-  bindclickCancel: function(e){
-    wx.navigateBack()
+  bindMultiPickerChange: function (e) {
+    this.setData({
+      multiIndex: e.detail.value,
+    })
+    const currentUser = AV.User.current();
+    currentUser.set('setTimeIndex',e.detail.value)
+    currentUser.save()
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const currentUser = AV.User.current();
-    this.setData({
-      selected:currentUser.attributes.pasteType
-    })
-    wx.setNavigationBarTitle ({title:""})
-
+    wx.setNavigationBarTitle ({title:"自定义时间"})
   },
 
   /**
@@ -67,7 +60,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const currentUser = AV.User.current();
+    this.setData({
+      prsnl_2:currentUser.attributes.prsnl_2,
+      multiIndex:currentUser.attributes.setTimeIndex
+    })
   },
 
   /**
@@ -103,5 +100,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
+  }
 })

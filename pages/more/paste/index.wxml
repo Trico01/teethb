@@ -12,6 +12,6 @@
 </view>
 
 <view class="bttnlist">
-<van-button type="default" round="true" size="small" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn">确认</van-button>
-<van-button type="default" round="true" size="small" color="#D6E7F2" customClass="bttn" bind:click="bindclickCancel">取消</van-button>
+<van-button type="default" round="true" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn">确认</van-button>
+<van-button type="default" round="true" color="#D6E7F2" customClass="bttn" bind:click="bindclickCancel">取消</van-button>
 </view>

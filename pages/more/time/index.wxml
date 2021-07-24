@@ -1,0 +1,16 @@
+<!--pages/more/brush/index.wxml-->
+
+<van-cell title="自定义时间" size="large" label="自定义刷牙时长，将取消个性化定制刷牙计划">
+  <view slot="icon" class="iconfont icon-a-shijian1" style="margin:10rpx 16rpx 0 6rpx; color:#549EE7; zoom: 1.6;">
+  </view>
+  <view slot="extra">
+    <switch checked="{{prsnl_2}}" color="#1989FA" bindchange="bindPrsnlChange2" />
+  </view>
+</van-cell>
+
+<view wx:if="{{prsnl_2}}">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <van-cell is-link title="刷牙时长" size="large" value="{{multiArray[0][multiIndex[0]]+multiArray[1][multiIndex[1]]}}">
+    </van-cell>
+  </picker>
+</view>

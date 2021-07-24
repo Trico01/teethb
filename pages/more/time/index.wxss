@@ -18,21 +18,10 @@ page{
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-a-xiugai:before {
-  content: "\e60e";
+.icon-a-shijian1:before {
+  content: "\e609";
 }
 
-.icon-yashualiebiao:before {
-  content: "\e60d";
-}
-
-.icon-a-tixing1:before {
-  content: "\e604";
-}
-
-.icon-a-rili:before {
-  content: "\e608";
-}
 
 .wx-switch-input {
   zoom: .7;

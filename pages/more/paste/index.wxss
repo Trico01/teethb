@@ -5,7 +5,7 @@ page{
 .intro{
   display: flex;
   flex-direction: row;
-  margin-top: 90rpx;
+  margin-top: 0rpx;
 }
 
 .dent{
@@ -19,12 +19,14 @@ page{
   padding-bottom: 50rpx;
   margin-bottom: auto;
   margin-top: 100rpx;
-  margin-left: 10rpx;
+  margin-left: 6rpx;
   background-color: #D6E7F2;
   color: #2A6DBE;
   text-align: center;
   border-radius: 10px;
   border: 20rpx solid #D6E7F2;
+  font-weight: bold;
+  font-size: large;
 }
 
 .imagelist{
@@ -74,12 +76,13 @@ page{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 30rpx;
+  margin-top: 120rpx;
 }
 
 .bttn{
-  width: 100rpx !important;
+  width: 200rpx !important;
   margin-left: 12rpx !important;
   margin-right: 12rpx !important;
   color: #2A6DBE !important;
+  font-size: large !important;
 }

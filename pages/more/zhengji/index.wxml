@@ -5,37 +5,42 @@
 </view>
 
 <view class="imagelist">
-<view style="display:flex; flex-direction:row;">
-  <view style="display:flex; flex-direction:column; justify-align:center">
-  <image class="{{selected===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEdJI.png" bindtap="bindtapYatao" data-id="{{1}}"></image>
-    <view class="imagename">唇侧金属托槽</view>
-</view>
+  <view style="display:flex; flex-direction:row;">
+    <view style="display:flex; flex-direction:column; justify-align:center">
+      <image class="{{selected===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEdJI.png"
+        bindtap="bindtapYatao" data-id="{{1}}"></image>
+      <view class="imagename">唇侧金属托槽</view>
+    </view>
 
-<view style="display:flex; flex-direction:column; justify-align:center">
-  <image class="{{selected===2?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEaFA.png" bindtap="bindtapYatao" data-id="{{2}}"></image>
-    <view class="imagename">唇侧陶瓷托槽</view>
-</view>
-</view>
+    <view style="display:flex; flex-direction:column; justify-align:center">
+      <image class="{{selected===2?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEaFA.png"
+        bindtap="bindtapYatao" data-id="{{2}}"></image>
+      <view class="imagename">唇侧陶瓷托槽</view>
+    </view>
+  </view>
 
 
-<view style="display:flex; flex-direction:row;">
-  <view style="display:flex; flex-direction:column; justify-align:center">
-  <image class="{{selected===3?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEwWt.png" bindtap="bindtapYatao" data-id="{{3}}"></image>
-    <view class="imagename">舌侧托槽</view>
-</view>
+  <view style="display:flex; flex-direction:row;">
+    <view style="display:flex; flex-direction:column; justify-align:center">
+      <image class="{{selected===3?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEwWt.png"
+        bindtap="bindtapYatao" data-id="{{3}}"></image>
+      <view class="imagename">舌侧托槽</view>
+    </view>
 
-<view style="display:flex; flex-direction:column; justify-align:center">
-  <image class="{{selected===4?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwENod.png" bindtap="bindtapYatao" data-id="{{4}}"></image>
-    <view class="imagename">隐形矫正牙套</view>
-</view>
-</view>
-
-<view class="mybttn">
-  <van-button type="default" color="#D6E7F2" customClass="bttn" bind:click="bindclickNull">我没有带牙套</van-button>
-</view>
+    <view style="display:flex; flex-direction:column; justify-align:center">
+      <image class="{{selected===4?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwENod.png"
+        bindtap="bindtapYatao" data-id="{{4}}"></image>
+      <view class="imagename">隐形矫正牙套</view>
+    </view>
+  </view>
+  <view class="mybttn">
+    <van-button type="default" color="#D6E7F2" customClass="bttn" bind:click="bindclickNull">我没有带牙套</van-button>
+  </view>
 </view>
 
 <view class="bttnlist">
-<van-button type="default" round="true" size="small" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn2">确认</van-button>
-<van-button type="default" round="true" size="small" color="#D6E7F2" customClass="bttn2" bind:click="bindclickCancel">取消</van-button>
+  <van-button type="default" round="true" color="#D6E7F2" bind:click="bindclickOK" customClass="bttn2">确认
+  </van-button>
+  <van-button type="default" round="true" color="#D6E7F2" customClass="bttn2" bind:click="bindclickCancel">
+    取消</van-button>
 </view>

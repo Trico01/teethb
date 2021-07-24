@@ -1,6 +1,11 @@
 /* pages/more/more.wxss */
 page{
   background-color: #f1f4fb;
+  height: 1600rpx;
+}
+
+.cell{
+  font-size:large !important;
 }
 
 .userinfo {
@@ -12,20 +17,21 @@ page{
 
 .userinfo-avatar {
   overflow: hidden;
-  width: 160rpx;
-  height: 160rpx;
-  margin-top: 50rpx;
-  margin-bottom: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 60rpx;
+  margin-bottom: 10rpx;
   border-radius: 50%;
 }
 
 .name{
-  margin: 8rpx 0 0 0;
+  margin: 5rpx 0 0 0;
+  font-size: 35rpx;
 }
 
 .avatar{
-  width: 190rpx;
-  height: 190rpx;
+  width: 180rpx;
+  height: 180rpx;
   margin: 30rpx 0 0 0;
   border-radius: 50%;
   overflow:hidden;

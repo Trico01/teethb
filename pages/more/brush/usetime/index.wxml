@@ -3,23 +3,45 @@
 
   <view class="intro">
     <view class="title">设置使用时间</view>
-    <view class="label">一般来说，一只牙刷最多使用3个月。您的牙刷使用多久了？</view>
+    <view class="label">一般来说，一支牙刷最多使用3个月。</view>
+    <view class="label2">您的牙刷使用多久了？</view>
+
   </view>
 
   <view class="{{selectedTime===1?'item_highlight':'item'}}" data-id="{{1}}" bindtap="bindtapTime">
-    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    <view wx:if="{{selectedTime==1}}">
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/24/WclIqU.png" class="myicon"></image>
+    </view>
+    <view wx:else>
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    </view>
     这是新的牙刷
   </view>
   <view class="{{selectedTime===2?'item_highlight':'item'}}" data-id="{{2}}" bindtap="bindtapTime">
-    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    <view wx:if="{{selectedTime==2}}">
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/24/WclIqU.png" class="myicon"></image>
+    </view>
+    <view wx:else>
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    </view>
     已使用14天
   </view>
   <view class="{{selectedTime===3?'item_highlight':'item'}}" data-id="{{3}}" bindtap="bindtapTime">
-    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    <view wx:if="{{selectedTime==3}}">
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/24/WclIqU.png" class="myicon"></image>
+    </view>
+    <view wx:else>
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    </view>
     已使用30天
   </view>
   <view class="{{selectedTime===4?'item_highlight':'item'}}" data-id="{{4}}" bindtap="bindtapTime">
-    <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    <view wx:if="{{selectedTime==4}}">
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/24/WclIqU.png" class="myicon"></image>
+    </view>
+    <view wx:else>
+      <image mode="aspectFit" src="https://z3.ax1x.com/2021/07/21/WweYeU.png" class="myicon"></image>
+    </view>
     已使用60天
   </view>
 

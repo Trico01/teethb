@@ -6,53 +6,47 @@
 
 <van-cell-group title="个人资料">
   <picker mode="date" value="{{birth}}" start="1900-01-01" end="{{today}}" bindchange="bindBirthChange">
-    <van-cell title="出生日期" is-link value="{{birth}}">
+    <van-cell title="出生日期" is-link value="{{birth}}" size="large">
       <view slot="icon" class="iconfont icon-a-rili" style="margin:0 20rpx 0 0; color:#549EE7"></view>
     </van-cell>
   </picker>
   <picker mode="selector" bindchange="bindHandChange" range="{{handOption}}" value="{{hand}}">
-    <van-cell title="常用手" is-link value="{{handOption[hand]}}">
+    <van-cell title="常用手" is-link value="{{handOption[hand]}}" size="large">
       <view slot="icon" class="iconfont icon-woshou" style="margin:0 20rpx 0 0; color:#549EE7"></view>
     </van-cell>
   </picker>
-  <van-cell title="龋齿" is-link url="./quchi/index">
+  <van-cell title="龋齿" is-link url="./quchi/index" size="large">
     <view slot="icon" class="iconfont icon-a-yachibayazhuyateeth" style="margin:0 20rpx 0 0; color:#549EE7"></view>
   </van-cell>
-  <van-cell title="正畸" is-link url="../more/zhengji/index" value="{{zhengjiList[zjType]}}">
+  <van-cell title="正畸" is-link url="../more/zhengji/index" value="{{zhengjiList[zjType]}}" size="large">
     <view slot="icon" class="iconfont icon-a-yachiyakeyayi" style="margin:0 20rpx 0 0; color:#549EE7"></view>
   </van-cell>
-  <van-cell title="您的牙刷" is-link url="../more/brush/index">
+  <van-cell title="您的牙刷" is-link url="../more/brush/index" size="large">
     <view slot="icon" class="iconfont icon-yashualiebiao" style="margin:0 20rpx 0 0; color:#549EE7"></view>
   </van-cell>
-  <van-cell title="牙膏类型" is-link url="../more/paste/index" value="{{yagaoList[yagao]}}">
+  <van-cell title="牙膏类型" is-link url="../more/paste/index" value="{{yagaoList[yagao]}}" size="large">
     <view slot="icon" class="iconfont icon-a-yagao1" style="margin:0 20rpx 0 0; color:#549EE7"></view>
   </van-cell>
 </van-cell-group>
 
 <van-cell-group title="个性化">
-  <van-cell title="儿童模式">
+  <van-cell title="自定义时间" size="large" is-link url="./time/index">
+    <view slot="icon" class="iconfont icon-a-shijian1" style="margin:0 20rpx 0 0; color:#549EE7"></view>
+  </van-cell>
+  <van-cell title="儿童模式" size="large">
     <view slot="icon" class="iconfont icon-ertong" style="margin:0 20rpx 0 0; color:#549EE7"></view>
     <view slot="extra">
       <switch checked="{{prsnl_1}}" color="#1989FA" bindchange="bindPrsnlChange1" />
     </view>
 
   </van-cell>
-  <van-cell title="自定义时间">
-    <view slot="icon" class="iconfont icon-a-shijian1" style="margin:0 20rpx 0 0; color:#549EE7"></view>
-    <view slot="extra">
-      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcancel="bindcancelTime" value="{{multiIndex}}"
-        range="{{multiArray}}" disabled="{{prsnl_2}}">
-        <switch checked="{{prsnl_2}}" color="#1989FA" bindchange="bindPrsnlChange2" />
-      </picker>
-    </view>
-  </van-cell>
-  <van-cell title="牙龈出血询问">
+  <van-cell title="牙龈出血询问" size="large">
     <view slot="icon" class="iconfont icon-a-jiankang1" style="margin:0 20rpx 0 0; color:#549EE7"></view>
     <view slot="extra">
       <switch checked="{{prsnl_4}}" color="#1989FA" bindchange="bindPrsnlChange4" />
     </view>
   </van-cell>
-  <van-cell title="播放音乐">
+  <van-cell title="播放音乐" size="large">
     <view slot="icon" class="iconfont icon-a-yinle" style="margin:0 20rpx 0 0; color:#549EE7"></view>
     <view slot="extra">
       <switch checked="{{prsnl_3}}" color="#1989FA" bindchange="bindPrsnlChange3" />

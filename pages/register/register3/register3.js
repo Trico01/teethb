@@ -47,6 +47,7 @@ Page({
           user.set('prsnl_4',false)
           user.set('useDate','')
           user.set('dueDate','')
+          user.set('setTimeIndex',[2,0])
           user.save() // 别忘了save
         }).catch(console.error);
         wx.switchTab({

@@ -7,23 +7,42 @@ page{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top:200rpx;
+  margin-top:60rpx;
   text-align: center;
 
 }
 
 .intro{
+  margin-bottom: 60rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  margin-bottom: 50rpx;
 }
 
 .title{
+  width:400rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin:20rpx 175rpx 20rpx 175rpx;
+  background-color: #D6E7F2;
+  color: #2A6DBE;
+  text-align: center;
+  border-radius: 10px;
+  border: 10rpx solid #D6E7F2;
+  font-weight: bold;
   font-size: larger;
-  color:white;
 }
 .label{
   color:white;
-  margin-top:10rpx;
+  font-size: large;
+  margin:0 10rpx 0 10rpx;
+}
+
+.label2{
+  color:white;
+  font-size: large;
+  margin:0 10rpx 0 10rpx;
 }
 
 .item{
@@ -33,7 +52,7 @@ page{
   width: 550rpx;
   height: 120rpx;
   border-radius: 20rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 35rpx;
   color: white;
   background-color: #498ED1;
   margin-left: 100rpx;
@@ -48,9 +67,9 @@ page{
   width: 550rpx;
   height: 120rpx;
   border-radius: 20rpx;
-  margin-bottom: 30rpx;
-  color: white;
-  background-color: #F2F2F7;
+  margin-bottom: 35rpx;
+  color: #2A6DBE;
+  background-color: #D6E7F2;
   margin-left: 100rpx;
   margin-right: 100rpx;
   font-size: large;
@@ -62,8 +81,12 @@ page{
   margin: 0 20rpx 0 40rpx
 }
 
+
 .bttn{
-  margin-top: 40rpx !important;
-  width: 160rpx !important;
+  margin-top: 110rpx !important;
+  width: 180rpx !important;
   color: #2A6DBE !important;
+  font-size: large !important;
 }
+
+

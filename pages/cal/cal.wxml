@@ -3,7 +3,7 @@
   <calendar id="calendar" config="{{calendarConfig}}" bind:afterCalendarRender="afterCalendarRender"
     bind:afterTapDate="afterTapDate" bind:whenChangeMonth="whenChangeMonth" />
 
-  <van-divider class="mydivider">刷牙时间</van-divider>
+  <div class="divider">刷牙时长</div>
 
   <van-tabs type="card" color="#5cc6f7" bindchange="bindchangeTab1">
     <van-tab title="周"></van-tab>
@@ -28,7 +28,7 @@
   </view>
 </view>
 
-<van-divider>牙龈出血</van-divider>
+<div class="divider">牙龈出血</div>
 
 <van-tabs type="card" color="#5cc6f7" bindchange="bindchangeTab2">
   <van-tab title="周"></van-tab>

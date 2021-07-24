@@ -12,13 +12,15 @@ page{
   width:440rpx;
   padding-top: 10rpx;
   padding-bottom: 10rpx;
-  margin-top: 150rpx;
+  margin-top: 30rpx;
   margin-bottom: 40rpx;
   background-color: #D6E7F2;
   color: #2A6DBE;
   text-align: center;
   border-radius: 10px;
   border: 10rpx solid #D6E7F2;
+  font-weight: bold;
+  font-size: large;
 }
 
 .item{
@@ -53,7 +55,7 @@ page{
   text-align: center;
   align-content: center;
   padding-top: 40rpx;
-  padding-bottom: 40rpx;
+  padding-bottom: 50rpx;
 }
 .im{
   margin: 60rpx 20rpx 0 10rpx;
@@ -80,12 +82,13 @@ page{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 30rpx;
+  margin-top: 150rpx;
 }
 
 .bttn{
-  width: 100rpx !important;
+  width: 200rpx !important;
   margin-left: 12rpx !important;
   margin-right: 12rpx !important;
   color: #2A6DBE !important;
+  font-size: large !important;
 }

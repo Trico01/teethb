@@ -46,6 +46,7 @@ Page({
     this.setData({
       selected:currentUser.attributes.zhengji
     })
+    wx.setNavigationBarTitle ({title:''})
   },
 
   /**

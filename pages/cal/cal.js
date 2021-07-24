@@ -117,7 +117,7 @@ function initChart1(canvas, width, height, dpr) {
             },
           },
           emphasis: {
-            color: '#37a2da'
+            color: '#FFC8DD'
           }
         }
       },
@@ -149,7 +149,7 @@ function initChart1(canvas, width, height, dpr) {
             },
           },
           emphasis: {
-            color: '#37a2da'
+            color: '#cdb4db'
           }
         }
       }
@@ -333,7 +333,7 @@ function initChart4(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
-    color:['white','white','#fa4747','#cacaca','#fa4747','#cacaca',],
+    color:['white','white','#fd5454','#d4d4d4','#fd5454','#d4d4d4'],
     tooltip: {
       show: false
     },
@@ -481,7 +481,7 @@ function initChart5(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
-    color:['white','white','#fa4747','#cacaca','#fa4747','#cacaca'],
+    color:['white','white','#fd5454','#d4d4d4','#fd5454','#d4d4d4'],
     tooltip: {
       show: false
     },
@@ -719,7 +719,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: '日历',
+    })
   },
 
   /**

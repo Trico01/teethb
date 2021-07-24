@@ -54,6 +54,7 @@ Page({
    */
   onLoad: function (options) {
     const currentUser = AV.User.current();
+    wx.setNavigationBarTitle ({title:""})
     this.setData({
       selectedHard:currentUser.attributes.brushType[0],
       selectedSize:currentUser.attributes.brushType[1]

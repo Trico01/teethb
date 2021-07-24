@@ -5,7 +5,7 @@ page{
 .intro{
   display: flex;
   flex-direction: row;
-  margin-top: 110rpx;
+  margin-top: 0rpx;
 }
 
 .dent{
@@ -19,12 +19,14 @@ page{
   padding-bottom: 50rpx;
   margin-bottom: auto;
   margin-top: 100rpx;
-  margin-left: 10rpx;
+  margin-left: 0rpx;
   background-color: #D6E7F2;
   color: #2A6DBE;
   text-align: center;
   border-radius: 10px;
   border: 20rpx solid #D6E7F2;
+  font-size:large;
+  font-weight: bold;
 }
 
 .imagelist{
@@ -37,7 +39,7 @@ page{
   text-align: center !important;
   align-content: center !important;
   padding-top: 40rpx;
-  padding-bottom: 20rpx;
+  padding-bottom: 40rpx;
 }
 .im{
   height: 230rpx;
@@ -64,7 +66,6 @@ page{
 .imagename{
   color: #ffffff;
   padding-bottom: 20rpx;
-  font-size: small;
   margin-top: 6rpx;
 }
 
@@ -76,7 +77,7 @@ page{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 30rpx;
+  margin-top: 70rpx;
 }
 
 .mybttn{
@@ -93,12 +94,12 @@ page{
   justify-content: center !important;
   color: #2A6DBE !important;
   border-radius: 20rpx !important;
-  font-size: small !important;
 }
 
 .bttn2{
-  width: 100rpx !important;
+  width: 200rpx !important;
   margin-left: 12rpx !important;
   margin-right: 12rpx !important;
   color: #2A6DBE !important;
+  font-size: large !important;
 }

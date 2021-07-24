@@ -4,13 +4,13 @@ page{
 }
 .good-date {
   border-radius: 100%;
-  border:6rpx solid #5cc6f7;
+  border:5rpx solid #5cc6f7;
   color: #000000;
 }
 
 .normal-date {
   border-radius: 100%;
-  border:6rpx solid white;
+  border:5rpx solid white;
   color: #000000;
   border-top-color: #5cc6f7;
   border-right-color: #5cc6f7;
@@ -28,8 +28,13 @@ ec-canvas {
 
 } 
 
-.mydivider{
-  margin: 0rpx !important;
-  justify-content: center !important;
-  color: #cacaca
+.divider{  
+  margin: 50rpx 0;  
+  line-height: 3rpx;  
+  border-left: 290rpx solid #ddd;  
+  border-right: 290rpx solid #ddd;  
+  text-align: center;  
+  color:rgb(201, 201, 201);
+  display:flex; 
+  flex-direction:column;
 }
