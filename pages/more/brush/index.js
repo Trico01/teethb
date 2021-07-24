@@ -35,6 +35,10 @@ Page({
         url: './usetime/index',
       })
     }
+    else{
+      currentUser.set('useTimeIndex',0)
+      currentUser.save()
+    }
   },
   
   bindtapEdit:function(e){
@@ -83,6 +87,11 @@ Page({
       useDate:currentUser.attributes.useDate,
       dueDate:currentUser.attributes.dueDate,
     })
+    if(currentUser.attributes.useTimeIndex==0){
+      this.setData({
+        useReminder:false,
+      })
+    }
     var date1=new Date()
     var date2=new Date(this.data.useDate)
     var total=(date1-date2)/1000

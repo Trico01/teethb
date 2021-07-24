@@ -48,6 +48,7 @@ Page({
           user.set('useDate','')
           user.set('dueDate','')
           user.set('setTimeIndex',[2,0])
+          user.set('useTimeIndex',0)
           user.save() // 别忘了save
         }).catch(console.error);
         wx.switchTab({

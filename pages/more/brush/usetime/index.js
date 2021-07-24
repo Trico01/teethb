@@ -28,6 +28,7 @@ Page({
 
     tempDate.setTime(tempDate.getTime()+24*60*60*1000*90)
     currentUser.set('dueDate',tempDate.toLocaleDateString())
+    currentUser.set('useTimeIndex',this.data.selectedTime)
 
     currentUser.save()
 
