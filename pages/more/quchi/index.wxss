@@ -1,78 +1,55 @@
-.quchi{
-  background: linear-gradient(
-    to top,
-    #0f82c0,
-    #85D8CE
-  );
-  height: 1448rpx;
-  overflow: hidden;
+page{
+  background-color: #2A6DBE;
 }
 
-.title{
+.intro{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  margin-top: 0rpx;
 }
 
-.con{
-  background-color: lightcyan;
-  width: 350rpx;
-  height: 200rpx;
-  margin-top: 80rpx;
+.dent{
+  width:390rpx;
+  height:420rpx;
   margin-left: 30rpx;
-  border-radius: 30rpx;
-  padding-bottom: 20rpx;
 }
-
-@font-face {
-  font-family: 'choose';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_uc76dsy8zyl.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_uc76dsy8zyl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_uc76dsy8zyl.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_uc76dsy8zyl.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_uc76dsy8zyl.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_uc76dsy8zyl.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
-}
-.choose{
-  font-family: "choose";
-  color: darkcyan;
-  font-size: 45rpx;
-  margin-top: 50rpx;
-  margin-left: 37rpx;
-  display: flex;
-  justify-content: center;
+.msg{
+  width:250rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  margin-bottom: auto;
+  margin-top: 100rpx;
+  margin-left: 6rpx;
+  background-color: #D6E7F2;
+  color: #2A6DBE;
   text-align: center;
-  width: 280rpx;
-}
-
-.doctor{
-  width: 320rpx;
-  height: 350rpx;
-  padding-top: 50rpx;
+  border-radius: 10px;
+  border: 20rpx solid #D6E7F2;
+  font-weight: bold;
+  font-size: large;
 }
 
 .content{
-  background: lightcyan;
+  background: #95B6DF;
   border-radius: 50rpx;
-  width: 700rpx;
-  margin-left: 25rpx;
+  width: 750rpx;
+  margin-left: 0rpx;
   height: 750rpx;
 }
 
 .teeth{
   width: 750rpx;
-  height: 1550rpx;
-  margin-top: -380rpx;
-  margin-left: -30rpx;
+  height: 880rpx;
+  margin-top: -70rpx;
+  margin-left: 5rpx;
 }
 
 .upleft{
   position: absolute;
-  margin-top: -980rpx;
-  height: 190rpx;
-  width: 150rpx;
-  margin-left: 68rpx;
+  margin-top: -890rpx;
+  height: 880rpx;
+  width: 820rpx;
+  margin-left: -9rpx;
 }
 
 .upmid{
@@ -115,51 +92,18 @@
   margin-left: 470rpx;
 }
 
-.button_2{
+
+.bttnlist{
   display: flex;
   flex-direction: row;
-  padding-top: 45rpx;
-  padding-bottom: 70rpx;
+  justify-content: center;
+  margin-top: 80rpx;
 }
 
-@font-face {
-  font-family: 'confirm';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
-}
-.button_2
-.confirm{
-  font-family: "confirm";
-  width: 220rpx;
-  height: 80rpx;
-  color: darkcyan;
-  font-size: 43rpx;
-  margin-right: 30rpx;
-  padding-top: 10rpx;
-}
-
-@font-face {
-  font-family: 'reset';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_y1v7zlezjh.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_y1v7zlezjh.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
-}
-.button_2
-.reset{
-  font-family: "reset";
-  width: 220rpx;
-  height: 80rpx;
-  color: darkcyan;
-  font-size: 43rpx;
-  margin-left: 30rpx;
-  padding-top: 10rpx;
+.bttn{
+  width: 200rpx !important;
+  margin-left: 12rpx !important;
+  margin-right: 12rpx !important;
+  color: #2A6DBE !important;
+  font-size: large !important;
 }

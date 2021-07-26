@@ -1,1 +1,203 @@
 /* pages/home/result/index.wxss */
+page{
+  background-color: #f1f4fb;
+  height: 2000rpx;
+}
+
+.brushtime{
+  display: flex;
+  flex-direction: row; 
+}
+
+.date{
+  width: 250rpx;
+  height: 250rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 30rpx 0 0 40rpx;
+  color:#51A0ED;
+  text-align: center;
+}
+
+.date_date{
+  font-size: 140rpx;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin-top: -5rpx;
+}
+
+.date_yearmonth{
+  margin-top: -20rpx;
+  font-weight: bold;
+  font-size: 38rpx;
+}
+
+
+.time{
+  width: 400rpx;
+  height: 250rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 30rpx 40rpx 0 20rpx;
+  color:#51A0ED;
+  text-align: center;
+}
+
+.time_time{
+  font-size: 130rpx;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  margin-top: -3rpx;
+}
+
+.amorpm{
+  margin:-13rpx 20rpx 0 280rpx;
+  font-weight: bold;
+  font-size: 38rpx;
+}
+
+.brushduration{
+  width: 670rpx;
+  height: 100rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 30rpx 40rpx 0 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color:#51A0ED;
+}
+
+.brushdurationtitle{
+  margin-left: 30rpx;
+  font-size: large;
+  font-weight: bold;
+}
+
+.duration{
+  margin-right: 30rpx;
+  font-size: large;
+  font-weight: bold;
+}
+
+.medallist{
+  width: 670rpx;
+  height: 400rpx;
+  margin: 30rpx 40rpx 0 40rpx; 
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.medaltitle{
+  font-size: 35rpx;
+  margin-top: 30rpx;
+  color: #51A0ED;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gum{
+  width: 670rpx;
+  height: 270rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 30rpx 40rpx 0 40rpx;
+  border: dashed rgb(173, 173, 173);
+  text-align: center;
+}
+
+.gumtitle1{
+  color:#fd5454;
+  font-size: 35rpx;
+  font-weight: bold;
+  width:400rpx;
+  margin: 38rpx 135rpx 0 135rpx;
+}
+
+.gumtitle2{
+  color:#fd5454;
+  font-size: 35rpx;
+  font-weight: bold;
+  width:500rpx;
+  margin: -3rpx 85rpx 0 85rpx;
+}
+
+.choice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.bttn1{
+  width: 140rpx !important;
+  margin-left: 195rpx !important;
+  height: 60rpx !important;
+  padding-top: 30rpx !important;
+  padding-bottom: 30rpx !important;
+}
+
+.bttn2{
+  width: 140rpx !important;
+  margin-right: 195rpx !important;
+  height: 60rpx !important;
+  padding-top: 30rpx !important;
+  padding-bottom: 30rpx !important;
+}
+
+.checkedIcon{
+  margin-top: 40rpx;
+}
+
+.gumSlogan{
+  margin-top: 10rpx;
+  font-size: large;
+}
+
+.notify{
+  width: 670rpx;
+  height: 578rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  margin: 30rpx 40rpx 0 40rpx;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.notifytitle{
+  font-size: 35rpx;
+  margin-top: 30rpx;
+  color: #e259ae;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+@font-face {
+  font-family: "iconfont"; /* Project id 2676400 */
+  src: url('//at.alicdn.com/t/font_2676400_py3q0p9kvs9.woff2?t=1626964070575') format('woff2'),
+       url('//at.alicdn.com/t/font_2676400_py3q0p9kvs9.woff?t=1626964070575') format('woff'),
+       url('//at.alicdn.com/t/font_2676400_py3q0p9kvs9.ttf?t=1626964070575') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yashua:before {
+  content: "\e60a";
+}
+
+.icon-a-yachibayazhuyateeth:before {
+  content: "\e602";
+}
+
+.icon-a-yachiyakeyayi:before {
+  content: "\e606";
+}

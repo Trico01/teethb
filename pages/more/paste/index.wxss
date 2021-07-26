@@ -26,7 +26,7 @@ page{
   border-radius: 10px;
   border: 20rpx solid #D6E7F2;
   font-weight: bold;
-  font-size: large;
+  font-size: larger;
 }
 
 .imagelist{

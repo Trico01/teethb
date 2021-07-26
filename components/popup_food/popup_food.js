@@ -56,9 +56,15 @@ Component({
       this.triggerEvent("error")
     },
     _success () {
+      var index = this.data.highlight
+      if (index.indexOf(true)==-1) {
+        this.triggerEvent("error")
+      }
+      else{
       //触发成功回调
       wx.setStorageSync('highlight', this.data.highlight)
       this.triggerEvent("success");
+      }
     },
 
     bindtapfood(e) {
@@ -74,7 +80,8 @@ Component({
 
     reset() {
       this.setData({
-        highlight:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        highlight:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+        selected: []
       })
       console.log(this.data.highlight)
     },

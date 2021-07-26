@@ -1,6 +1,6 @@
 /* pages/more/more.wxss */
 page{
-  background-color: #f1f4fb;
+  background-color: #F0F3FC;
   height: 1600rpx;
 }
 

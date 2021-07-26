@@ -1,2 +1,67 @@
 <!--pages/home/result/index.wxml-->
-<text>pages/home/result/index.wxml</text>
+<view class="brushtime">
+  <view class="date">
+    <view class="date_date">{{day}}</view>
+    <view class="date_yearmonth">{{yearmonth}}</view>
+  </view>
+  <view class="time">
+    <view class="time_time">{{time}}</view>
+    <view class="amorpm">{{amorpm==0?"上午":"下午"}}</view>
+  </view>
+</view>
+
+<view class="brushduration">
+  <view class="brushdurationtitle">本次刷牙时长：</view>
+  <view class="duration">{{duration}}</view>
+</view>
+
+<view class="medallist">
+  <view class="medaltitle">解锁新勋章</view>
+</view>
+
+<view wx:if="{{useGum}}">
+  <view class="gum">
+    <view wx:if="{{!gumConfirmed}}">
+      <view class="gumtitle1">本次刷牙过程中</view>
+      <view class="gumtitle2">是否有牙龈出血的情况？</view>
+      <view class="choice">
+        <van-button customClass="bttn1" color="#fd5454" bindtap="bindtapYes">是</van-button>
+        <van-button customClass="bttn2" color="#fd5454" plain bindtap="bindtapNo">否</van-button>
+      </view>
+    </view>
+    <view wx:else>
+      <view class="checkedIcon">
+        <van-icon name="checked" color="#09BA08" size="60"></van-icon>
+      </view>
+      <view wx:if="{{gumBleed}}" class="gumSlogan">请继续加油改善牙龈状况哦~</view>
+      <view wx:if="{{!gumBleed}}" class="gumSlogan">您的牙龈很健康哦，请继续保持！</view>
+    </view>
+  </view>
+</view>
+
+<view class="notify">
+  <view class="notifytitle">注意事项</view>
+  <view wx:if="{{changeBrush}}">
+    <van-cell title="您的牙刷还有 {{changeBrushDays}} 天就需要更换了哦" size="large" label="牙刷更换提醒" is-link
+      url="../../more/brush/index">
+      <view slot="icon" class="iconfont icon-yashua" style="margin:10rpx 5rpx 0 0; color:#e259ae; zoom: 2;">
+      </view>
+    </van-cell>
+  </view>
+
+  <view wx:if="{{quchi}}">
+    <van-cell title="为了防止您的牙齿进一步龋坏，请尽早补牙！" size="large" label="有龋齿时只注意平时清洁是不够的~" is-link url="../../more/quchi/index">
+      <view slot="icon" class="iconfont icon-a-yachibayazhuyateeth"
+        style="margin:10rpx 18rpx 0 6rpx; color:#e259ae; zoom: 1.3;">
+      </view>
+    </van-cell>
+  </view>
+
+  <view wx:if="{{yatao}}">
+    <van-cell title="不要忘记定期刷一刷牙套" size="large" label="隐形牙套需要悉心照顾">
+      <view slot="icon" class="iconfont icon-a-yachiyakeyayi"
+        style="margin:8rpx 17rpx 0 8rpx; color:#e259ae; zoom: 1.3;">
+      </view>
+    </van-cell>
+  </view>
+</view>

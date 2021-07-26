@@ -28,11 +28,11 @@ Component({
         flag: 0
       })
 
-    var highlight = this.getParams('highlight');
-    console.log(highlight);
-    this.setData({
-      highlight : highlight
-    })
+      var highlight = this.getParams('highlight');
+      console.log(highlight);
+      this.setData({
+        highlight : highlight
+      })
 
       this.choose_brush()
     },
