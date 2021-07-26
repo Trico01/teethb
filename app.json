@@ -1,33 +1,37 @@
 {
   "pages": [
-    "pages/more/quchi/index",
 
-    "pages/more/more",
-
+    "pages/home/home",
     "pages/home/result/index",
-
-
-
-
 
     "pages/register/register",
     "pages/register/register1/register1",
     "pages/register/register2/register2",
     "pages/register/register3/register3",
+
+
+
+
+
+
+
+
+
+
+
+
+    "pages/more/more",
+    "pages/more/quchi/index",
+
+
+
     "pages/cal/cal",
 
     "pages/more/time/index",
     "pages/more/brush/index",
     "pages/more/brush/brushtype/index",
     "pages/more/brush/usetime/index",
-    "pages/register/register4/register4",
-    "pages/register/register5/register5",
-    "pages/register/register6/register6",
-    "pages/register/register7/register7",
-    "pages/register/register8/register8",
-    "pages/register/register9/register9",
-    "pages/register/register10/register10",
-    "pages/home/home",
+    
     "pages/find/find",
     "pages/more/zhengji/index",
     "pages/more/remind/index",

@@ -19,7 +19,7 @@
       </view>
       <view  class="listElement">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/W0PLZj.png"></image>
-        <view class="listTitle">达标天数</view>
+        <view class="listTitle">达标天数</view> 
       </view>
     </view>
   </view>
@@ -59,19 +59,20 @@
     </view>
     <view class="divLine"></view>
     <view class="myList">
-      <view  class="listElement">
+      <view  class="listElement2">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/Ww6Czd.png"></image>
-        <view class="listTitle">孩子总爱惹事生非？他或许只是牙痛……</view>
+        <view class="listTitle2">孩子总爱惹事生非？他或许只是牙痛……</view>
       </view>
-      <view  class="listElement">
+      <view  class="listElement2">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/Ww6Czd.png"></image>
-        <view class="listTitle">震惊！用薄荷糖或漱口水是起不到护牙作用的！</view>
+        <view class="listTitle2">震惊！用薄荷糖或漱口水起不到护牙作用！</view>
       </view>
-      <view  class="listElement">
+      <view  class="listElement2">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/Ww6Czd.png"></image>
-        <view class="listTitle">照常刷牙，牙却不白？可能是牙膏出了错！</view>
+        <view class="listTitle2">照常刷牙，牙却不白？可能是牙膏出了错！</view>
       </view>
     </view>
   </view>
 
 </view>
+

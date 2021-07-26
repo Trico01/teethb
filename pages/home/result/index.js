@@ -37,11 +37,25 @@ Page({
       gumConfirmed: true,
       gumBleed: true,
     })
+    const query=new AV.Query('BrushRecord')
+    query.equalTo('username',this.data.success_record[0])
+    query.equalTo('date',this.data.success_record[1])
+    query.equalTo('tt',this.data.success_record[2])
+    query.first().then((thisRecord) => {
+      thisRecord.set('gumBleed',1)
+      thisRecord.save()
+    });
+
   },
   bindtapNo: function(e){
     this.setData({
       gumConfirmed: true,
       gumBleed: false,
+    })
+  },
+  bindtapArrow: function(e){
+    wx.navigateTo({
+      url: '../../find/achievement/achievement',
     })
   },
 

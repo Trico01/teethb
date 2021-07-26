@@ -12,14 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({ title:'发现'})
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
@@ -79,4 +78,5 @@ Page({
       url: 'tips/tips',
     })
   },
+
 })

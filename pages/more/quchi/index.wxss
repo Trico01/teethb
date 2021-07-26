@@ -46,50 +46,50 @@ page{
 
 .upleft{
   position: absolute;
-  margin-top: -890rpx;
-  height: 880rpx;
-  width: 820rpx;
-  margin-left: -9rpx;
+  margin-top: -605rpx;
+  height: 165rpx;
+  width: 110rpx;
+  margin-left: 115rpx;
 }
 
 .upmid{
   position: absolute;
-  margin-top: -1100rpx;
-  height: 190rpx;
-  width: 410rpx;
-  margin-left: 143rpx;
+  margin-top: -740rpx;
+  height: 180rpx;
+  width: 425rpx;
+  margin-left: 170rpx;
 }
 
 .upright{
   position: absolute;
-  margin-top: -945rpx;
-  height: 150rpx;
-  width: 110rpx;
-  margin-left: 500rpx;
+  margin-top: -620rpx;
+  height: 192rpx;
+  width: 108rpx;
+  margin-left: 535rpx;
 }
 
 .downleft{
   position: absolute;
-  margin-top: -800rpx;
-  height: 196rpx;
-  width: 135rpx;
-  margin-left: 78rpx;
+  margin-top: -458rpx;
+  height: 227rpx;
+  width: 115rpx;
+  margin-left: 120rpx;
 }
 
 .downmid{
   position: absolute;
-  margin-top: -650rpx;
-  height: 130rpx;
-  width: 370rpx;
-  margin-left: 160rpx;
+  margin-top: -295rpx;
+  height: 140rpx;
+  width: 347rpx;
+  margin-left: 210rpx;
 }
 
 .downright{
   position: absolute;
-  margin-top: -825rpx;
-  height: 230rpx;
-  width: 160rpx;
-  margin-left: 470rpx;
+  margin-top: -452rpx;
+  height: 238rpx;
+  width: 125rpx;
+  margin-left: 528rpx;
 }
 
 

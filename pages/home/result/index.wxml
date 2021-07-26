@@ -16,7 +16,15 @@
 </view>
 
 <view class="medallist">
-  <view class="medaltitle">解锁新勋章</view>
+  <view class="medaltitleline">
+    <view class="medaltitle">解锁新勋章</view>
+    <van-icon name="arrow" color="gray" size="20" bindtap="bindtapArrow"></van-icon>
+  </view>
+
+  <view class="imglist">
+    <image class="elementImg1" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+    <image class="elementImg2" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+  </view>
 </view>
 
 <view wx:if="{{useGum}}">

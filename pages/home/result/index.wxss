@@ -79,6 +79,14 @@ page{
   font-weight: bold;
 }
 
+.medaltitleline{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
 .medallist{
   width: 670rpx;
   height: 400rpx;
@@ -88,13 +96,35 @@ page{
   flex-direction: column;
 }
 
+
+
 .medaltitle{
   font-size: 35rpx;
-  margin-top: 30rpx;
   color: #51A0ED;
   text-align: center;
   font-weight: bold;
 }
+
+.imglist{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+.elementImg1{
+  height: 245rpx;
+  width: 220rpx;
+  margin-left: 20rpx;
+}
+
+.elementImg2{
+  height: 247rpx;
+  width: 247rpx;
+  margin-left: 30rpx;
+}
+
+
 
 .gum{
   width: 670rpx;

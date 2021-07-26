@@ -17,7 +17,7 @@ page {
 }
 .head {
   width: 650rpx;
-  height: 60rpx;
+  height: 80rpx;
   margin-top: 5px;
   display: flex;
   flex-direction: row;
@@ -29,19 +29,19 @@ page {
 }
 .headTitle {
   width:440rpx;
-  height:30rpx;
+  height:40rpx;
   margin-left:15rpx;
   margin-bottom: 20rpx;
   display:flex;
   align-items: left;
-  font-weight: 500;
-  font-size: 35rpx;
+  font-weight: 700;
+  font-size: 45rpx;
 }
 .rightArrow {
   width:50rpx;
   height: 50rpx;
   position: relative;
-  left: 20rpx;
+  left: 80rpx;
 }
 .divLine{
   background: rgb(240, 243, 252);
@@ -51,6 +51,14 @@ page {
   height: 4rpx; 
 }
 .listElement {
+  width: 550rpx;
+  height: 90rpx;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.listElement2 {
   width: 550rpx;
   height: 70rpx;
   margin-left: 30px;
@@ -63,5 +71,8 @@ page {
   height: 60rpx;
 }
 .listTitle {
-  font-size: 27rpx
+  font-size: 35rpx
+}
+.listTitle2 {
+  font-size: 25rpx
 }

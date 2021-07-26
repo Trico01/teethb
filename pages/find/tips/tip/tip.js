@@ -12,6 +12,7 @@ Page({
    ]
   },
   onLoad: function(options){
+    wx.setNavigationBarTitle({ title:'你知道吗'})
     this.setData({
       index: options.index,
     })

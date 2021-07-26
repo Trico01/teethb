@@ -8,40 +8,77 @@
     <view class="title2">连续打卡</view>
     <text>\n</text>
     <view class="elements">
-      <view class="element">
+      <view wx:if="{{day1>=1}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
         <view class="elementNum">1天</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day1<1}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">3天</view>        
+        <view class="elementNum">1天</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>  <view class="elementNum">5天</view>   
+      <view wx:if="{{day1>=3}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">3天</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day1<3}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">7天</view>        
+        <view class="elementNum">3天</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src=https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">10天</view>        
+      <view wx:if="{{day1>=5}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">5天</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day1<5}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">20天</view>        
+        <view class="elementNum">5天</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">30天</view>        
+      <view wx:if="{{day1>=7}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">7天</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day1<7}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">50天</view>        
+        <view class="elementNum">7天</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day1>=10}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">10天</view>     
+      </view>
+      <view wx:if="{{day1<10}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
-        <view class="elementNum">100天</view>        
+        <view class="elementNum">10天</view>     
+      </view>
+      <view wx:if="{{day1>=20}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">20天</view>     
+      </view>
+      <view wx:if="{{day1<20}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
+        <view class="elementNum">20天</view>     
+      </view>
+      <view wx:if="{{day1>=30}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">30天</view>     
+      </view>
+      <view wx:if="{{day1<30}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
+        <view class="elementNum">30天</view>     
+      </view>
+      <view wx:if="{{day1>=50}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">50天</view>     
+      </view>
+      <view wx:if="{{day1<50}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
+        <view class="elementNum">50天</view>     
+      </view>
+      <view wx:if="{{day1>=100}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+        <view class="elementNum">100天</view>     
+      </view>
+      <view wx:if="{{day1<100}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
+        <view class="elementNum">100天</view>     
       </view>
     </view>
     <view class="gap"></view>
@@ -49,40 +86,77 @@
     <view class="title2">累计刷牙次数</view>
     <text>\n</text>
     <view class="elements">
-      <view class="element">
-        <image class="elementImg" src=https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+      <view wx:if="{{day2>=1}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
         <view class="elementNum2">1</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day2<1}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">9</view>        
+        <view class="elementNum2">1</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>  <view class="elementNum2">29</view>   
+      <view wx:if="{{day2>=9}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">9</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day2<9}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">39</view>        
+        <view class="elementNum2">9</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">59</view>        
+      <view wx:if="{{day2>=29}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">29</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day2<29}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">99</view>        
+        <view class="elementNum2">29</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">129</view>        
+      <view wx:if="{{day2>=39}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">39</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day2<39}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">159</view>        
+        <view class="elementNum2">39</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day2>=59}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">59</view>     
+      </view>
+      <view wx:if="{{day2<59}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
-        <view class="elementNum2">199</view>        
+        <view class="elementNum2">59</view>     
+      </view>
+      <view wx:if="{{day2>=99}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">99</view>     
+      </view>
+      <view wx:if="{{day2<99}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
+        <view class="elementNum2">99</view>     
+      </view>
+      <view wx:if="{{day2>=129}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">129</view>     
+      </view>
+      <view wx:if="{{day2<129}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
+        <view class="elementNum2">129</view>     
+      </view>
+      <view wx:if="{{day2>=159}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">159</view>     
+      </view>
+      <view wx:if="{{day2<159}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
+        <view class="elementNum2">159</view>     
+      </view>
+      <view wx:if="{{day2>=199}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+        <view class="elementNum2">199</view>     
+      </view>
+      <view wx:if="{{day2<199}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
+        <view class="elementNum2">199</view>     
       </view>
     </view>  
     <view class="gap"></view>
@@ -90,40 +164,77 @@
     <view class="title2">连续达标天数</view>
     <text>\n</text>
     <view class="elements">
-      <view class="element">
+      <view wx:if="{{day3>=3}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
         <view class="elementNum3">3</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day3<3}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">7</view>        
+        <view class="elementNum3">3</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>  <view class="elementNum3">14</view>   
+      <view wx:if="{{day3>=7}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">7</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day3<7}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">30</view>        
+        <view class="elementNum3">7</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">50</view>        
+      <view wx:if="{{day3>=14}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">14</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day3<14}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">80</view>        
+        <view class="elementNum3">14</view>     
       </view>
-      <view class="element">
-        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">120</view>        
+      <view wx:if="{{day3>=30}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">30</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day3<30}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">200</view>        
+        <view class="elementNum3">30</view>     
       </view>
-      <view class="element">
+      <view wx:if="{{day3>=50}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">50</view>     
+      </view>
+      <view wx:if="{{day3<50}}" class="element">
         <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
-        <view class="elementNum3">365</view>        
+        <view class="elementNum3">50</view>     
+      </view>
+      <view wx:if="{{day3>=80}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">80</view>     
+      </view>
+      <view wx:if="{{day3<80}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
+        <view class="elementNum3">80</view>     
+      </view>
+      <view wx:if="{{day3>=120}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">120</view>     
+      </view>
+      <view wx:if="{{day3<120}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
+        <view class="elementNum3">120</view>     
+      </view>
+      <view wx:if="{{day3>=200}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">200</view>     
+      </view>
+      <view wx:if="{{day3<200}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
+        <view class="elementNum3">200</view>     
+      </view>
+      <view wx:if="{{day3>=365}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+        <view class="elementNum3">365</view>     
+      </view>
+      <view wx:if="{{day3<365}}" class="element">
+        <image class="elementImg" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
+        <view class="elementNum3">365</view>     
       </view>
     </view>  
     <view class="gap"></view>

@@ -6,27 +6,27 @@
 <view class="content">
   <image class="teeth" src="https://z3.ax1x.com/2021/07/25/W2QP7F.png"></image>
   <view class="ul" bindtap="quchi_ul">
-    <image class="upleft" src="https://z3.ax1x.com/2021/07/26/WfW5VI.png"></image>
-    <!-- <image class="upleft" src="https://i.loli.net/2021/07/21/QybEefMP6DLYIS8.png" wx:if="{{upleft == 0}}"></image> -->
+    <image class="upleft" wx:if="{{upleft == 1}}" src="https://z3.ax1x.com/2021/07/26/WfW5VI.png"></image>
+    <image class="upleft" src="https://i.loli.net/2021/07/21/QybEefMP6DLYIS8.png" wx:if="{{upleft == 0}}"></image>
   </view>
   <view class="um" bindtap="quchi_um">
-    <image class="upmid" src="https://z3.ax1x.com/2021/07/21/WaTMfP.png" wx:if="{{upmid == 1}}"></image>
+    <image class="upmid" src="https://z3.ax1x.com/2021/07/26/WfWoIP.png" wx:if="{{upmid == 1}}"></image>
     <image class="upmid" src="https://i.loli.net/2021/07/21/2iEKkcMlpLutRnQ.png" wx:if="{{upmid == 0}}"></image>
   </view>
   <view class="ur" bindtap="quchi_ur">
-    <image class="upright" src="https://i.loli.net/2021/07/21/tTFINURj7wWkYVp.png" wx:if="{{upright == 1}}"></image>
+    <image class="upright" src="https://z3.ax1x.com/2021/07/26/WfWhqA.png" wx:if="{{upright == 1}}"></image>
     <image class="upright" src="https://i.loli.net/2021/07/21/OHeWnf9jd62Xigt.png" wx:if="{{upright == 0}}"></image>
   </view>
   <view class="dl" bindtap="quchi_dl">
-    <image class="downleft" src="https://i.loli.net/2021/07/21/OWqimzk6E5IKhHb.png" wx:if="{{downleft == 1}}"></image>
+    <image class="downleft" src="https://z3.ax1x.com/2021/07/26/WfWIat.png" wx:if="{{downleft == 1}}"></image>
     <image class="downleft" src="https://i.loli.net/2021/07/21/IrBDJ2ChnWHZAuq.png" wx:if="{{downleft == 0}}"></image>
   </view>
   <view class="dm" bindtap="quchi_dm">
-    <image class="downmid" src="https://i.loli.net/2021/07/21/qGRJLY65hocKEjy.png" wx:if="{{downmid == 1}}"></image>
+    <image class="downmid" src="https://z3.ax1x.com/2021/07/26/WfW7Pf.png" wx:if="{{downmid == 1}}"></image>
     <image class="downmid" src="https://i.loli.net/2021/07/21/KsAWDwPpn8OhiQB.png" wx:if="{{downmid == 0}}"></image>
   </view>
   <view class="dr" bindtap="quchi_dr">
-    <image class="downright" src="https://z3.ax1x.com/2021/07/21/WaTkQO.png" wx:if="{{downright == 1}}"></image>
+    <image class="downright" src="https://z3.ax1x.com/2021/07/26/WfWHG8.png" wx:if="{{downright == 1}}"></image>
     <image class="downright" src="https://i.loli.net/2021/07/21/9VRLqdQkY3AmF2h.png" wx:if="{{downright == 0}}"></image>
   </view>
 </view>

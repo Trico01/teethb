@@ -221,7 +221,7 @@ function initChart2(canvas, width, height, dpr) {
       type: 'line',
       smooth: true,
       symbol: 'none',
-      data: [2.1,2.5,2.4,2.5,2.7,2.5,2.1,2.8,2.7,2.7],
+      data: [2.1,2.5,1.5,1.8,2.7,2.5,1.6,2.8,1.6,1.4],
       lineStyle:{
         width:2.5,
       },
@@ -230,7 +230,7 @@ function initChart2(canvas, width, height, dpr) {
       type: 'line',
       smooth: true,
       symbol: 'none',
-      data: [3,3,3,2.9,2.6,2.9,2.8,2.7,3,3], //无数据时''即可
+      data: [1.9,2.4,1.6,2.1,2.6,2.5,2.8,2.7,2.5,1.9], //无数据时''即可
       lineStyle:{
         width:2.5,
       },

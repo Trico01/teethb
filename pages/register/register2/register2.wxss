@@ -16,7 +16,7 @@ page {
   margin-top: 150rpx;
   margin-left: 30rpx;
   color: rgb(84,158,231);
-  font-size: 57rpx;
+  font-size: 58rpx;
   font-weight: 700;
 }
 .tip {

@@ -90,50 +90,29 @@
 .button_2{
   display: flex;
   flex-direction: row;
-  padding-top: 45rpx;
-  padding-bottom: 50rpx;
+  margin-bottom: 50rpx;
 }
 
-@font-face {
-  font-family: 'confirm';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_z4y4r9lbdjq.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
-}
-.button_2
-.confirm{
-  font-family: "confirm";
-  width: 200rpx;
-  height: 70rpx;
-  color: whitesmoke;
-  font-size: 40rpx;
-  margin-right: 100rpx;
-  padding-top: 10rpx;
-  background: grey;
-}
 
-@font-face {
-  font-family: 'reset';
-  font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_y1v7zlezjh.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_y1v7zlezjh.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_y1v7zlezjh.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
-}
-.button_2
 .reset{
-  font-family: "reset";
-  width: 200rpx;
+  width: 200rpx !important;
   height: 70rpx;
   color: whitesmoke;
   font-size: 40rpx;
-  margin-left: 100rpx;
-  padding-top: 10rpx;
   background: grey;
+  margin-right: 20rpx !important;
+  padding-bottom: 70rpx !important;
 }
+
+
+.confirm{
+  width: 200rpx !important;
+  height: 70rpx;
+  color: whitesmoke;
+  font-size: 40rpx;
+  background: grey;
+  margin-left: 20rpx !important;
+  padding-bottom: 70rpx !important;
+
+}
+

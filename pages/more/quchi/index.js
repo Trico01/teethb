@@ -73,6 +73,7 @@ Page({
     const currentUser = AV.User.current();
     currentUser.set('quchi',this.data.quchi)
     currentUser.save()
+    wx.navigateBack()
   },
 
   reset(){

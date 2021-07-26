@@ -22,6 +22,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    popupFlag: 0,
     model_switch: 0,
     funcFlag: 0, //0刷牙，1牙线，2漱口
     myFuncFlag: [
@@ -35,8 +36,8 @@ Page({
     textValue: 0,
 
     brush_state: 0, // 表示刷牙的位置状态
-    bursh_time: [26,26,32,32,32,32], // 不同位置的刷牙时间
-    // bursh_time: [1,1,1,1,1,1], //测试用
+    // bursh_time: [26,26,32,32,32,32], // 不同位置的刷牙时间
+    bursh_time: [1,1,1,1,1,1], //测试用
     brush_mode: 0, // 刷牙模式，0表示成人模式，1表示儿童模式
     nusic_mode: 0, // 音乐播放模式，0表示不播放
     title_change: [1,1,1,1,1,1], // 标题修改，1表示外侧，2表示咬合，3表示内侧，4表示远端
@@ -89,14 +90,24 @@ Page({
 
 
   play: function () {//点击play按钮
-    if(this.data.start_flag== true ) return
-    console.log("play")
-    this.setData({
-      start_flag: true//把flag置为true
-    })
-    if (this.data.start_flag == true) this.timer();//如果flag为true 开始倒计时函数timer()
-    else {//否则即为停止，清除全局变量的计时函数，实现时间的停止
-      clearInterval(setTimer);
+    if(this.data.popupFlag==0){
+      this.setData({
+        popupFlag:1
+      })
+      this.popup_food = this.selectComponent("#popup_food");
+      this.popup_brush = this.selectComponent("#popup_brush");
+      this.popup_food.showPopup();
+    }
+    else{
+      if(this.data.start_flag== true ) return
+      console.log("play")
+      this.setData({
+        start_flag: true//把flag置为true
+      })
+      if (this.data.start_flag == true) this.timer();//如果flag为true 开始倒计时函数timer()
+      else {//否则即为停止，清除全局变量的计时函数，实现时间的停止
+        clearInterval(setTimer);
+      }
     }
   },
 
@@ -211,14 +222,17 @@ Page({
 
   // 刷牙成功数据上传
   success_record() {
-
+    this.setData({
+      popupFlag:0
+    })
     this.getTabBar().init();
     const currentUser = AV.User.current();
+    console.log(currentUser.attributes.username)
 
     // 获取用户
-    // this.setData({
-    //   username: currentUser.attributes.username
-    // })
+    this.setData({
+      username: currentUser.attributes.username
+    })
 
     // 获取现在时间
     // 调用函数时，传入new Date()参数，返回值是日期和时间
@@ -250,11 +264,17 @@ Page({
     this.setData({
       success_record: [this.data.username, date, tt, t_total, day_or_night, this.data.success_flag]
     })
-    console.log(this.data.success_record)
 
+    const myRecord=new AV.Object('BrushRecord')
+    myRecord.set('username',this.data.username)
+    myRecord.set('date',date)
+    myRecord.set('tt',tt)
+    myRecord.set('t_total',t_total)
+    myRecord.set('day_or_night',day_or_night)
+    myRecord.set('success_flag',this.data.success_flag)
+    myRecord.set('gumBleed',0)
+    myRecord.save()
     wx.setStorageSync('success_record', this.data.success_record)
-    // currentUser.set('success_record',this.data.success_record)
-    // currentUser.save()
 
     wx.navigateTo({
       url: './result/index',
@@ -435,9 +455,7 @@ Page({
    */
   onReady: function () {
     //获得popup组件
-    this.popup_food = this.selectComponent("#popup_food");
-    this.popup_brush = this.selectComponent("#popup_brush");
-    this.popup_food.showPopup();
+
   },
 
   //修改刷牙时间
