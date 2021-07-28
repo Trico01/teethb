@@ -84,7 +84,7 @@
   </view>
 </view>
 
-<view class="notify" wx:if="{{changeBrush||quchi||yatao}}">
+<view class="notify">
   <view class="notifytitle">注意事项</view>
   <view wx:if="{{changeBrush}}">
     <van-cell title="您的牙刷还有 {{changeBrushDays}} 天就需要更换了哦" size="large" label="牙刷更换提醒" is-link
@@ -109,12 +109,4 @@
       </view>
     </van-cell>
   </view>
-  <view style="height: 30rpx"></view>
 </view>
-
-<view class="bttnlist">
-  <button open-type="share" class="bttn22">分享</button>
-  <button class="bttn" bindtap="bindtapComplete">完成</button>
-</view>
-
-<view style="height: 120rpx"></view>

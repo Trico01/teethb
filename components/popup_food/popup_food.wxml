@@ -2,8 +2,8 @@
 <view class="wx-popup" hidden="{{flag}}">
   <view class='popup-container'>
     <view class="title">
-      <image class="smile" src="https://z3.ax1x.com/2021/07/23/WswLAf.png"></image>
-      <view class="wx-popup-title">今天吃了......</view>
+      <!-- <image class="smile" src="https://z3.ax1x.com/2021/07/23/WswLAf.png"></image> -->
+      <view class="wx-popup-title">😀 今天吃了......</view>
       <image class="cross" src="https://z3.ax1x.com/2021/07/23/WsByo6.png" bindtap="_error"></image>
     </view>
 
@@ -16,8 +16,9 @@
     </view>
 
     <view class="button_2">
-      <button class="reset" bindtap='reset'>重置</button>
-      <button class="confirm" bindtap='_success'>确定</button>
+      <van-button type="info" plain customClass="reset" color="#3277D1" bindtap="reset">重置</van-button>
+      <van-button type="info" customClass="confirm" color="#3277D1" bindtap="_success">确定</van-button>
     </view>
+    <view style="height: 100rpx"></view>
   </view>
 </view>

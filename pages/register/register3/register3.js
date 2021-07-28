@@ -10,7 +10,6 @@ AV.init({
   serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
 });
 
-var app=getApp()
 Page({
 
   /**
@@ -23,12 +22,8 @@ Page({
     wx.getUserProfile({
       desc: '展示用户信息',
       success: (res) => {
-        app.globalData.signedIn=true
         var nickName=res.userInfo.nickName
         var avatarUrl=res.userInfo.avatarUrl
-        this.setData({
-          hasUserInfo: true
-        })
         //leancloud一键登录，并导入授权获得的头像、昵称信息
         AV.User.loginWithMiniApp().then(user => { // user即为数据表中的一行（实例）
           console.log(user)

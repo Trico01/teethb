@@ -22,10 +22,10 @@ Page({
     time: "09:03",
     amorpm: 0, // 0上午1下午
     duration: "2分39秒",
-    useGum: false, // 是否开启牙龈保护询问
-    quchi: false, // 是否有龋齿
-    yatao: false, // 是否有透明牙套
-    changeBrush: false, // 是否离更换牙刷日期dueDate（查询时注意先判断useReminder再用dueDate）在5日内
+    useGum: true, // 是否开启牙龈保护询问
+    quchi: true, // 是否有龋齿
+    yatao: true, // 是否有透明牙套
+    changeBrush: true, // 是否离更换牙刷日期dueDate（查询时注意先判断useReminder再用dueDate）在5日内
     changeBrushDays: 2, // 离dueDate还有几天
 
     gumConfirmed: false, // 询问后是否点击了是或否
@@ -38,6 +38,7 @@ Page({
     jiesuo2:0,//
     jiesuo3:0,//
     username: '', //唯一确定登录的用户
+
   },
 
   bindtapYes: function(e){
@@ -65,17 +66,6 @@ Page({
     wx.navigateTo({
       url: '../../find/achievement/achievement',
     })
-  },
-  bindtapComplete: function(e){
-    wx.navigateBack({
-      delta: 0,
-    })
-  },
-  onShareAppMessage() {
-    return{
-      title: '我今天完成了刷牙打卡任务~',
-      // imageUrl: "https://z3.ax1x.com/2021/07/21/WwBE60.png"
-    }
   },
 
   /**
@@ -306,6 +296,9 @@ Page({
         jiesuo3:jiesuo
       })
     })
+    
+
+
   },
 
   getParams: function (a) {
@@ -323,48 +316,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const currentUser = AV.User.current();
-    this.setData({
-      useGum:currentUser.attributes.prsnl_4,
-      yatao:(currentUser.attributes.zhengji==4)
-    })
-    var quchiList=currentUser.attributes.quchi
-    var i=0
-    var quchiFlag=false
-    for (i=0;i<5;i++){
-      if(quchiList[i]){
-        quchiFlag=true
-        break
-      }
-    }
-    this.setData({
-      quchi: quchiFlag
-    })
-    if(currentUser.attributes.brushReminder){
-      const dueDate=new Date(currentUser.attributes.dueDate)
-      console.log(currentUser.attributes.dueDate)
-      const today= new Date()
-      const s1=dueDate.getTime()
-      const s2=today.getTime()
-      const total=(s1-s2)/1000
-      const day=parseInt(total/(24*60*60))
-      if(day<=5){
-        this.setData({
-          changeBrush:true,
-          changeBrushDays:day
-        })
-      }
-      else{
-        this.setData({
-          changeBrush: false
-        })
-      }
-    }
-    else{
-      this.setData({
-        changeBrush: false
-      })
-    }
+
   },
 
   /**
@@ -392,6 +344,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
 
   }
 })

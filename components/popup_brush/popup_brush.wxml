@@ -1,10 +1,8 @@
 <!--components/popup_brush/popup_brush.wxml-->
 <view class="wx-popup" hidden="{{flag}}">
   <view class='popup-container'>
-    <text class="notice">提示</text>
     <view class="title">
-      <image class="smile" src="https://z3.ax1x.com/2021/07/23/WswLAf.png"></image>
-      <view class="wx-popup-title">牙膏今日推荐：</view>
+      <view class="wx-popup-title">😀 今日牙膏推荐：</view>
     </view>
     <view class="recommend">
       <text wx:if="{{brush[0]==1}}">防蛀</text>
@@ -17,7 +15,7 @@
     </view>
 
     <view class="button_2">
-      <button class="confirm" bindtap='_error'>OK! 开始刷牙！</button>
+    <van-button bindtap='_error' customClass="mybutton" type="info">OK! 开始刷牙！</van-button>
     </view>
   </view>
 </view>

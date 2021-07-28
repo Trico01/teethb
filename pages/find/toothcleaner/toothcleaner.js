@@ -1,11 +1,23 @@
 // pages/find/toothcleaner/toothcleaner.js
+const AV = require('../../../libs/av-core-min.js');
+const adapters = require('../../../libs/leancloud-adapters-weapp.js');
+
+AV.setAdapters(adapters);
+// 改为自己的，在leancloud控制台-设置-应用凭证中
+AV.init({
+  appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+  appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+  serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+});
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    avatarUrl:'',
+    nickName:'',
   },
 
   /**
@@ -13,6 +25,12 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({ title:'牙具种草'})
+    const currentUser = AV.User.current();
+    // console.log(currentUser)
+    this.setData({
+      avatarUrl:currentUser.attributes.avatarUrl,
+      nickName:currentUser.attributes.nickName,
+    })
   },
 
   /**

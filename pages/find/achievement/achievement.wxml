@@ -5,7 +5,7 @@
   <view class="gap"></view>
 
   <view class="block">
-    <view class="title2">连续打卡</view>
+    <view class="title2">打卡天数</view>
     <text>\n</text>
     <view class="elements">
       <view wx:if="{{day1>=1}}" class="element">
@@ -161,7 +161,7 @@
     </view>  
     <view class="gap"></view>
 
-    <view class="title2">连续达标天数</view>
+    <view class="title2">达标天数</view>
     <text>\n</text>
     <view class="elements">
       <view wx:if="{{day3>=3}}" class="element">

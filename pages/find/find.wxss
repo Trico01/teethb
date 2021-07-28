@@ -36,6 +36,7 @@ page {
   align-items: left;
   font-weight: 700;
   font-size: 45rpx;
+  color: rgb(73,80,96);
 }
 .rightArrow {
   width:50rpx;
@@ -71,8 +72,10 @@ page {
   height: 60rpx;
 }
 .listTitle {
-  font-size: 35rpx
+  font-size: 35rpx;
+  color: rgb(73,80,96);
 }
 .listTitle2 {
-  font-size: 25rpx
+  font-size: 25rpx;
+  color: rgb(73,80,96);
 }

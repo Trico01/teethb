@@ -1,6 +1,7 @@
 /* pages/home/result/index.wxss */
 page{
   background-color: #f1f4fb;
+  height: 2000rpx;
 }
 
 .brushtime{
@@ -83,7 +84,7 @@ page{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
 }
 
 .medallist{
@@ -116,37 +117,37 @@ page{
   height:30rpx;
 }
 .elementImg1{
-  height: 200rpx;
+  height: 220rpx;
   margin-left: 30rpx;
 }
 
 .elementImg2{
-  height: 200rpx;
+  height: 220rpx;
   margin-left: 30rpx;
 }
 .elementImg3{
-  height: 200rpx;
+  height: 220rpx;
   margin-left: 30rpx;
 }
 .jiesuo {
   color: #51A0ED;
-  font-size: 35rpx;
+  font-size: 50rpx;
   text-align: center;
   margin-left: 30rpx;
 }
 .weijiesuo {
   color: grey;
-  font-size: 35rpx;
+  font-size: 50rpx;
   text-align: center;
   margin-left: 30rpx;
 }
 .elementNum1{
   position: relative;
   height: 0rpx;
-  top:-170rpx;
+  top:-180rpx;
   font-size: 50rpx;
   text-align: center;
-  margin-left: 13rpx;
+  margin-left: 30rpx;
   font-weight: 700;
   font-style: italic;
   color: rgb(255, 255, 255);
@@ -154,25 +155,23 @@ page{
 .elementNum2{
   position: relative;
   height: 0rpx;
-  top:-112rpx;
+  top:-110rpx;
   font-size: 50rpx;
   text-align: center;
-  margin-left: 12rpx;
+  margin-left: 30rpx;
   font-weight: 700;
   color: rgb(255, 255, 255);
 }
 .elementNum3{
   position: relative;
   height: 0rpx;
-  top:-176rpx;
+  top:-180rpx;
   font-size: 50rpx;
   text-align: center;
-  margin-left: 10rpx;
+  margin-left: 30rpx;
   font-weight: 700;
   color: rgb(255, 255, 255);
 }
-
-
 
 .gum{
   width: 670rpx;
@@ -234,9 +233,10 @@ page{
 
 .notify{
   width: 670rpx;
+  height: 578rpx;
   background-color: white;
   border-radius: 20rpx;
-  margin: 30rpx 40rpx 0rpx 40rpx;
+  margin: 30rpx 40rpx 0 40rpx;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -250,31 +250,6 @@ page{
   font-weight: bold;
 }
 
-.bttnlist{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 40rpx;
-}
-
-.bttn{
-  width: 200rpx !important;
-  margin-left: 12rpx !important;
-  margin-right: 12rpx !important;
-  font-size: large !important;
-  background-color: #1989FA;
-  color: white
-}
-
-
-.bttn22{
-  width: 200rpx !important;
-  margin-left: 12rpx !important;
-  margin-right: 12rpx !important;
-  font-size: large !important;
-  color: #1989FA;
-  border: 3rpx solid #1989FA;
-}
 
 
 @font-face {

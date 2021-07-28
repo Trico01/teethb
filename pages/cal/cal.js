@@ -18,11 +18,20 @@ plugin
   .use(selectable)
 
 let chart = null;
-// 条形图所用数据
-// 不设为全局的方法？
-let amData = [2, 2.2, 2.1, 2.5, 2.1, 2.8, 2.9];
-let pmData = [3, 2.8, 3, 3, 2.7, 2.8, 2.8];
+// 条形图所用数据mock数据
+// let amData = [2, 2.2, 2.1, 2.5, 2.1, 2.8, 2.9];
+// let pmData = [3, 2.8, 3, 3, 2.7, 2.8, 2.8];
 // 日历所需标注数据在page.data.toSet
+
+let chrt1AM = [0, 0, 0, 0, 0, 0, 0]
+let chrt1PM = [0, 0, 0, 0, 0, 0, 0]
+
+let chrt4AM = [0, 0, 0, 0, 0, 0, 0]
+let chrt4AM_F = [-1, -1, -1, -1, -1, -1, -1]
+let chrt4PM = [0, 0, 0, 0, 0, 0, 0]
+let chrt4PM_F = [1, 1, 1, 1, 1, 1, 1]
+
+
 
 function initChart1(canvas, width, height, dpr) {
   chart = echarts.init(canvas, null, {
@@ -42,11 +51,11 @@ function initChart1(canvas, width, height, dpr) {
     },
     legend: {
       data: [{
-        name:'早',
-        icon:'rect'
-      },{
-        name:'晚',
-        icon:'rect'
+        name: '早',
+        icon: 'rect'
+      }, {
+        name: '晚',
+        icon: 'rect'
       }],
       itemWidth: 25, //矩形宽度
       itemHeight: 3, //矩形高度
@@ -98,7 +107,7 @@ function initChart1(canvas, width, height, dpr) {
             show: false,
           }
         },
-        data: amData,
+        data: chrt1AM,
         itemStyle: {
           normal: {
             barBorderRadius: 6,
@@ -130,7 +139,7 @@ function initChart1(canvas, width, height, dpr) {
             show: false,
           }
         },
-        data: pmData,
+        data: chrt1PM,
         itemStyle: {
           normal: {
             barBorderRadius: 6,
@@ -168,14 +177,14 @@ function initChart2(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
-    color:['#00EE00','#FF9F7F'],
+    color: ['#00EE00', '#FF9F7F'],
     legend: {
       data: [{
-        name:'早',
-        icon:'rect'
-      },{
-        name:'晚',
-        icon:'rect'
+        name: '早',
+        icon: 'rect'
+      }, {
+        name: '晚',
+        icon: 'rect'
       }],
       itemWidth: 25, //矩形宽度
       itemHeight: 3, //矩形高度
@@ -197,12 +206,12 @@ function initChart2(canvas, width, height, dpr) {
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: [22,25,28,1,4,7,10,13,16,19],
-      axisLine:{
+      data: [22, 25, 28, 1, 4, 7, 10, 13, 16, 19],
+      axisLine: {
         show: false
       },
-      axisTick:{
-        show:false
+      axisTick: {
+        show: false
       },
     },
     yAxis: {
@@ -213,26 +222,26 @@ function initChart2(canvas, width, height, dpr) {
           type: 'dashed'
         }
       },
-      min:1.5,
-      max:3
+      min: 1.5,
+      max: 3
     },
     series: [{
       name: "早",
       type: 'line',
       smooth: true,
       symbol: 'none',
-      data: [2.1,2.5,1.5,1.8,2.7,2.5,1.6,2.8,1.6,1.4],
-      lineStyle:{
-        width:2.5,
+      data: [2.1, 2.5, 1.5, 1.8, 2.7, 2.5, 1.6, 2.8, 1.6, 1.4],
+      lineStyle: {
+        width: 2.5,
       },
     }, {
       name: "晚",
       type: 'line',
       smooth: true,
       symbol: 'none',
-      data: [1.9,2.4,1.6,2.1,2.6,2.5,2.8,2.7,2.5,1.9], //无数据时''即可
-      lineStyle:{
-        width:2.5,
+      data: [1.9, 2.4, 1.6, 2.1, 2.6, 2.5, 2.8, 2.7, 2.5, 1.9], //无数据时''即可
+      lineStyle: {
+        width: 2.5,
       },
     }]
   };
@@ -250,14 +259,14 @@ function initChart3(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
-    color:['#00EE00','#FF9F7F'],
+    color: ['#00EE00', '#FF9F7F'],
     legend: {
       data: [{
-        name:'早',
-        icon:'rect'
-      },{
-        name:'晚',
-        icon:'rect'
+        name: '早',
+        icon: 'rect'
+      }, {
+        name: '晚',
+        icon: 'rect'
       }],
       itemWidth: 25, //矩形宽度
       itemHeight: 3, //矩形高度
@@ -280,12 +289,12 @@ function initChart3(canvas, width, height, dpr) {
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: [7,8,9,10,11,12,1,2,3,4,5,6],
-      axisLine:{
+      data: [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6],
+      axisLine: {
         show: false
       },
-      axisTick:{
-        show:false
+      axisTick: {
+        show: false
       },
     },
     yAxis: {
@@ -296,26 +305,26 @@ function initChart3(canvas, width, height, dpr) {
           type: 'dashed'
         }
       },
-      min:1.5,
-      max:3
+      min: 1.5,
+      max: 3
     },
     series: [{
       name: "早",
       type: 'line',
       smooth: true,
       symbol: 'none',
-      data: [2.2,2.5,2.4,2.7,2.9,2.5,2.4,2.7,2.9,2.5,2.6,2.7],
-      lineStyle:{
-        width:2.5,
+      data: [2.2, 2.5, 2.4, 2.7, 2.9, 2.5, 2.4, 2.7, 2.9, 2.5, 2.6, 2.7],
+      lineStyle: {
+        width: 2.5,
       }
     }, {
       name: "晚",
       type: 'line',
       smooth: true,
       symbol: 'none',
-      data: [3,3,3,2.9,2.9,2.8,2.9,2.7,3,3,2.8,2.8], //无数据时''即可
-      lineStyle:{
-        width:2.5,
+      data: [3, 3, 3, 2.9, 2.9, 2.8, 2.9, 2.7, 3, 3, 2.8, 2.8], //无数据时''即可
+      lineStyle: {
+        width: 2.5,
       }
     }]
   };
@@ -333,17 +342,17 @@ function initChart4(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
-    color:['white','white','#fd5454','#d4d4d4','#fd5454','#d4d4d4'],
+    color: ['white', 'white', '#fd5454', '#d4d4d4', '#fd5454', '#d4d4d4'],
     tooltip: {
       show: false
     },
     legend: {
       data: [{
-        name:'出血',
-        icon:'rect'
-      },{
-        name:'正常',
-        icon:'rect'
+        name: '出血',
+        icon: 'rect'
+      }, {
+        name: '正常',
+        icon: 'rect'
       }],
       itemWidth: 25, //矩形宽度
       itemHeight: 6, //矩形高度
@@ -362,7 +371,7 @@ function initChart4(canvas, width, height, dpr) {
       {
         type: 'category',
         axisTick: { show: false },
-        data: ['Mon','Tue','Wed','Thur','Fri','Sat','Sun'],
+        data: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
         axisLine: {
           lineStyle: {
             color: '#ffffff',
@@ -383,14 +392,14 @@ function initChart4(canvas, width, height, dpr) {
             color: '#999'
           }
         },
-        max:1.2,
-        min:-1.2,
+        max: 1.2,
+        min: -1.2,
         axisLabel: {
           formatter: function (value) {
             var texts = [];
-            if(value>0&&value<1)
+            if (value > 0 && value < 1)
               texts.push('晚')
-            else if(value<0&&value>-1)
+            else if (value < 0 && value > -1)
               texts.push('早')
             return texts;
           }
@@ -429,7 +438,7 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [1, 0, 1, 1, 1, 0, 1],
+        data: chrt4PM,
       },
       {
         name: '晚F',
@@ -440,7 +449,7 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0, 1, 0, 0, 0, 1, 0],
+        data: chrt4PM_F,
       },
       {
         name: '出血',
@@ -451,7 +460,7 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [-1, -1, -1, -1, -1, 0, -1],
+        data: chrt4AM,
       },
       {
         name: '正常',
@@ -462,7 +471,7 @@ function initChart4(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0, 0, 0, 0, 0, -1, 0],
+        data: chrt4AM_F,
       },
 
     ]
@@ -481,17 +490,17 @@ function initChart5(canvas, width, height, dpr) {
   canvas.setChart(chart);
 
   var option = {
-    color:['white','white','#fd5454','#d4d4d4','#fd5454','#d4d4d4'],
+    color: ['white', 'white', '#fd5454', '#d4d4d4', '#fd5454', '#d4d4d4'],
     tooltip: {
       show: false
     },
     legend: {
       data: [{
-        name:'出血',
-        icon:'rect'
-      },{
-        name:'正常',
-        icon:'rect'
+        name: '出血',
+        icon: 'rect'
+      }, {
+        name: '正常',
+        icon: 'rect'
       }],
       itemWidth: 25, //矩形宽度
       itemHeight: 6, //矩形高度
@@ -510,7 +519,7 @@ function initChart5(canvas, width, height, dpr) {
       {
         type: 'category',
         axisTick: { show: false },
-        data: [22,23,24,25,26,27,28,29,30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21],
+        data: [22, 23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
         axisLine: {
           lineStyle: {
             color: '#ffffff',
@@ -521,7 +530,7 @@ function initChart5(canvas, width, height, dpr) {
           color: '#666',
           formatter: function (value) {
             var texts = [];
-            if(value%3==0)
+            if (value % 3 == 0)
               texts.push(value)
             else
               texts.push('')
@@ -539,14 +548,14 @@ function initChart5(canvas, width, height, dpr) {
             color: '#999'
           }
         },
-        max:1.2,
-        min:-1.2,
+        max: 1.2,
+        min: -1.2,
         axisLabel: {
           formatter: function (value) {
             var texts = [];
-            if(value>0&&value<1)
+            if (value > 0 && value < 1)
               texts.push('晚')
-            else if(value<0&&value>-1)
+            else if (value < 0 && value > -1)
               texts.push('早')
             return texts;
           }
@@ -563,7 +572,7 @@ function initChart5(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,0.05,0.05],
+        data: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
       },
       {
         name: '白',
@@ -574,7 +583,7 @@ function initChart5(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05,-0.05,-0.05],
+        data: [-0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05, -0.05],
       },
       {
         name: '晚T',
@@ -596,7 +605,7 @@ function initChart5(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0,1,0,0,0,1,0,0,0,1,0,1,1,1,1,0,1,0,1,1,0,0,1,1,1,1,0,1,1,0],
+        data: [0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0],
       },
       {
         name: '出血',
@@ -618,13 +627,14 @@ function initChart5(canvas, width, height, dpr) {
             show: false
           }
         },
-        data: [0,0,0,0,0,-1,0,-1,0,0,-1,-1,-1,0,-1,-1,0,0,-1,-1,-1,-1,-1,-1,0,0,-1,-1,0,-1],
+        data: [0, 0, 0, 0, 0, -1, 0, -1, 0, 0, -1, -1, -1, 0, -1, -1, 0, 0, -1, -1, -1, -1, -1, -1, 0, 0, -1, -1, 0, -1],
       },
     ]
   };
   chart.setOption(option);
   return chart;
 }
+
 
 Page({
   data: {
@@ -643,32 +653,60 @@ Page({
     selectedMonth: 0,
     selectedDate: 0,
     ec1: {
-      onInit: initChart1
+      lazyLoad: true
+
     },
     ec2: {
-      onInit: initChart2
+      lazyLoad: true
+
     },
     ec3: {
-      onInit: initChart3
+      lazyLoad: true
     },
     ec4: {
-      onInit: initChart4
+      lazyLoad: true
     },
     ec5: {
-      onInit: initChart5
+      lazyLoad: true
     },
-    tab1:0,
-    tab2:0,
+    tab1: 0,
+    tab2: 0,
   },
-  bindchangeTab1:function(e){
+  bindchangeTab1: function (e) {
     this.setData({
-      tab1:e.detail.index
-    })
+      tab1: e.detail.index
+    });
+    switch (e.detail.index) {
+      case 0:
+        console.log(this.ecComponent1);
+        this.ecComponent1.init(initChart1);
+        break;
+      case 1:
+        console.log(this.ecComponent2);
+
+        this.ecComponent2.init(initChart2);
+        break;
+      case 2:
+        console.log(this.ecComponent3);
+
+        this.ecComponent3.init(initChart3);
+        break;
+    }
+
   },
-  bindchangeTab2:function(e){
+  bindchangeTab2: function (e) {
     this.setData({
-      tab2:e.detail.index
-    })
+      tab2: e.detail.index
+    });
+    switch (e.detail.index) {
+      case 0:
+        this.ecComponent4.init(initChart4);
+        break;
+      case 1:
+        this.ecComponent5.init(initChart5);
+        break;
+
+    }
   },
   /**
    * 日历初次渲染完成后触发事件，如设置事件标记
@@ -681,11 +719,17 @@ Page({
     })
     // 获取日历组件上的 calendar 对象
     const calendar = this.selectComponent('#calendar').calendar
-    const query = new AV.Query('Mock');
-    query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
-      const tmp=mockInfo.get('toSet')
-      calendar.setDateStyle(tmp)
-    });
+    // mock数据
+    // const query = new AV.Query('Mock');
+    // query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
+    //   const tmp = mockInfo.get('toSet')
+    //   calendar.setDateStyle(tmp)
+    //   this.setData({
+    //     toSet: tmp
+    //   })
+    // });
+    calendar.setDateStyle(this.data.toSet)
+
   },
   /**
   * 选择日期后执行的事件
@@ -703,16 +747,10 @@ Page({
    * => current 当前年月 / next 切换后的年月
    */
   whenChangeMonth(e) {
-    console.log('whenChangeMonth', e.detail)
     let curYear = e.detail.current.year
     let curMonth = e.detail.current.month
     const calendar = this.selectComponent('#calendar').calendar
-    // 加function2:获取curYear、curMonth的标注数据
-    const query = new AV.Query('Mock');
-    query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
-      const tmp=mockInfo.get('toSet')
-      calendar.setDateStyle(tmp)
-    });
+    calendar.setDateStyle(this.data.toSet)
   },
 
   /**
@@ -722,57 +760,159 @@ Page({
     wx.setNavigationBarTitle({
       title: '日历',
     })
+    wx.showLoading({
+      title: '加载中',
+    })
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    setTimeout(function () {
-      // 获取 chart 实例的方式
-      // console.log(chart)
-    }, 2000);
+ 
+    this.ecComponent1 = this.selectComponent('#mychart-dom-bar1');
+    this.ecComponent2 = this.selectComponent('#mychart-dom-bar2');
+    this.ecComponent3 = this.selectComponent('#mychart-dom-bar3');
+    this.ecComponent4 = this.selectComponent('#mychart-dom-bar4');
+    this.ecComponent5 = this.selectComponent('#mychart-dom-bar5');
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: async function () {
     this.getTabBar().init();
+
+    
+
+
+      // mock数据
+      // const query = new AV.Query('Mock');
+      // query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
+      //   const tmp = mockInfo.get('toSet')
+      //   calendar.setDateStyle(tmp)
+      // });
+      var toset = []
+      const currentUser = AV.User.current();
+      let username = currentUser.attributes.username
+      const query = new AV.Query('BrushRecord')
+      query.equalTo('username', username)
+      query.ascending('date');
+
+      //await异步改同步
+      let setRecords = await query.find();
+
+      toset.push(setRecords[0].attributes.date)
+      let i = 1
+      let len = setRecords.length
+      for (i = 1; i < len; i++) {
+        if (toset.indexOf(setRecords[i].attributes.date) == -1) {
+          toset.push(setRecords[i].attributes.date)
+        }
+      }
+      len = toset.length
+      let tosetData = []
+      for (i = 0; i < len; i++) {
+        const query2 = new AV.Query('BrushRecord')
+        query2.equalTo('username', username)
+        query2.equalTo('date', toset[i])
+        const myDate = new Date(toset[i].replace(/-/g, "/"))
+        let year = myDate.getFullYear()
+        let month = myDate.getMonth() + 1
+        let date = myDate.getDate();
+        //异步改同步
+        let count = await query2.count();
+        if (count < 2 && count > 0) {
+          tosetData.push({
+            "year": year,
+            "month": month,
+            "date": date,
+            "class": "normal-date",
+          })
+          this.setData({
+            toSet: tosetData
+          })
+        }
+        else {
+          tosetData.push({
+            "year": year,
+            "month": month,
+            "date": date,
+            "class": "good-date",
+          })
+          this.setData({
+            toSet: tosetData
+          })
+        }
+      }
+
+      const calendar = this.selectComponent('#calendar').calendar
+      //直接设置数据
+      calendar.setDateStyle(this.data.toSet)
+
+
+      // -------------------------------------
+
+      var now = new Date(); //当前日期 
+      var nowDayOfWeek = now.getDay(); //今天本周的第几天 
+      var startTime = now.getTime() - ((nowDayOfWeek - 1) * 24 * 60 * 60 * 1000)
+      var startDate = new Date()
+      startDate.setTime(startTime);
+
+
+      for (let i = 0; i < 7; i++) {
+        const queryChart1AM = new AV.Query('BrushRecord')
+        queryChart1AM.equalTo('username', username)
+
+        var ye = startDate.getFullYear();
+        var mo = (startDate.getMonth() + 1).toString().padStart(2, '0');
+        var da = startDate.getDate().toString().padStart(2, '0');
+        var formatDate = ye + '-' + mo + '-' + da;
+
+        queryChart1AM.equalTo('date', formatDate)
+        queryChart1AM.equalTo('day_or_night', "AM")
+
+        let res = await queryChart1AM.first().catch(e => {
+          console.log(e);
+        });
+        if (res) {
+          console.log(res);
+          chrt1AM.splice(i, 1, res.attributes.t_total / 60);
+          chrt4AM.splice(i, 1, -res.attributes.gumBleed)
+          chrt4AM_F.splice(i, 1, res.attributes.gumBleed - 1)
+        }
+
+
+
+        const queryChart1PM = new AV.Query('BrushRecord')
+        queryChart1PM.equalTo('username', username)
+        queryChart1PM.equalTo('date', formatDate)
+        queryChart1PM.equalTo('day_or_night', "PM")
+
+        let res2 = await queryChart1PM.first().catch(e => {
+          console.log(e);
+        });
+        console.log(res2, i);
+        if (res2) {
+          chrt1PM.splice(i, 1, res2.attributes.t_total / 60);
+          chrt4PM.splice(i, 1, res2.attributes.gumBleed)
+          chrt4PM_F.splice(i, 1, 1 - res2.attributes.gumBleed)
+        }
+
+
+
+        var tmpTime = startDate.getTime() + (24 * 60 * 60 * 1000)
+        startDate.setTime(tmpTime)
+      }
+      wx.hideLoading({
+        success: (res) => {},
+      })
+
+
+      this.ecComponent1.init(initChart1);
+      this.ecComponent4.init(initChart4);
+
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

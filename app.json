@@ -1,31 +1,23 @@
 {
   "pages": [
 
-    "pages/home/home",
-    "pages/home/result/index",
-
     "pages/register/register",
     "pages/register/register1/register1",
     "pages/register/register2/register2",
     "pages/register/register3/register3",
+    "pages/home/home",
+    "pages/home/result/index",
 
-
-
-
-
-
-
-
-
-
-
-
-    "pages/more/more",
-    "pages/more/quchi/index",
 
 
 
     "pages/cal/cal",
+
+    "pages/more/more",
+
+
+
+    "pages/more/quchi/index",
 
     "pages/more/time/index",
     "pages/more/brush/index",

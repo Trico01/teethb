@@ -114,7 +114,13 @@ Page({
   onShow: function () {
     const currentUser = AV.User.current();
     this.setData({
-      quchi:currentUser.attributes.quchi
+      quchi:currentUser.attributes.quchi,
+      upleft:currentUser.attributes.quchi[0],
+      upmid:currentUser.attributes.quchi[1],
+      upright:currentUser.attributes.quchi[2],
+      downleft:currentUser.attributes.quchi[3],
+      downmid:currentUser.attributes.quchi[4],
+      downright:currentUser.attributes.quchi[5]
     })
     console.log(this.data.quchi)
   },

@@ -1,7 +1,5 @@
 /* pages/cal/cal.wxss */
-page{
-  height:2500rpx;
-}
+
 .good-date {
   border-radius: 100%;
   border:5rpx solid #5cc6f7;

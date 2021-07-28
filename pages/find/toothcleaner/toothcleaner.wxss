@@ -50,3 +50,51 @@ page {
   width:30%;
   margin: 1.66%;
 }
+.user {
+  height: 220rpx;
+}
+.white {
+  background-color: white;
+  position: relative;
+  left: 5%;
+  top: 15%;
+  height: 75%;
+  width: 90%;
+  border-radius: 30rpx;
+}
+.userImg{
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 60rpx;
+  position: relative;
+  top:-30rpx;
+  left: 30rpx;
+}
+.userName{
+  position: absolute;
+  top: 15rpx;
+  left: 180rpx;
+  font-size: 35rpx;
+}
+.tip1{
+  position: absolute;
+  top:100rpx;
+  left: 30rpx;
+  font-size: 30rpx;
+  color: rgb(86,93,110);
+}
+.tip2{
+  position: absolute;
+  top:100rpx;
+  left: 210rpx;
+  font-size: 30rpx;
+  color: rgb(86,93,110);
+}
+.divLine2{
+  position: absolute;
+  top:100rpx;
+  left: 170rpx;
+  width: 5rpx;
+  height: 50rpx;
+  background-color: rgb(206,206,214);
+}

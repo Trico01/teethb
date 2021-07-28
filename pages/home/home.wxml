@@ -49,12 +49,12 @@
       </image>
     </view>
     <view class="button3">
-      <image src="https://i.loli.net/2021/07/21/OqLBjaH79mMbRkX.png" class="play" bindtap="play"
+      <image src="https://z3.ax1x.com/2021/07/28/W7GBNQ.png" class="stop" bindtap="stop"></image>
+      <image src="https://z3.ax1x.com/2021/07/28/W7Gy3n.png" class="play" bindtap="play"
         wx:if="{{start_flag==0}}"></image>
-      <image src="https://z3.ax1x.com/2021/07/26/WRKB0U.png" class="pause" bindtap="pause" wx:if="{{start_flag==1}}">
+      <image src="https://z3.ax1x.com/2021/07/28/W7Gs9s.png" class="pause" bindtap="pause" wx:if="{{start_flag==1}}">
       </image>
-      <image src="https://z3.ax1x.com/2021/07/26/WRugL8.png" class="stop" bindtap="stop"></image>
-      <image src="https://i.loli.net/2021/07/21/b9dDMAe58EPhJp1.png" class="reset" bindtap="reset"></image>
+      <image src="https://z3.ax1x.com/2021/07/28/W7GDhj.png" class="reset" bindtap="reset"></image>
     </view>
   </view>
 
@@ -66,7 +66,7 @@
   
   </view> -->
 
-  <view class="choose">
+  <!-- <view class="choose">
     <view class="left" bindtap="change_L">
       <view class="lwai">
         <view class="lnei">
@@ -88,7 +88,7 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
   <van-count-down :time="time" />
 
   <popup_food id='popup_food' bind:error="_error" bind:success="_success">

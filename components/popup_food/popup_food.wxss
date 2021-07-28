@@ -10,7 +10,7 @@
 .popup-container {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 57%;
   width: 100%;
   border: 2rpx solid #ccc;
   border-radius: 10rpx;
@@ -23,6 +23,7 @@
 .title{
   display: flex;
   padding-bottom: 30rpx;
+  margin-top: 10rpx;
 }
 
 .title
@@ -39,6 +40,7 @@
   font-size: 40rpx;
   color: gray;
   font-weight: bold;
+  margin-left: 30rpx;
 }
 
 .title
@@ -47,6 +49,7 @@
   height: 60rpx;
   padding-top: 15rpx;
   padding-right: 10rpx;
+  margin-right: 20rpx;
 }
 
 .imagelist{
@@ -57,7 +60,7 @@
   background-color: #F0F3FC;
   padding-top: 20rpx;
   padding-bottom: 20rpx;
-  padding-left: 0rpx;
+  padding-left: 15rpx;
 }
 .im{
   margin:auto;
@@ -90,29 +93,26 @@
 .button_2{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-bottom: 50rpx;
+
 }
 
 
 .reset{
   width: 200rpx !important;
-  height: 70rpx;
-  color: whitesmoke;
-  font-size: 40rpx;
-  background: grey;
-  margin-right: 20rpx !important;
-  padding-bottom: 70rpx !important;
+  height: 80rpx !important;
+  font-size: large !important;
+  margin-right: 10rpx !important;
+
 }
 
 
 .confirm{
   width: 200rpx !important;
-  height: 70rpx;
-  color: whitesmoke;
-  font-size: 40rpx;
-  background: grey;
-  margin-left: 20rpx !important;
-  padding-bottom: 70rpx !important;
+  height: 80rpx !important;
+  font-size: large !important;
+  margin-left: 10rpx !important;
 
 }
 

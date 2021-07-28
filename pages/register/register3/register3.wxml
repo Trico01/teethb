@@ -18,6 +18,5 @@
     <image class="arrow" src="https://z3.ax1x.com/2021/07/21/WwB311.png"></image>
   </view> -->
   <button bindtap="getUserProfile" class="bttn"> 授权登录 </button>
-  <view class="enter" bindtap="bindtapEnter">不登录，直接进入小程序-></view>
 </view>
 

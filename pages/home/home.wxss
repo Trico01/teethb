@@ -1,5 +1,7 @@
 /* pages/home/home.wxss */
-
+page{
+  background-color: #e2e9ff;
+}
 .home{
   /* background: linear-gradient(
     to bottom,
@@ -15,6 +17,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top:60rpx;
+  margin-bottom: 30rpx;
 }
 
 @font-face {
@@ -54,12 +58,12 @@
 .home
 .brushteeth
 .title {
-  color: #1296db;
+  color: #559EEA;
   font-size: 60rpx;
   padding-left: 40rpx;
   margin-top: 32rpx;
   font-family: "brushteeth_title";
-  background-color: whitesmoke;
+  background-color: white;
   width: 460rpx;
   height: 70rpx;
   border-radius: 30rpx;
@@ -201,11 +205,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: whitesmoke;
-  margin-top: -60rpx;
-  padding-top: 10rpx;
-  padding-bottom: 0rpx;
-  margin-left: 130rpx;
+  align-items: center;
+  background-color: white;
+  margin-top: 30rpx;
+  padding: 1rpx 20rpx 0 20rpx;
+  margin-left: 108rpx;
   height: 140rpx;
   width: 500rpx;
   border-radius: 50rpx;
@@ -213,37 +217,29 @@
 
 .brushteeth
 .play{
-  width: 125rpx;
-  height: 125rpx;
-  padding-left: 10rpx;
+  width: 140rpx;
+  height: 140rpx;
 }
 
 .brushteeth
 .pause{
-  width: 110rpx;
-  height: 110rpx;
-  margin-top: 0rpx;
-  margin-left: 10rpx;
-  margin-top: 10rpx;
+  width: 120rpx;
+  height: 120rpx;
+  padding-left: 10rpx;
   padding-right: 10rpx;
-  padding-left: 5rpx;
+
 }
 
 .brushteeth
 .stop{
-  width: 170rpx;
-  height: 170rpx;
-  padding-left: 0rpx;
-  margin-top: -22rpx;
+  width: 140rpx;
+  height: 140rpx;
 }
 
 .brushteeth
 .reset{
   width: 110rpx;
   height: 110rpx;
-  padding-left: 20rpx;
-  margin-top: 5rpx;
-  padding-right: 10rpx;
 }
 
 

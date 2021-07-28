@@ -1,4 +1,6 @@
 <!--pages/cal/cal.wxml-->
+
+
 <view style="display:flex; flex-direction:column;">
   <calendar id="calendar" config="{{calendarConfig}}" bind:afterCalendarRender="afterCalendarRender"
     bind:afterTapDate="afterTapDate" bind:whenChangeMonth="whenChangeMonth" />
@@ -11,37 +13,34 @@
     <van-tab title="年"></van-tab>
   </van-tabs>
 
-  <view wx:if="{{tab1==0}}">
-    <view class="contain">
-      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec1 }}"></ec-canvas>
-    </view>
+
+  <view class="contain" style="display:{{tab1==0?'':'none'}}">
+      <ec-canvas id="mychart-dom-bar1" canvas-id="mychart-bar" ec="{{ ec1 }}"></ec-canvas>
   </view>
-  <view wx:elif="{{tab1==1}}">
-    <view class="contain">
-      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>
-    </view>
+
+
+  <view class="contain" style="display:{{tab1==1?'':'none'}}">
+    <ec-canvas id="mychart-dom-bar2" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>
   </view>
-  <view wx:elif="{{tab1==2}}">
-    <view class="contain">
-      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec3 }}"></ec-canvas>
-    </view>
+
+
+  <view class="contain" style="display:{{tab1==2?'':'none'}}">
+    <ec-canvas id="mychart-dom-bar3" canvas-id="mychart-bar" ec="{{ ec3 }}"></ec-canvas>
+  </view>
+
+
+  <div class="divider">牙龈出血</div>
+
+  <van-tabs type="card" color="#5cc6f7" bindchange="bindchangeTab2">
+    <van-tab title="周"></van-tab>
+    <van-tab title="月"></van-tab>
+  </van-tabs>
+
+  <view class="contain" style="display:{{tab2==0?'':'none'}}">
+    <ec-canvas id="mychart-dom-bar4" canvas-id="mychart-bar" ec="{{ ec4 }}"></ec-canvas>
+  </view>
+  <view class="contain" style="display:{{tab2==1?'':'none'}}">
+    <ec-canvas id="mychart-dom-bar5" canvas-id="mychart-bar" ec="{{ ec5 }}"></ec-canvas>
   </view>
 </view>
-
-<div class="divider">牙龈出血</div>
-
-<van-tabs type="card" color="#5cc6f7" bindchange="bindchangeTab2">
-  <van-tab title="周"></van-tab>
-  <van-tab title="月"></van-tab>
-</van-tabs>
-
-<view wx:if="{{tab2==0}}">
-  <view class="contain">
-    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec4 }}"></ec-canvas>
-  </view>
-</view>
-<view wx:elif="{{tab2==1}}">
-  <view class="contain">
-    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec5 }}"></ec-canvas>
-  </view>
-</view>
+<view style="height:150rpx"></view>
