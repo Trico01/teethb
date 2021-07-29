@@ -23,45 +23,41 @@
   <swiper class="newmedal" style="height:500rpx" next-margin="400rpx" previous-margin="20rpx">
     <swiper-item wx:if="{{jiesuo1==1}}">
       <view class="gap"></view>
-      <image mode="heightFix"  class="elementImg1"  src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
+      <image mode="heightFix"  class="elementImg1"  src="http://oss.raynor.top/teethb/medal11.png"></image>
       <view class="elementNum1">{{snum1}}</view>
       <view class="jiesuo">新解锁</view>
     </swiper-item>
     <swiper-item wx:if="{{jiesuo2==1}}">
       <view class="gap"></view>
-      <image mode="heightFix" class="elementImg2" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
+      <image mode="heightFix" class="elementImg2" src="http://oss.raynor.top/teethb/medal21.png"></image>
       <view class="elementNum2">{{snum2}}</view>
       <view class="jiesuo">新解锁</view>
     </swiper-item>
     <swiper-item wx:if="{{jiesuo3==1}}">
       <view class="gap"></view>
-      <image mode="heightFix" class="elementImg3" src="https://z3.ax1x.com/2021/07/22/W0PfII.png"></image>
+      <image mode="heightFix" class="elementImg3" src="http://oss.raynor.top/teethb/medal31.png"></image>
       <view class="elementNum3">{{snum3}}</view>
       <view class="jiesuo">新解锁</view>
     </swiper-item>
     <swiper-item wx:if="{{jiesuo1 == 0}}">
       <view class="gap"></view>
-      <image mode="heightFix"  class="elementImg1"  src="https://z3.ax1x.com/2021/07/22/W0P4it.png"></image>
+      <image mode="heightFix"  class="elementImg1"  src="http://oss.raynor.top/teethb/medal10.png"></image>
       <view class="elementNum1">{{snum1}}</view>
       <view class="weijiesuo">即将解锁</view>
     </swiper-item>
     <swiper-item wx:if="{{jiesuo2==0}}">
       <view class="gap"></view>
-      <image mode="heightFix" class="elementImg2" src="https://z3.ax1x.com/2021/07/22/W0PsxO.png"></image>
+      <image mode="heightFix" class="elementImg2" src="http://oss.raynor.top/teethb/medal20.png"></image>
       <view class="elementNum2">{{snum2}}</view>
       <view class="weijiesuo">即将解锁</view>
     </swiper-item>
     <swiper-item wx:if="{{jiesuo3==0}}">
       <view class="gap"></view>
-      <image mode="heightFix" class="elementImg3" src="https://z3.ax1x.com/2021/07/22/W0PWdA.png"></image>
+      <image mode="heightFix" class="elementImg3" src="http://oss.raynor.top/teethb/medal30.png"></image>
       <view class="elementNum3">{{snum3}}</view>
       <view class="weijiesuo">即将解锁</view>
     </swiper-item>
   </swiper>
-  <!-- <view class="imglist">
-    <image class="elementImg1" src="https://z3.ax1x.com/2021/07/22/W0P5JP.png"></image>
-    <image class="elementImg2" src="https://z3.ax1x.com/2021/07/22/W0PgqH.png"></image>
-  </view> -->
 </view>
 
 <view wx:if="{{useGum}}">

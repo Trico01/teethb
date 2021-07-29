@@ -17,15 +17,15 @@ Page({
    */
   data: {
     yagaoList:[
-      { url: "https://z3.ax1x.com/2021/07/21/WwV3hn.png", name: '美白',id:"0"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVYcV.png", name: '清新',id:"1"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVGpq.png", name: '防蛀',id:"2"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVtXT.png", name: '固齿',id:"3"},
-      { url: "https://z3.ax1x.com/2021/07/25/W2PJ4U.png", name: '抗敏感',id:"4"},
-      { url: "https://z3.ax1x.com/2021/07/25/W2PN34.png", name: '护龈' ,id:"5"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVaBF.png", name: '竹盐',id:"6"},
-      { url: "https://z3.ax1x.com/2021/07/21/WwVd74.png", name: '药用',id:"7"},
-      { url: "https://z3.ax1x.com/2021/07/25/W2PtCF.png", name: '多效',id:"8"},
+      { url: "http://oss.raynor.top/teethb/p2.png", name: '美白',id:"0"},
+      { url: "http://oss.raynor.top/teethb/p3.png", name: '清新',id:"1"},
+      { url: "http://oss.raynor.top/teethb/p4.png", name: '防蛀',id:"2"},
+      { url: "http://oss.raynor.top/teethb/p5.png", name: '固齿',id:"3"},
+      { url: "http://oss.raynor.top/teethb/p6.png", name: '抗敏感',id:"4"},
+      { url: "http://oss.raynor.top/teethb/p7.png", name: '护龈' ,id:"5"},
+      { url: "http://oss.raynor.top/teethb/p3.png", name: '竹盐',id:"6"},
+      { url: "http://oss.raynor.top/teethb/p4.png", name: '药用',id:"7"},
+      { url: "http://oss.raynor.top/teethb/p8.png", name: '多效',id:"8"},
     ],
     selected:0
   },

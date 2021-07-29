@@ -1,40 +1,47 @@
 {
   "pages": [
-
     "pages/register/register",
     "pages/register/register1/register1",
     "pages/register/register2/register2",
     "pages/register/register3/register3",
     "pages/home/home",
     "pages/home/result/index",
-
-
-
-
     "pages/cal/cal",
-
-    "pages/more/more",
-
-
-
-    "pages/more/quchi/index",
-
-    "pages/more/time/index",
-    "pages/more/brush/index",
-    "pages/more/brush/brushtype/index",
-    "pages/more/brush/usetime/index",
-    
     "pages/find/find",
-    "pages/more/zhengji/index",
-    "pages/more/remind/index",
-    "pages/more/paste/index",
     "pages/find/achievement/achievement",
     "pages/find/toothcleaner/toothcleaner",
     "pages/find/tips/tips",
     "pages/find/toothcleaner/yashua/yashua",
     "pages/find/toothcleaner/yagao/yagao",
     "pages/find/toothcleaner/beizi/beizi",
-    "pages/find/tips/tip/tip"
+    "pages/find/tips/tip/tip",
+    "pages/more/more",
+    "pages/more/quchi/index",
+    "pages/more/time/index",
+    "pages/more/brush/index",
+    "pages/more/brush/brushtype/index",
+    "pages/more/brush/usetime/index",
+    "pages/more/zhengji/index",
+    "pages/more/remind/index",
+    "pages/more/paste/index",
+    "pages/children/main1/main1",
+    "pages/children/main2/main2",
+    "pages/children/map/index",
+    "pages/children/level1/bonus1/bonus",
+    "pages/children/level1/guides1/guides",
+    "pages/children/level1/test1/test1",
+    "pages/children/level2/bonus2/bonus2",
+    "pages/children/level2/guides2/guides",
+    "pages/children/level2/test2/test2",
+    "pages/children/level3/bonus3/bonus3",
+    "pages/children/level3/guides3/guides",
+    "pages/children/level3/test3/test3",
+    "pages/children/level4/bonus4/bonus4",
+    "pages/children/level4/guides4/guides",
+    "pages/children/level4/test4/test4",
+    "pages/children/level5/bonus5/bonus5",
+    "pages/children/level5/guides5/guides",
+    "pages/children/level5/test5/test5"
   ],
   "window": {
     "backgroundTextStyle": "light",

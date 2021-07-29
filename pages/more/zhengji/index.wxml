@@ -1,19 +1,19 @@
 <!--pages/more_paste/index.wxml-->
 <view class="intro">
-  <image src="https://z3.ax1x.com/2021/07/21/WwEtdH.png" class="dent"></image>
+  <image src="http://oss.raynor.top/teethb/zj1.png" class="dent"></image>
   <view class="msg">选择您正在使用的正畸牙套类型</view>
 </view>
 
 <view class="imagelist">
   <view style="display:flex; flex-direction:row;">
     <view style="display:flex; flex-direction:column; justify-align:center">
-      <image class="{{selected===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEdJI.png"
+      <image class="{{selected===1?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/zj2.png"
         bindtap="bindtapYatao" data-id="{{1}}"></image>
       <view class="imagename">唇侧金属托槽</view>
     </view>
 
     <view style="display:flex; flex-direction:column; justify-align:center">
-      <image class="{{selected===2?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEaFA.png"
+      <image class="{{selected===2?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/zj3.png"
         bindtap="bindtapYatao" data-id="{{2}}"></image>
       <view class="imagename">唇侧陶瓷托槽</view>
     </view>
@@ -22,13 +22,13 @@
 
   <view style="display:flex; flex-direction:row;">
     <view style="display:flex; flex-direction:column; justify-align:center">
-      <image class="{{selected===3?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwEwWt.png"
+      <image class="{{selected===3?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/zj4.png"
         bindtap="bindtapYatao" data-id="{{3}}"></image>
       <view class="imagename">舌侧托槽</view>
     </view>
 
     <view style="display:flex; flex-direction:column; justify-align:center">
-      <image class="{{selected===4?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwENod.png"
+      <image class="{{selected===4?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/zj5.png"
         bindtap="bindtapYatao" data-id="{{4}}"></image>
       <view class="imagename">隐形矫正牙套</view>
     </view>

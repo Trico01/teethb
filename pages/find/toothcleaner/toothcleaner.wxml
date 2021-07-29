@@ -18,7 +18,7 @@
     <view class="tip2">消息提醒 99+</view>
   </view>
 </view>
-<image class="cleaner" mode="widthFix" src="https://z3.ax1x.com/2021/07/28/W7rSje.png"></image>
+<image class="cleaner" mode="widthFix" src="http://oss.raynor.top/teethb/column1.png"></image>
 <swiper  style="height:500rpx" next-margin="70rpx" previous-margin="20rpx">
   <swiper-item>
     <image class="tuijian" src="https://z3.ax1x.com/2021/07/22/W0ajKK.png"></image>
@@ -30,7 +30,7 @@
     <image class="tuijian" src="https://z3.ax1x.com/2021/07/22/W0a759.png"></image>
   </swiper-item>
 </swiper>
-<image class="cleaner" mode="widthFix" src="https://z3.ax1x.com/2021/07/22/W0abCR.png"></image>
+<image class="cleaner" mode="widthFix" src="http://oss.raynor.top/teethb/column2.png"></image>
 <view class="elements">
   <image class="element" mode="widthFix" bindtap="toYashua" src="https://z3.ax1x.com/2021/07/22/W0iGFI.png"></image>
   <image class="element" mode="widthFix" bindtap="toYagao" src="https://z3.ax1x.com/2021/07/22/W0i1wd.png"></image>

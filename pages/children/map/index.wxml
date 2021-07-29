@@ -1,0 +1,18 @@
+<!--index.wxml-->
+
+
+<image class="back" src="http://oss.raynor.top/teethb/map_bg.png"></image>
+<image class="cross" src="http://oss.raynor.top/teethb/cross.png" bindtap="bindtapExit"></image>
+
+<image class="ball1" src="http://oss.raynor.top/teethb/map_1.png" bindtap="bindtapComplete1"></image>
+<image class="ball2" src="http://oss.raynor.top/teethb/map_2.png" bindtap="bindtapComplete2"></image>
+<image class="ball3" src="http://oss.raynor.top/teethb/map_3.png" bindtap="bindtapComplete3"></image>
+<image class="ball4" src="http://oss.raynor.top/teethb/map_4.png" bindtap="bindtapComplete4"></image>
+<image class="ball5" src="http://oss.raynor.top/teethb/map_5.png" bindtap="bindtapComplete5"></image>
+<view class="bttnlist">
+ <button class="but1">1</button>
+ <button class="but2">2</button>
+ <button class="but3">3</button>
+ <button class="but4">4</button>
+ <button class="but5">5</button>
+</view>

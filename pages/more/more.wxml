@@ -34,11 +34,8 @@
   <van-cell title="自定义时间" size="large" is-link url="./time/index">
     <view slot="icon" class="iconfont icon-a-shijian1" style="margin:0 20rpx 0 0; color:#549EE7"></view>
   </van-cell>
-  <van-cell title="儿童模式" size="large">
+  <van-cell title="儿童模式" size="large" is-link url="../children/main1/main1">
     <view slot="icon" class="iconfont icon-ertong" style="margin:0 20rpx 0 0; color:#549EE7"></view>
-    <view slot="extra">
-      <switch checked="{{prsnl_1}}" color="#1989FA" bindchange="bindPrsnlChange1" />
-    </view>
 
   </van-cell>
   <van-cell title="牙龈出血询问" size="large">

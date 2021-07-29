@@ -2,10 +2,10 @@
 <view class="contain">
   <view class="title">你即将迈出第一步</view>
   <view class="tip">每日正确刷牙是一种健康的生活习惯</view>
-  <image class="image" src="https://z3.ax1x.com/2021/07/21/WwYLrQ.png"></image>
-  <view bindtap="toNext" class="next">
-    <view class="jixu">继续</view>
-    <image class="arrow" src="https://z3.ax1x.com/2021/07/21/WwB311.png"></image>
+  <image class="image" src="http://oss.raynor.top/teethb/register_0.png"></image>
+  <view  class="next" bindtap="onClickNext">
+    <view  class="jixu">继续</view>
+    <image class="arrow"  src="http://oss.raynor.top/teethb/arrow.png"></image>
   </view>
 </view>
 

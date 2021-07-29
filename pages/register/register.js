@@ -15,9 +15,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
-
+  onClickNext:function(){
+    wx.navigateTo({
+      url: '/pages/register/register1/register1',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,7 +29,7 @@ Page({
     console.log(currentUser)
     if(currentUser!=null){
       wx.switchTab({
-        url: '../home/home',
+        url: '/pages/home/home',
       })
     }
   },
@@ -78,10 +81,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  toNext(){
-    wx.redirectTo({
-      url: 'register1/register1',
-    })
-  },
+  }
+ 
 })

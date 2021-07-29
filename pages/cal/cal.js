@@ -801,9 +801,13 @@ Page({
       query.ascending('date');
 
       //await异步改同步
-      let setRecords = await query.find();
-
-      toset.push(setRecords[0].attributes.date)
+      let setRecords = await query.find().catch(e=>{
+        console.log(e);
+      });
+      console.log(setRecords);
+      if(setRecords&&setRecords.length){
+        toset.push(setRecords[0].attributes.date)
+      }
       let i = 1
       let len = setRecords.length
       for (i = 1; i < len; i++) {
@@ -878,7 +882,7 @@ Page({
         });
         if (res) {
           console.log(res);
-          chrt1AM.splice(i, 1, res.attributes.t_total / 60);
+          chrt1AM.splice(i, 1, (res.attributes.t_total / 60).toFixed(2));
           chrt4AM.splice(i, 1, -res.attributes.gumBleed)
           chrt4AM_F.splice(i, 1, res.attributes.gumBleed - 1)
         }
@@ -895,7 +899,7 @@ Page({
         });
         console.log(res2, i);
         if (res2) {
-          chrt1PM.splice(i, 1, res2.attributes.t_total / 60);
+          chrt1PM.splice(i, 1, (res2.attributes.t_total / 60).toFixed(2));
           chrt4PM.splice(i, 1, res2.attributes.gumBleed)
           chrt4PM_F.splice(i, 1, 1 - res2.attributes.gumBleed)
         }

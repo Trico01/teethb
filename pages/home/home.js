@@ -23,6 +23,7 @@ Page({
    */
   data: {
     popupFlag: 0,
+    night_popup_flag: 0, // 晚上才会弹出食物询问，默认0不弹出
     model_switch: 0,
     funcFlag: 0, //0刷牙，1牙线，2漱口
     myFuncFlag: [
@@ -35,9 +36,9 @@ Page({
     time: '', // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
     textValue: 0,
 
-    brush_state: 0, // 表示刷牙的位置状态
-    // bursh_time: [26,26,32,32,32,32], // 不同位置的刷牙时间
-    bursh_time: [5, 5, 5, 5, 5, 5], //测试用
+    brush_state: -1, // 表示刷牙的位置状态
+    bursh_time: [26, 26, 32, 32, 32, 32], // 不同位置的刷牙时间
+    // bursh_time: [5, 5, 5, 5, 5, 5], //测试用
     brush_mode: 0, // 刷牙模式，0表示成人模式，1表示儿童模式
     nusic_mode: 0, // 音乐播放模式，0表示不播放
     title_change: [1, 1, 1, 1, 1, 1], // 标题修改，1表示外侧，2表示咬合，3表示内侧，4表示远端
@@ -91,10 +92,17 @@ Page({
 
 
   play: function () {//点击play按钮
-    if (this.data.popupFlag == 0) {
+    if (this.data.brush_state == -1) {
       this.setData({
-        popupFlag: 1
+        brush_state: 0
       })
+    }
+    if (this.data.popupFlag == 0 && this.data.night_popup_flag == 1) {
+      this.setData({
+        popupFlag: 1,
+        time: '0:' + String(this.data.bursh_time[this.data.brush_state])
+      })
+      //获得popup组件
       this.popup_food = this.selectComponent("#popup_food");
       this.popup_brush = this.selectComponent("#popup_brush");
       this.popup_food.showPopup();
@@ -234,12 +242,13 @@ Page({
     })
     this.getTabBar().init();
     const currentUser = AV.User.current();
-    console.log(currentUser.attributes.username)
 
     // 获取用户
-    this.setData({
-      username: currentUser.attributes.username
-    })
+    if (currentUser !== null) {
+      this.setData({
+        username: currentUser.attributes.username
+      })
+    }
 
     // 获取现在时间
     // 调用函数时，传入new Date()参数，返回值是日期和时间
@@ -251,7 +260,7 @@ Page({
     var date = current_time.substr(0, 10)
     var tt = current_time.substr(11)
     tt = tt.substr(0, tt.length - 3)
-    var day_or_night = current_time.substr(current_time.length - 2, current_time.length) // false表示早上，true表示晚上
+    var day_or_night = current_time.substr(current_time.length - 2, current_time.length) // AM表示早上，PM表示晚上
 
     // 计算刷牙总时间(秒)
     var t_total = 0
@@ -448,19 +457,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      timestamp: this.data.bursh_time[this.data.brush_state], // 倒计时的总共的秒数
-      start_flag: false,
-      time: '0:' + String(this.data.bursh_time[this.data.brush_state]) // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
-    })
-
+    // 获取上午或下午数据
+    var current_time = String(util.formatTime(new Date()));
+    var day_or_night = current_time.substr(current_time.length - 2, current_time.length) // AM表示早上 PM表示晚上
+    if (day_or_night == 'PM') {
+      this.setData({
+        night_popup_flag: 1
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    //获得popup组件
 
   },
 
@@ -468,17 +478,19 @@ Page({
   change_time() {
     this.getTabBar().init();
     const currentUser = AV.User.current();
-    this.setData({ // 读取云端数据
-      hand: currentUser.attributes.hand,
-      zjType: currentUser.attributes.zhengji,
-      yagao: currentUser.attributes.pasteType,
-      prsnl_1: currentUser.attributes.prsnl_1,
-      prsnl_2: currentUser.attributes.prsnl_2,
-      prsnl_3: currentUser.attributes.prsnl_3,
-      prsnl_4: currentUser.attributes.prsnl_4,
-      multiIndex: currentUser.attributes.multiIndex,
-      quchi: currentUser.attributes.quchi,
-    })
+    if (currentUser !== null) {
+      this.setData({ // 读取云端数据
+        hand: currentUser.attributes.hand,
+        zjType: currentUser.attributes.zhengji,
+        yagao: currentUser.attributes.pasteType,
+        prsnl_1: currentUser.attributes.prsnl_1,
+        prsnl_2: currentUser.attributes.prsnl_2,
+        prsnl_3: currentUser.attributes.prsnl_3,
+        prsnl_4: currentUser.attributes.prsnl_4,
+        multiIndex: currentUser.attributes.multiIndex,
+        quchi: currentUser.attributes.quchi,
+      })
+    }
 
     // 先处理个性化需求
     this.setData({
@@ -492,7 +504,10 @@ Page({
       })
       return
     }
-
+        // 没有个性化则先初始化数据
+    this.setData({
+      bursh_time: [26, 26, 32, 32, 32, 32]
+    })
     // 先判断是否有龋齿，若有则不判断正畸
     if (this.data.zjType != 0) {
       if (this.data.zjType == 1 || this.data.zjType == 2) { // 唇侧牙套，外侧、咬合和远端各加2秒
@@ -514,7 +529,7 @@ Page({
     }
     else {
       // 龋齿处理，内外咬合各加2秒
-      if (this.data.quchi != [0, 0, 0, 0, 0, 0]) {
+      if (this.data.quchi.indexOf(1) != -1) {
         for (let index = 0; index < this.data.quchi.length; index++) {
           const element = this.data.quchi[index];
           if (element == 1) {
@@ -527,6 +542,24 @@ Page({
         console.log(this.data.bursh_time)
       }
     }
+
+    var t_t = 0
+    for (let index = 0; index < this.data.bursh_time.length; index++) {
+      const t = this.data.bursh_time[index];
+      t_t = t_t + t
+    }
+    var min, sec
+    min = String(Math.floor(t_t / 60))
+    sec = t_t % 60
+    if (sec < 10) {
+      sec = '0' + String(sec)
+    }
+    this.setData({
+      timestamp: this.data.bursh_time[0], // 倒计时的总共的秒数
+      start_flag: false,
+      // time: '0:' + String(this.data.bursh_time[this.data.brush_state]) // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
+      time: min + ':' + sec
+    })
   },
 
   //取消事件

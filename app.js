@@ -1,18 +1,23 @@
-// app.js
+// // app.js
+// const AV = require('/libs/av-core-min.js');
+// const adapters = require('/libs/leancloud-adapters-weapp.js');
 
+// AV.setAdapters(adapters);
+// // 改为自己的，在leancloud控制台-设置-应用凭证中
+// AV.init({
+//   appId: "yelxhl0OPMa8AN0BOU5qndGU-gzGzoHsz",
+//   appKey: "FEy1FLbtbj4nP9rleSPtHq7j",
+//   serverURL: "https://yelxhl0o.lc-cn-n1-shared.com"
+// });
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+    // const currentUser = AV.User.current();
+    // console.log(currentUser)
+    // if(currentUser==null){
+    //   wx.reLaunch({
+    //     url: '/pages/register/register',
+    //   })
+    // }
   },
   globalData: {
   },

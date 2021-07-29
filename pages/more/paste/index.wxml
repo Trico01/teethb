@@ -1,6 +1,6 @@
 <!--pages/more_paste/index.wxml-->
 <view class="intro">
-  <image src="https://z3.ax1x.com/2021/07/21/WwVBN9.png" class="dent"></image>
+  <image src="http://oss.raynor.top/teethb/p1.png" class="dent"></image>
 <view class="msg">选择您所使用的牙膏类型</view>
 </view>
 

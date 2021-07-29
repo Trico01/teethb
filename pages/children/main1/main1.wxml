@@ -1,0 +1,5 @@
+<!--index.wxml-->
+
+<image class="back" src="http://oss.raynor.top/teethb/1.png" ></image>
+<image class="cross" src="http://oss.raynor.top/teethb/cross.png" bindtap="bindtapExit"></image>
+<button class="bttn" bindtap="bindtapNext">进入儿童模式</button>

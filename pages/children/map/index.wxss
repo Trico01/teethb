@@ -1,0 +1,145 @@
+/**index.wxss**/
+page{
+  height:100%;
+}
+
+.ball1 { 
+  position: absolute;
+  height: 400rpx;
+  width: 400rpx;
+  margin-top: 950rpx;
+  margin-left:260rpx;
+  z-index:1
+}
+
+.ball2 { 
+  position: absolute;
+  height: 295rpx;
+  width: 295rpx;
+  margin-top: 680rpx;
+  margin-left:420rpx;
+  z-index:2
+}
+.ball3 { 
+  position: absolute;
+  height: 250rpx;
+  width: 260rpx;
+  margin-top: 400rpx;
+  margin-left:350rpx;
+  z-index:3
+}
+
+.ball4 { 
+  position: absolute;
+  height: 196rpx;
+  width: 260rpx;
+  margin-top: 210rpx;
+  margin-left:220rpx;
+  z-index:3
+}
+
+.ball5 { 
+  position: absolute;
+  height: 200rpx;
+  width: 240rpx;
+  margin-top: 20rpx;
+  margin-left:220rpx;
+  z-index:3
+}
+
+
+.back {
+  position: absolute;
+  width:750rpx;
+  height: 100%;
+  z-index: 0;
+}
+
+.cross{
+  position: absolute;
+  z-index: 1;
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 20rpx;
+  margin-left: 660rpx;
+}
+
+.ball5 { 
+  position: absolute;
+  height: 200rpx;
+  width: 240rpx;
+  margin-top: 20rpx;
+  margin-left:220rpx;
+  z-index:3
+}
+
+.bttnlist{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+}
+
+.but1{
+  width: 110rpx !important;
+  margin-left: 150rpx !important;
+  margin-right: 100rpx !important;
+  margin-top:1100rpx !important;
+  font-size: large;
+  color: #2b68b8;
+  border-radius: 70rpx;
+  text-align:center;
+}
+
+
+.but2{
+  width: 110rpx !important;
+  margin-left: 310rpx !important;
+  margin-right: 100rpx !important;
+  margin-top:-400rpx !important;
+  font-size: large;
+  color: #2b68b8;
+  border-radius: 70rpx;
+  text-align:center;
+
+}
+
+.but3{
+  width: 110rpx !important;
+  margin-left: 220rpx !important;
+  margin-right: 100rpx !important;
+  margin-top:-360rpx !important;
+  font-size: large;
+  background-color: #e6e5eb;
+  color: #2b68b8;
+  border-radius: 70rpx;
+  text-align:center;
+
+}
+
+.but4{
+  width: 110rpx !important;
+  margin-left: 130rpx !important;
+  margin-right: 100rpx !important;
+  margin-top:-300rpx !important;
+  font-size: large;
+  background-color: #cccbd3;
+  color: #2b68b8;
+  border-radius: 70rpx;
+  text-align:center;
+
+}
+
+.but5{
+  width: 120rpx !important;
+  margin-left: 70rpx !important;
+  margin-right: 100rpx !important;
+  margin-top:-300rpx !important;
+  font-size: large;
+  background-color: #bab8c5;
+  color: #2b68b8;
+  border-radius: 70rpx;
+  text-align:center;
+
+}

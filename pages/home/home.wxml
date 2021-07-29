@@ -12,49 +12,51 @@
         </view>
       </view> -->
       <text class="title">
-        <text>{{brush_state%2 == 0? '上':'下'}}颌牙齿</text>
-        <text wx:if="{{title_change[brush_state]==1}}">外侧面</text>
-        <text wx:if="{{title_change[brush_state]==2}}">咬合面</text>
-        <text wx:if="{{title_change[brush_state]==3}}">内侧面</text>
-        <text wx:if="{{title_change[brush_state]==4}}">远端面</text>
+        <text style="padding-left: 50rpx;" wx:if="{{brush_state==-1}}">开始刷牙吧！</text>
+        <text wx:if="{{brush_state>-1}}">{{brush_state%2 == 0? '上':'下'}}颌牙齿</text>
+        <text wx:if="{{title_change[brush_state]==1 && brush_state>-1}}">外侧面</text>
+        <text wx:if="{{title_change[brush_state]==2 && brush_state>-1}}">咬合面</text>
+        <text wx:if="{{title_change[brush_state]==3 && brush_state>-1}}">内侧面</text>
+        <text wx:if="{{title_change[brush_state]==4 && brush_state>-1}}">远端面</text>
       </text>
     </view>
-    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waq45d.png" wx:if="{{brush_state == 0}}"></image>
-    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waqo8I.png" wx:if="{{brush_state == 1}}"></image>
-    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqIPA.png" wx:if="{{brush_state == 2}}"></image>
-    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqT2t.png" wx:if="{{brush_state == 3}}"></image>
-    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqhUH.png" wx:if="{{brush_state == 4}}"></image>
-    <image class="teeth" src="https://z3.ax1x.com/2021/07/21/WaqbKf.png" wx:if="{{brush_state == 5}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth.png" wx:if="{{brush_state == -1}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth_0.png" wx:if="{{brush_state == 0}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth_1.png" wx:if="{{brush_state == 1}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth_2.png" wx:if="{{brush_state == 2}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth_3.png" wx:if="{{brush_state == 3}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth_4.png" wx:if="{{brush_state == 4}}"></image>
+    <image class="teeth" src="http://oss.raynor.top/teethb/teeth_5.png" wx:if="{{brush_state == 5}}"></image>
     <view class='time'>
       <text>{{time}}</text>
     </view>
     <view class="brush_gif">
-      <image src="https://i.loli.net/2021/07/21/r84M56qpHhdXIES.gif" class="gif1" wx:if="{{brush_state == 0}}">
+      <image src="http://oss.raynor.top/teethb/1.gif" class="gif1" wx:if="{{brush_state == 0}}">
         <text class="brush_method1">{{method_array[brush_method]}}</text>
       </image>
-      <image src="https://i.loli.net/2021/07/21/yeGaSHPuL9oRI3k.gif" class="gif2" wx:if="{{brush_state == 1}}">
+      <image src="http://oss.raynor.top/teethb/2.gif" class="gif2" wx:if="{{brush_state == 1}}">
         <text class="brush_method2">{{method_array[brush_method]}}</text>
       </image>
-      <image src="https://i.loli.net/2021/07/21/kywIAf83B5ig2CY.gif" class="gif3" wx:if="{{brush_state == 2}}">
+      <image src="http://oss.raynor.top/teethb/3.gif" class="gif3" wx:if="{{brush_state == 2}}">
         <text class="brush_method3">{{method_array[brush_method]}}</text>
       </image>
-      <image src="https://i.loli.net/2021/07/21/RKW6VSeZD7fsBnh.gif" class="gif4" wx:if="{{brush_state == 3}}">
+      <image src="http://oss.raynor.top/teethb/4.gif" class="gif4" wx:if="{{brush_state == 3}}">
         <text class="brush_method4">{{method_array[brush_method]}}</text>
       </image>
-      <image src="https://i.loli.net/2021/07/21/utlnVvi8GQ4CrSI.gif" class="gif5" wx:if="{{brush_state == 4}}">
+      <image src="http://oss.raynor.top/teethb/5.gif" class="gif5" wx:if="{{brush_state == 4}}">
         <text class="brush_method5">{{method_array[brush_method]}}</text>
       </image>
-      <image src="https://i.loli.net/2021/07/21/zIMu5nVeZCpGdJo.gif" class="gif6" wx:if="{{brush_state == 5}}">
+      <image src="http://oss.raynor.top/teethb/6.gif" class="gif6" wx:if="{{brush_state == 5}}">
         <text class="brush_method6">{{method_array[brush_method]}}</text>
       </image>
     </view>
     <view class="button3">
-      <image src="https://z3.ax1x.com/2021/07/28/W7GBNQ.png" class="stop" bindtap="stop"></image>
-      <image src="https://z3.ax1x.com/2021/07/28/W7Gy3n.png" class="play" bindtap="play"
+      <image src="http://oss.raynor.top/teethb/stop.png" class="stop" bindtap="stop"></image>
+      <image src="http://oss.raynor.top/teethb/play.png" class="play" bindtap="play"
         wx:if="{{start_flag==0}}"></image>
-      <image src="https://z3.ax1x.com/2021/07/28/W7Gs9s.png" class="pause" bindtap="pause" wx:if="{{start_flag==1}}">
+      <image src="http://oss.raynor.top/teethb/pause.png" class="pause" bindtap="pause" wx:if="{{start_flag==1}}">
       </image>
-      <image src="https://z3.ax1x.com/2021/07/28/W7GDhj.png" class="reset" bindtap="reset"></image>
+      <image src="http://oss.raynor.top/teethb/reset.png" class="reset" bindtap="reset"></image>
     </view>
   </view>
 
@@ -91,7 +93,7 @@
   </view> -->
   <van-count-down :time="time" />
 
-  <popup_food id='popup_food' bind:error="_error" bind:success="_success">
+  <popup_food id='popup_food' bind:error="_error" bind:success="_success" wx:if="{{night_popup_flag==1}}">
   </popup_food>
 
   <popup_brush id='popup_brush' bind:error="_error">

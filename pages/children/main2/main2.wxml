@@ -1,0 +1,6 @@
+<!--index.wxml-->
+
+
+<image class="back" src="http://oss.raynor.top/teethb/2.png"></image>
+<image class="cross" src="http://oss.raynor.top/teethb/cross.png" bindtap="bindtapExit"></image>
+<button class="bttn" bindtap="bindtapNext">开始星球历险</button>

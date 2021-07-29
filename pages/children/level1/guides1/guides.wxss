@@ -1,0 +1,31 @@
+/**index.wxss**/
+page{
+  height:100%;
+}
+
+
+.back {
+  position: absolute;
+  width:750rpx;
+  height: 100%;
+  z-index: 0;
+}
+
+.bttnlist{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0rpx;
+  margin-bottom: 80rpx;
+}
+.bttn{
+  width: 255rpx !important;
+  margin-left: 420rpx !important;
+  margin-right: 0rpx !important;
+  margin-top:1305rpx !important;
+  font-size: large !important;
+  height: 80rpx !important;
+  background-color: #ffffff;
+  color: #F18DAB;
+}
+

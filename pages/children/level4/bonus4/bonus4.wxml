@@ -1,0 +1,7 @@
+<!--index.wxml-->
+
+
+<image class="back" src="http://oss.raynor.top/teethb/bonus_4.png"></image>
+<view class="bttnlist">
+   <button class="bttn" bindtap="bindtapComplete">完成</button>
+</view>

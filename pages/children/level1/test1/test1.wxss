@@ -1,0 +1,70 @@
+/**index.wxss**/
+page{
+  height:100%;
+}
+
+
+.back {
+  position: absolute;
+  width:750rpx;
+  height: 100%;
+  z-index: 0;
+}
+
+.photocam {
+  position: absolute;
+  margin-top:-700rpx;
+  width:500rpx;
+  height: 500rpx;
+  z-index: 1;
+}
+
+.cam {
+  position: absolute;
+  width:300rpx;
+  height:300rpx;
+  margin-left:100rpx;
+  margin-top:100rpx;
+  z-index: 5;
+}
+
+.cam2 {
+  position: absolute;
+  width:500rpx;
+  height:500rpx;
+  margin-left:0rpx;
+  margin-top:0rpx;
+  z-index: 4;
+}
+
+.word {
+  position: absolute;
+  margin-top:700rpx;
+  z-index: 2;
+}
+
+.wordm {
+  position: absolute;
+  margin-top:300rpx;
+  color: #80b1df;
+  font-weight: 700;
+  font-size: large;
+  z-index: 2;
+}
+
+.bttnlist{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0rpx;
+  margin-bottom: 80rpx;
+}
+.bttn{
+  width: 330rpx !important;
+  margin-left: 100rpx !important;
+  margin-right: 100rpx !important;
+  margin-top:900rpx !important;
+  font-size: large !important;
+  background-color: #9684F2;
+  color: #ffffff;
+}

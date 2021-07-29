@@ -7,24 +7,24 @@
 <view class="imagelist">
   <view style="display: flex; flex-direction: row; align-items:center;">
     <view class="item">
-      <image class="{{selectedHard===0?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwepIH.png" bindtap="bindtapBrushHard" data-id="{{0}}"></image>
+      <image class="{{selectedHard===0?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/brush1.png" bindtap="bindtapBrushHard" data-id="{{0}}"></image>
       <view class="itemname">软毛</view>
     </view>
     <view class="item">
-      <image class="{{selectedHard===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WweCid.png" bindtap="bindtapBrushHard" data-id="{{1}}"></image>
+      <image class="{{selectedHard===1?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/brush2.png" bindtap="bindtapBrushHard" data-id="{{1}}"></image>
       <view class="itemname">硬毛</view>
     </view>
-    <image class="dent1" src="https://z3.ax1x.com/2021/07/21/WwePJA.png" ></image>
+    <image class="dent1" src="http://oss.raynor.top/teethb/brush3.png" ></image>
   </view>
 
   <view style="display: flex; flex-direction: row; align-items:center">
-    <image class="dent2" src="https://z3.ax1x.com/2021/07/21/WweiRI.png" ></image>
+    <image class="dent2" src="http://oss.raynor.top/teethb/brush4.png" ></image>
     <view class="item">
-      <image class="{{selectedSize===0?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WweSde.png" bindtap="bindtapBrushSize" data-id="{{0}}"></image>
+      <image class="{{selectedSize===0?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/brush5.png" bindtap="bindtapBrushSize" data-id="{{0}}"></image>
       <view class="itemname">小刷头</view>
     </view>
     <view class="item">
-      <image class="{{selectedSize===1?'im_highlight':'im'}}" src="https://z3.ax1x.com/2021/07/21/WwZzZD.png" bindtap="bindtapBrushSize" data-id="{{1}}"></image>
+      <image class="{{selectedSize===1?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/brush6.png" bindtap="bindtapBrushSize" data-id="{{1}}"></image>
       <view class="itemname">大刷头</view>
     </view>
   </view>

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+
+
+<image class="back" src="http://oss.raynor.top/teethb/guide_5.png"></image>
+<view class="bttnlist">
+   <button class="bttn" bindtap="bindtapComplete">我学会了</button>
+</view>
