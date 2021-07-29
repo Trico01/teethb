@@ -19,7 +19,8 @@ Component({
     //隐藏弹框
     hidePopup: function () {
       this.setData({
-        flag: 1
+        flag: 1,
+        brush: [0,0,0,0,0,0]
       })
     },
     //展示弹框

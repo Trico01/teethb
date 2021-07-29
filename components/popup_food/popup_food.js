@@ -44,6 +44,7 @@ Component({
     //展示弹框
     showPopup () {
       this.setData({
+        highlight:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
         flag: 0
       })
     },

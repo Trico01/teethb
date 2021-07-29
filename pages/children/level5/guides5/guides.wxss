@@ -28,3 +28,9 @@ page{
   color: #5987F5;
 }
 
+.gif{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-top: 46%;
+}

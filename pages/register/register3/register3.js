@@ -45,10 +45,11 @@ Page({
           user.set('setTimeIndex',[2,0])
           user.set('useTimeIndex',0)
           user.save() // 别忘了save
+          wx.switchTab({
+            url: '../../home/home',
+          })
         }).catch(console.error);
-        wx.switchTab({
-          url: '../../home/home',
-        })
+     
       }
     })
   },

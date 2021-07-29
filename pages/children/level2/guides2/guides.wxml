@@ -2,6 +2,7 @@
 
 
 <image class="back" src="http://oss.raynor.top/teethb/guide_2.png"></image>
+<image class="gif" src="http://oss.raynor.top/teethb/level2.gif"></image>
 <view class="bttnlist">
    <button class="bttn" bindtap="bindtapComplete">我学会了</button>
 </view>

@@ -28,3 +28,10 @@ page{
   background-color: #ffffff;
   color: #6B4CA0;
 }
+
+.gif{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin-top: 46%;
+}

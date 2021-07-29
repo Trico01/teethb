@@ -31,6 +31,7 @@ Page({
     ],
     lastTime: 0,
 
+
     start_flag: false, // 倒计时开始或暂停的flag，false为暂停
     timestamp: [], // 倒计时的总共的秒数
     time: '', // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
@@ -154,31 +155,33 @@ Page({
   },
 
   reset: function (e) {//点击reset按钮,重置并清除全局变量的计时函数
-    console.log("reset")
-    //监测是否双击
-    // 获取这次点击时间
-    var thisTime = e.timeStamp;
-    // 获取上次点击时间 默认为0
-    var lastTime = this.data.lastTime;
-    if (lastTime != 0) {
-      if (thisTime - this.data.lastTime < 500)
-        //发生了双击事件
-        this.setData({
-          brush_state: 0
-        })
+    if(this.data.playedFlag){
+      console.log("reset")
+      //监测是否双击
+      // 获取这次点击时间
+      var thisTime = e.timeStamp;
+      // 获取上次点击时间 默认为0
+      var lastTime = this.data.lastTime;
+      if (lastTime != 0) {
+        if (thisTime - this.data.lastTime < 500)
+          //发生了双击事件
+          this.setData({
+            brush_state: 0
+          })
+      }
+      // 赋值
+      this.setData({
+        lastTime: thisTime
+      })
+  
+      this.setData({
+        timestamp: this.data.bursh_time[this.data.brush_state],
+        start_flag: false,
+        time: '0:' + String(this.data.bursh_time[this.data.brush_state])
+      })
+      clearInterval(setTimer);
+      this.pause()
     }
-    // 赋值
-    this.setData({
-      lastTime: thisTime
-    })
-
-    this.setData({
-      timestamp: this.data.bursh_time[this.data.brush_state],
-      start_flag: false,
-      time: '0:' + String(this.data.bursh_time[this.data.brush_state])
-    })
-    clearInterval(setTimer);
-    this.pause()
   },
 
   time_change: function (timestamp) {//时间戳转化成‘xx:xx’的可读形式
@@ -239,6 +242,7 @@ Page({
     this.setData({
       popupFlag: 0,
       playedFlag: 0,
+      title_change: [1, 1, 1, 1, 1, 1],
     })
     this.getTabBar().init();
     const currentUser = AV.User.current();
@@ -278,7 +282,7 @@ Page({
       t_total = t_total + this.data.bursh_time[this.data.brush_state] - this.data.timestamp
     }
     this.setData({
-      success_record: [this.data.username, date, tt, t_total, day_or_night, this.data.success_flag]
+      success_record: [this.data.username, date, tt, t_total, day_or_night, this.data.success_flag],
     })
 
     const myRecord = new AV.Object('BrushRecord')
@@ -321,7 +325,7 @@ Page({
     }
     else {
       // 龋齿处理
-      if (this.data.quchi[this.data.brush_state] == 1) {
+      if (this.data.quchi[this.data.brush_state]) {
         t1 = t1 + 2
         t2 = t2 + 4
         t3 = t3 + 6
@@ -487,7 +491,7 @@ Page({
         prsnl_2: currentUser.attributes.prsnl_2,
         prsnl_3: currentUser.attributes.prsnl_3,
         prsnl_4: currentUser.attributes.prsnl_4,
-        multiIndex: currentUser.attributes.multiIndex,
+        multiIndex: currentUser.attributes.setTimeIndex,
         quchi: currentUser.attributes.quchi,
       })
     }
@@ -504,7 +508,7 @@ Page({
       })
       return
     }
-        // 没有个性化则先初始化数据
+    // 没有个性化则先初始化数据
     this.setData({
       bursh_time: [26, 26, 32, 32, 32, 32]
     })
@@ -529,10 +533,10 @@ Page({
     }
     else {
       // 龋齿处理，内外咬合各加2秒
-      if (this.data.quchi.indexOf(1) != -1) {
+      if (this.data.quchi[0]||this.data.quchi[1]||this.data.quchi[2]||this.data.quchi[3]||this.data.quchi[4]||this.data.quchi[5]) {
         for (let index = 0; index < this.data.quchi.length; index++) {
           const element = this.data.quchi[index];
-          if (element == 1) {
+          if (element) {
             this.data.bursh_time[index] = this.data.bursh_time[index] + 6
           }
         }

@@ -32,6 +32,7 @@ Page({
     const currentUser = AV.User.current();
     currentUser.set('zhengji',this.data.selected)
     currentUser.save()
+    console.log(currentUser.attributes.zhengji)
     wx.navigateBack()
   },
   bindclickCancel: function(e){
