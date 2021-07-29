@@ -110,7 +110,8 @@ Page({
     }
     else {
       this.setData({
-        playedFlag: 1
+        playedFlag: 1,
+        brush_method: 0
       })
       if (this.data.start_flag == true) return
       console.log("play")
@@ -155,7 +156,7 @@ Page({
   },
 
   reset: function (e) {//点击reset按钮,重置并清除全局变量的计时函数
-    if(this.data.playedFlag){
+    if (this.data.playedFlag) {
       console.log("reset")
       //监测是否双击
       // 获取这次点击时间
@@ -173,7 +174,7 @@ Page({
       this.setData({
         lastTime: thisTime
       })
-  
+
       this.setData({
         timestamp: this.data.bursh_time[this.data.brush_state],
         start_flag: false,
@@ -206,6 +207,9 @@ Page({
       this.success_record()
       this.pause()
       this.reset()
+      this.setData({
+        playedFlag: 0
+      })
     }
     let promise = new Promise((resolve, reject) => {//ES6的语法，用就行，不需要看懂
       setTimer = setInterval(//时间循环函数
@@ -241,7 +245,6 @@ Page({
   success_record() {
     this.setData({
       popupFlag: 0,
-      playedFlag: 0,
       title_change: [1, 1, 1, 1, 1, 1],
     })
     this.getTabBar().init();
@@ -461,14 +464,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取上午或下午数据
-    var current_time = String(util.formatTime(new Date()));
-    var day_or_night = current_time.substr(current_time.length - 2, current_time.length) // AM表示早上 PM表示晚上
-    if (day_or_night == 'PM') {
-      this.setData({
-        night_popup_flag: 1
-      })
-    }
+
   },
 
   /**
@@ -506,6 +502,24 @@ Page({
       this.setData({
         bursh_time: [aver_time, aver_time, aver_time, aver_time, aver_time, aver_time]
       })
+      var t_t = 0
+      for (let index = 0; index < this.data.bursh_time.length; index++) {
+        const t = this.data.bursh_time[index];
+        t_t = t_t + t
+      }
+      var min, sec
+      min = String(Math.floor(t_t / 60))
+      sec = t_t % 60
+      if (sec < 10) {
+        sec = '0' + String(sec)
+      }
+      this.setData({
+        timestamp: this.data.bursh_time[0], // 倒计时的总共的秒数
+        start_flag: false,
+        // time: '0:' + String(this.data.bursh_time[this.data.brush_state]) // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
+        time: min + ':' + sec
+      })
+
       return
     }
     // 没有个性化则先初始化数据
@@ -533,7 +547,7 @@ Page({
     }
     else {
       // 龋齿处理，内外咬合各加2秒
-      if (this.data.quchi[0]||this.data.quchi[1]||this.data.quchi[2]||this.data.quchi[3]||this.data.quchi[4]||this.data.quchi[5]) {
+      if (this.data.quchi[0] || this.data.quchi[1] || this.data.quchi[2] || this.data.quchi[3] || this.data.quchi[4] || this.data.quchi[5]) {
         for (let index = 0; index < this.data.quchi.length; index++) {
           const element = this.data.quchi[index];
           if (element) {
@@ -582,6 +596,14 @@ Page({
    */
   onShow: function () {
     this.getTabBar().init();
+    // 获取上午或下午数据
+    var current_time = String(util.formatTime(new Date()));
+    var day_or_night = current_time.substr(current_time.length - 2, current_time.length) // AM表示早上 PM表示晚上
+    if (day_or_night == 'PM') {
+      this.setData({
+        night_popup_flag: 1
+      })
+    }
     //修改刷牙时间
     this.change_time()
   },

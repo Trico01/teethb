@@ -62,11 +62,11 @@ Page({
   confirm(){
     this.setData({
       quchi: [
-        this.data.upleft,
         this.data.upmid,
-        this.data.upright,
-        this.data.downleft,
         this.data.downmid,
+        this.data.upleft,
+        this.data.downleft,
+        this.data.upright,
         this.data.downright
       ]
     })
@@ -115,11 +115,11 @@ Page({
     const currentUser = AV.User.current();
     this.setData({
       quchi:currentUser.attributes.quchi,
-      upleft:currentUser.attributes.quchi[0],
-      upmid:currentUser.attributes.quchi[1],
-      upright:currentUser.attributes.quchi[2],
+      upleft:currentUser.attributes.quchi[2],
+      upmid:currentUser.attributes.quchi[0],
+      upright:currentUser.attributes.quchi[4],
       downleft:currentUser.attributes.quchi[3],
-      downmid:currentUser.attributes.quchi[4],
+      downmid:currentUser.attributes.quchi[1],
       downright:currentUser.attributes.quchi[5]
     })
     console.log(this.data.quchi)
