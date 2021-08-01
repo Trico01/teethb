@@ -18,7 +18,7 @@
     <view class="tip2">消息提醒 99+</view>
   </view>
 </view>
-<image class="cleaner" mode="widthFix" src="http://oss.raynor.top/teethb/column1.png"></image>
+<image class="cleaner" mode="widthFix" src="http://oss.raynor.top/teethb/find_column.png"></image>
 <swiper  style="height:500rpx" next-margin="70rpx" previous-margin="20rpx">
   <swiper-item>
     <image class="tuijian" src="https://z3.ax1x.com/2021/07/22/W0ajKK.png"></image>

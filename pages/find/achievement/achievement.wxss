@@ -64,7 +64,7 @@ page {
 }
 .elementNum{
   position: relative;
-  top:-120rpx;
+  top:-125rpx;
   font-size: 37rpx;
   font-weight: 700;
   font-style: italic;
@@ -72,15 +72,36 @@ page {
 }
 .elementNum2{
   position: relative;
-  top:-80rpx;
+  top:-88rpx;
   font-size: 37rpx;
   font-weight: 700;
   color: white;
 }
 .elementNum3{
   position: relative;
-  top:-120rpx;
+  top:-130rpx;
   font-size: 37rpx;
   font-weight: 700;
   color: white;
 }
+
+
+.Next {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background-color: #549ee7;
+  height: 100rpx;
+  width: 60%;
+  border-radius: 20rpx;
+  color: white;
+  margin-top: -50rpx;
+  margin-left: 20%;
+}
+
+.next{
+  position: relative;
+  font-weight: 700;
+  font-size: 38rpx;
+}
+  

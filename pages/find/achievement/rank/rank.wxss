@@ -1,0 +1,26 @@
+/* pages/find/achievement/rank/rank.wxss */
+.title{
+  display: flex;
+  height: 80rpx;
+  background-color: rgb(240,243,252);
+}
+.titleElement1{
+  width: 33.3333%;
+  background-color: rgb(42,109,190);
+  color: white;
+  text-align: center;
+  font-size: 35rpx;
+  
+}
+.titleElement0{
+  width: 33.3333%;
+  text-align: center;
+  font-size: 35rpx; 
+}
+.titleText{
+  position: relative;
+  top: 15rpx;
+}
+.full{
+  width:100%;  
+}

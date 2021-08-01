@@ -27,9 +27,9 @@
 </view>
 
 <view class="tips">
-  <image class="tip" mode='widthFix' bindtap="toTip1" src="https://z3.ax1x.com/2021/07/22/W0ikw9.png"></image>
-  <image class="tip" mode='widthFix' bindtap="toTip2" src="https://z3.ax1x.com/2021/07/22/W0iAoR.png"></image>
-  <image class="tip" mode='widthFix' bindtap="toTip3" src="https://z3.ax1x.com/2021/07/22/W0iVF1.png"></image>
-  <image class="tip" mode='widthFix' bindtap="toTip4" src="https://z3.ax1x.com/2021/07/22/W0iZJx.png"></image>
-  <image class="tip" mode='widthFix' bindtap="toTip5" src="https://z3.ax1x.com/2021/07/22/W0inSK.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip1" src="http://oss.raynor.top/teethb/tips1.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip2" src="http://oss.raynor.top/teethb/tips2.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip3" src="http://oss.raynor.top/teethb/tips3.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip4" src="http://oss.raynor.top/teethb/tips4.png"></image>
+  <image class="tip" mode='widthFix' bindtap="toTip5" src="http://oss.raynor.top/teethb/tips5.png"></image>
 </view>

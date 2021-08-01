@@ -1,6 +1,6 @@
 <!--pages/find/tips/tip/tip.wxml-->
-<swiper current="{{index}}" indicator-dots="yes" style="height:1300rpx">
+<swiper current="{{index}}" indicator-dots="yes" style="height:4000rpx;">
  <swiper-item wx:for="{{imgUrls}}">
-  <image src='{{item}}' mode='widthFix' class='img'></image>
+  <image src='{{item}}' mode='widthFix' class='img' bindload="imageLoad"></image>
  </swiper-item>
 </swiper>

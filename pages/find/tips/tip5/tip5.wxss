@@ -1,0 +1,4 @@
+/* pages/find/tips/tip5/tip5.wxss */
+.full{
+  width: 100%;
+}

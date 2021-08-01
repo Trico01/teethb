@@ -5,7 +5,7 @@
     <view class="head">
       <image class="headImg" src="https://z3.ax1x.com/2021/07/22/W0Poz8.png"></image>
       <view class="headTitle">成就勋章</view>
-      <image class="rightArrow" bindtap="toAchievement" src="image/arrow-right-solid.svg"></image> 
+      <image class="rightArrow" bindtap="toAchievement" src="https://z3.ax1x.com/2021/07/31/WxSSot.png"></image> 
     </view>
     <view class="divLine"></view>
     <view class="myList">
@@ -30,7 +30,7 @@
     <view class="head">
       <image class="headImg" src="https://z3.ax1x.com/2021/07/22/W0PrRK.png"></image>
       <view class="headTitle">牙具种草</view>
-      <image class="rightArrow" bindtap="toToothcleaner" src="image/arrow-right-solid.svg"></image>
+      <image class="rightArrow" bindtap="toToothcleaner" src="https://z3.ax1x.com/2021/07/31/WxSSot.png"></image>
     </view>
     <view class="divLine"></view>
     <view class="myList">
@@ -55,21 +55,21 @@
     <view class="head">
       <image class="headImg" src="https://z3.ax1x.com/2021/07/22/WwyHz9.png"></image>
       <view class="headTitle">你知道吗</view>
-      <image class="rightArrow" bindtap="toTips" src="image/arrow-right-solid.svg"></image>
+      <image class="rightArrow" bindtap="toTips" src="https://z3.ax1x.com/2021/07/31/WxSSot.png"></image>
     </view>
     <view class="divLine"></view>
     <view class="myList">
-      <view  class="listElement2">
+      <view  class="listElement">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/Ww6Czd.png"></image>
-        <view class="listTitle2">孩子总爱惹事生非？他或许只是牙痛……</view>
+        <view class="listTitle">孩子爱惹事生非？或许只是牙痛</view>
       </view>
-      <view  class="listElement2">
+      <view  class="listElement">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/Ww6Czd.png"></image>
-        <view class="listTitle2">震惊！用薄荷糖或漱口水起不到护牙作用！</view>
+        <view class="listTitle">震惊！漱口水起不到护牙作用！</view>
       </view>
-      <view  class="listElement2">
+      <view  class="listElement">
         <image class="listImg" src="https://z3.ax1x.com/2021/07/22/Ww6Czd.png"></image>
-        <view class="listTitle2">照常刷牙，牙却不白？可能是牙膏出了错！</view>
+        <view class="listTitle">照常刷牙仍不白？问题在牙膏</view>
       </view>
     </view>
   </view>

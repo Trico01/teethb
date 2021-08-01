@@ -24,18 +24,21 @@ page {
   align-items: center;
 }
 .headImg {
-  width:60rpx;
-  height: 60rpx;
+  position: relative;
+  left: 20rpx;
+  top: 6rpx;
+  width:50rpx;
+  height: 50rpx;
 }
 .headTitle {
   width:440rpx;
   height:40rpx;
-  margin-left:15rpx;
-  margin-bottom: 20rpx;
+  margin-left:30rpx;
+  margin-bottom: 10rpx;
   display:flex;
   align-items: left;
-  font-weight: 700;
-  font-size: 45rpx;
+  font-weight: 500;
+  font-size: 40rpx;
   color: rgb(73,80,96);
 }
 .rightArrow {
@@ -68,12 +71,13 @@ page {
   align-items: center;
 }
 .listImg {
-  width:60rpx;
-  height: 60rpx;
+  width:50rpx;
+  height: 50rpx;
 }
 .listTitle {
-  font-size: 35rpx;
+  font-size: 32rpx;
   color: rgb(73,80,96);
+  margin-left: 10rpx;
 }
 .listTitle2 {
   font-size: 25rpx;

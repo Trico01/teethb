@@ -1,4 +1,4 @@
-// pages/find/tips/tips.js
+// pages/find/tips/tip3/tip3.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({ title:'你知道吗'})
+
   },
 
   /**
@@ -62,30 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  toTip1(){
-    wx.navigateTo({
-      url: 'tip1/tip1',
-    })
-  },
-  toTip2(){
-    wx.navigateTo({
-      url: 'tip2/tip2',
-    })
-  },
-  toTip3(){
-    wx.navigateTo({
-      url: 'tip3/tip3',
-    })
-  },
-  toTip4(){
-    wx.navigateTo({
-      url: 'tip4/tip4',
-    })
-  },
-  toTip5(){
-    wx.navigateTo({
-      url: 'tip5/tip5',
-    })
-  },
+  }
 })

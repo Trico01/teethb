@@ -153,5 +153,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  toNext(){
+    wx.navigateTo({
+      url: 'rank/rank',
+    })
   }
 })

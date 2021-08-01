@@ -1,18 +1,23 @@
-// pages/find/tips/tips.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    active: 0,
+  },
 
+  bindChangeTab: function(e){
+    this.setData({
+      active: e.detail.index
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({ title:'你知道吗'})
+    wx.setNavigationBarTitle({ title:'勋章排行榜'})
   },
 
   /**
@@ -63,29 +68,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  toTip1(){
-    wx.navigateTo({
-      url: 'tip1/tip1',
+  to1: function(){
+    this.setData({
+      active:1
     })
   },
-  toTip2(){
-    wx.navigateTo({
-      url: 'tip2/tip2',
+  to2: function(){
+    this.setData({
+      active:2
     })
   },
-  toTip3(){
-    wx.navigateTo({
-      url: 'tip3/tip3',
-    })
-  },
-  toTip4(){
-    wx.navigateTo({
-      url: 'tip4/tip4',
-    })
-  },
-  toTip5(){
-    wx.navigateTo({
-      url: 'tip5/tip5',
+  to3: function(){
+    this.setData({
+      active:3
     })
   },
 })

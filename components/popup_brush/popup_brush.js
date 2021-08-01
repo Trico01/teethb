@@ -48,19 +48,19 @@ Component({
       if(a[0]==1 || a[1]==1 || a[3]==1){
         this.data.brush[0]=1
       }
-      if(a[2]==1 || a[4]==1 || a[5]==1 || a[12]==1){
+      else if(a[2]==1 || a[4]==1 || a[5]==1 || a[12]==1){
         this.data.brush[1]=1
       }
-      if(a[9]==1 || a[11]==1){
+      else if(a[9]==1 || a[11]==1){
         this.data.brush[2]=1
       }
-      if(a[6]==1 || a[7]==1 || a[8]==1 || a[10]==1 || a[15]==1){
+      else if(a[6]==1 || a[7]==1 || a[8]==1 || a[10]==1 || a[15]==1){
         this.data.brush[3]=1
       }
-      if(a[13]==1){
+      else if(a[13]==1){
         this.data.brush[4]=1
       }
-      if(a[14]==1){
+      else if(a[14]==1){
         this.data.brush[5]=1
       }
       this.setData({

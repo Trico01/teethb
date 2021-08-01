@@ -1,0 +1,10 @@
+<!--pages/find/achievement/rank/rank.wxml-->
+
+<van-tabbs bindchange="bindChangeTab">
+  <van-tab title="连续打卡"></van-tab>
+  <van-tab title="累计刷牙次数"></van-tab>
+  <van-tab title="连续达标天数"></van-tab>
+</van-tabbs>
+<image wx:if="{{active==0}}" src="http://oss.raynor.top/teethb/rank3.png" mode="widthFix" class="full"></image>
+<image wx:if="{{active==1}}" src="http://oss.raynor.top/teethb/rank1.png" mode="widthFix" class="full"></image>
+<image wx:if="{{active==2}}" src="http://oss.raynor.top/teethb/rank2.png" mode="widthFix" class="full"></image>

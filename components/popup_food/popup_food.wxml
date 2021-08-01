@@ -3,7 +3,7 @@
   <view class='popup-container'>
     <view class="title">
       <!-- <image class="smile" src="https://z3.ax1x.com/2021/07/23/WswLAf.png"></image> -->
-      <view class="wx-popup-title">😀 今天吃了......</view>
+      <view class="wx-popup-title">😀 您今天是否吃了以下食物？</view>
       <image class="cross" src="https://z3.ax1x.com/2021/07/23/WsByo6.png" bindtap="_error"></image>
     </view>
 

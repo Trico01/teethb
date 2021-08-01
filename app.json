@@ -9,6 +9,7 @@
     "pages/home/result/index",
     "pages/cal/cal",
     "pages/find/find",
+    "pages/find/achievement/rank/rank",
     "pages/find/achievement/achievement",
     "pages/find/toothcleaner/toothcleaner",
     "pages/find/tips/tips",
