@@ -1,15 +1,15 @@
 <!--pages/home/home.wxml-->
 
-<view class="home" wx:if="{{brush_mode == 0}}">
+<view class="home" >
   <view class="brushteeth">
     <view class="top">
       <text class="title">
         <text style="padding-left: 50rpx;" wx:if="{{brush_state==-1}}">开始刷牙吧！</text>
         <text wx:if="{{brush_state>-1}}">{{brush_state%2 == 0? '上':'下'}}颌牙齿</text>
-        <text wx:if="{{title_change[brush_state]==1 && brush_state>-1}}">外侧面</text>
-        <text wx:if="{{title_change[brush_state]==2 && brush_state>-1}}">咬合面</text>
-        <text wx:if="{{title_change[brush_state]==3 && brush_state>-1}}">内侧面</text>
-        <text wx:if="{{title_change[brush_state]==4 && brush_state>-1}}">远端面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==1 }}">外侧面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==2}}">咬合面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==3}}">内侧面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==4}}">远端面</text>
       </text>
     </view>
     <image class="teeth" src="http://oss.raynor.top/teethb/teeth.png" style="display:{{playedFlag==0?'':'none'}}"></image>
@@ -43,11 +43,11 @@
       </image>
     </view>
     <view class="button3">
-      <image src="http://oss.raynor.top/teethb/stop.png" class="stop" bindtap="stop"></image>
-      <image src="http://oss.raynor.top/teethb/play.png" class="play" bindtap="play" wx:if="{{start_flag==0}}"></image>
-      <image src="http://oss.raynor.top/teethb/pause.png" class="pause" bindtap="pause" wx:if="{{start_flag==1}}">
+      <image src="http://oss.raynor.top/teethb/stop.png" class="stop" bindtap="onClickStop"></image>
+      <image src="http://oss.raynor.top/teethb/play.png" class="play" bindtap="onClickPlay" wx:if="{{start_flag==0}}"></image>
+      <image src="http://oss.raynor.top/teethb/pause.png" class="pause" bindtap="onClickPause" wx:if="{{start_flag==1}}">
       </image>
-      <image src="http://oss.raynor.top/teethb/reset.png" class="reset" bindtap="reset"></image>
+      <image src="http://oss.raynor.top/teethb/reset.png" class="reset" bindtap="onClickReset"></image>
     </view>
   </view>
 
@@ -56,6 +56,7 @@
   <popup_food id='popup_food' bind:error="_error" bind:success="_success" wx:if="{{night_popup_flag==1}}">
   </popup_food>
 
-  <popup_brush id='popup_brush' bind:error="_error">
+  <popup_brush id='popup_brush' bind:click="onClickBeginBrucs">
   </popup_brush>
+
 </view>

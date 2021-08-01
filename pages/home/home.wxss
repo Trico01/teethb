@@ -1,8 +1,8 @@
 /* pages/home/home.wxss */
-page{
+page {
   background-color: #e2e9ff;
 }
-.home{
+.home {
   /* background: linear-gradient(
     to bottom,
     #7F7FD5,
@@ -12,53 +12,53 @@ page{
   background: #e2e9ff;
 }
 
-.brushteeth
-.top{
+.brushteeth .top {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top:60rpx;
+  margin-top: 60rpx;
   margin-bottom: 30rpx;
 }
 
 @font-face {
-  font-family: 'switch_content';
+  font-family: "switch_content";
   font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_di9ygd1jsg.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_di9ygd1jsg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+  src: url("//at.alicdn.com/t/webfont_di9ygd1jsg.eot"); /* IE9*/
+  src: url("//at.alicdn.com/t/webfont_di9ygd1jsg.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_di9ygd1jsg.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/t/webfont_di9ygd1jsg.woff") format("woff"),
+    /* chrome、firefox */ url("//at.alicdn.com/t/webfont_di9ygd1jsg.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("//at.alicdn.com/t/webfont_di9ygd1jsg.svg#杨任东竹石体-Bold")
+      format("svg"); /* iOS 4.1- */
 }
-.home
-.brushteeth
-.switch_content{
+.home .brushteeth .switch_content {
   font-family: "switch_content";
   font-size: 40rpx;
   padding-top: 10rpx;
   padding-left: 25rpx;
 }
 
-.brushteeth
-.model_switch{
-  padding-left: 20rpx;
-}
-
 @font-face {
-  font-family: 'brushteeth_title';
+  font-family: "brushteeth_title";
   font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_zcb3e2hk1v.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_zcb3e2hk1v.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_zcb3e2hk1v.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_zcb3e2hk1v.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_zcb3e2hk1v.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_zcb3e2hk1v.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+  src: url("//at.alicdn.com/t/webfont_zcb3e2hk1v.eot"); /* IE9*/
+  src: url("//at.alicdn.com/t/webfont_zcb3e2hk1v.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_zcb3e2hk1v.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/t/webfont_zcb3e2hk1v.woff") format("woff"),
+    /* chrome、firefox */ url("//at.alicdn.com/t/webfont_zcb3e2hk1v.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("//at.alicdn.com/t/webfont_zcb3e2hk1v.svg#杨任东竹石体-Bold")
+      format("svg"); /* iOS 4.1- */
 }
-.home
-.brushteeth
-.title {
-  color: #559EEA;
+.home .brushteeth .title {
+  color: #559eea;
   font-size: 60rpx;
   padding-left: 40rpx;
   margin-top: 32rpx;
@@ -69,17 +69,14 @@ page{
   border-radius: 30rpx;
 }
 
-.brushteeth
-.teeth {
+.brushteeth .teeth {
   height: 820rpx;
   width: 750rpx;
   margin-top: 0rpx;
   margin-left: -10rpx;
 }
 
-.home
-.brushteeth
-.time{
+.home .brushteeth .time {
   position: absolute;
   margin-top: -480rpx;
   font-size: 60rpx;
@@ -87,12 +84,12 @@ page{
   color: #1296db;
 }
 
-.brush_gif{
+.brush_gif {
   position: absolute;
-  color:#1296db;
+  color: #1296db;
 }
 
-.gif1{
+.gif1 {
   width: 350rpx;
   height: 300rpx;
   margin-top: -1000rpx;
@@ -100,7 +97,7 @@ page{
   margin-left: 200rpx;
 }
 
-.brush_method1{
+.brush_method1 {
   /* font-weight: 600; */
   font-size: 30rpx;
   position: absolute;
@@ -110,7 +107,7 @@ page{
   text-align: center;
 }
 
-.gif2{
+.gif2 {
   width: 350rpx;
   height: 300rpx;
   margin-top: -1000rpx;
@@ -118,7 +115,7 @@ page{
   margin-left: 200rpx;
 }
 
-.brush_method2{
+.brush_method2 {
   /* font-weight: 600; */
   font-size: 35rpx;
   position: absolute;
@@ -128,7 +125,7 @@ page{
   text-align: center;
 }
 
-.gif3{
+.gif3 {
   width: 320rpx;
   height: 340rpx;
   margin-top: -1000rpx;
@@ -136,7 +133,7 @@ page{
   margin-left: 100rpx;
 }
 
-.brush_method3{
+.brush_method3 {
   /* font-weight: 600; */
   font-size: 35rpx;
   position: absolute;
@@ -146,7 +143,7 @@ page{
   text-align: center;
 }
 
-.gif4{
+.gif4 {
   width: 320rpx;
   height: 340rpx;
   margin-top: -700rpx;
@@ -154,7 +151,7 @@ page{
   margin-left: 100rpx;
 }
 
-.brush_method4{
+.brush_method4 {
   /* font-weight: 600; */
   font-size: 35rpx;
   position: absolute;
@@ -164,7 +161,7 @@ page{
   text-align: center;
 }
 
-.gif5{
+.gif5 {
   width: 320rpx;
   height: 340rpx;
   margin-top: -1000rpx;
@@ -172,7 +169,7 @@ page{
   margin-left: 310rpx;
 }
 
-.brush_method5{
+.brush_method5 {
   /* font-weight: 600; */
   font-size: 35rpx;
   position: absolute;
@@ -182,7 +179,7 @@ page{
   text-align: center;
 }
 
-.gif6{
+.gif6 {
   width: 320rpx;
   height: 340rpx;
   margin-top: -1000rpx;
@@ -190,7 +187,7 @@ page{
   margin-left: 310rpx;
 }
 
-.brush_method6{
+.brush_method6 {
   /* font-weight: 600; */
   font-size: 35rpx;
   position: absolute;
@@ -199,8 +196,7 @@ page{
   text-align: center;
 }
 
-.home
-.button3{
+.home .button3 {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -215,56 +211,45 @@ page{
   border-radius: 50rpx;
 }
 
-.brushteeth
-.play{
+.brushteeth .play {
   width: 140rpx;
   height: 140rpx;
 }
 
-.brushteeth
-.pause{
+.brushteeth .pause {
   width: 120rpx;
   height: 120rpx;
   padding-left: 10rpx;
   padding-right: 10rpx;
-
 }
 
-.brushteeth
-.stop{
+.brushteeth .stop {
   width: 140rpx;
   height: 140rpx;
 }
 
-.brushteeth
-.reset{
+.brushteeth .reset {
   width: 110rpx;
   height: 110rpx;
 }
 
-
-
-
-.choose{
+.choose {
   display: flex;
   flex-direction: row;
   padding-bottom: 160rpx;
   padding-top: 10rpx;
 }
 
-.choose
-.left{
+.choose .left {
   padding-left: 50rpx;
 }
 
-.choose
-.mid{
+.choose .mid {
   padding-left: 50rpx;
   padding-right: 50rpx;
 }
 
-.choose
-.p1{
+.choose .p1 {
   width: 230rpx;
   height: 140rpx;
   /* margin-top: -400rpx;
@@ -272,16 +257,14 @@ page{
   padding-left: 30rpx; */
 }
 
-.choose
-.p2{
+.choose .p2 {
   width: 230rpx;
   height: 200rpx;
   /* margin-top: -400rpx;
   padding-bottom: 40rpx; */
 }
 
-.home
-.lwai{
+.home .lwai {
   background-color: lightblue;
   height: 150rpx;
   width: 150rpx;
@@ -291,8 +274,7 @@ page{
   align-items: center;
 }
 
-.home
-.midwai{
+.home .midwai {
   background-color: lightblue;
   height: 240rpx;
   width: 240rpx;
@@ -302,8 +284,7 @@ page{
   align-items: center;
 }
 
-.home
-.rwai{
+.home .rwai {
   background-color: lightblue;
   height: 150rpx;
   width: 150rpx;
@@ -313,8 +294,7 @@ page{
   align-items: center;
 }
 
-.home
-.lnei{
+.home .lnei {
   background-color: white;
   height: 140rpx;
   width: 140rpx;
@@ -324,8 +304,7 @@ page{
   align-items: center;
 }
 
-.home
-.midnei{
+.home .midnei {
   background-color: white;
   height: 230rpx;
   width: 230rpx;
@@ -335,8 +314,7 @@ page{
   align-items: center;
 }
 
-.home
-.rnei{
+.home .rnei {
   background-color: white;
   height: 140rpx;
   width: 140rpx;
@@ -346,30 +324,28 @@ page{
   align-items: center;
 }
 
-
 /* child mode */
 
-.child{
-  background: linear-gradient(
-    to top,
-    #FF416C,
-    #FF4B2B
-  );
+.child {
+  background: linear-gradient(to top, #ff416c, #ff4b2b);
 }
 
 @font-face {
-  font-family: 'switch_content';
+  font-family: "switch_content";
   font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_di9ygd1jsg.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_di9ygd1jsg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_di9ygd1jsg.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+  src: url("//at.alicdn.com/t/webfont_di9ygd1jsg.eot"); /* IE9*/
+  src: url("//at.alicdn.com/t/webfont_di9ygd1jsg.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_di9ygd1jsg.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/t/webfont_di9ygd1jsg.woff") format("woff"),
+    /* chrome、firefox */ url("//at.alicdn.com/t/webfont_di9ygd1jsg.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("//at.alicdn.com/t/webfont_di9ygd1jsg.svg#杨任东竹石体-Bold")
+      format("svg"); /* iOS 4.1- */
 }
-.child
-.brushteeth
-.switch_content{
+.child .brushteeth .switch_content {
   font-family: "switch_content";
   color: lightyellow;
   font-size: 40rpx;
@@ -378,18 +354,21 @@ page{
 }
 
 @font-face {
-  font-family: 'brushteeth_title';
+  font-family: "brushteeth_title";
   font-display: swap;
-  src: url('//at.alicdn.com/t/webfont_abn5uplb6a.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/webfont_abn5uplb6a.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/webfont_abn5uplb6a.woff2') format('woff2'),
-  url('//at.alicdn.com/t/webfont_abn5uplb6a.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/webfont_abn5uplb6a.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/webfont_abn5uplb6a.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+  src: url("//at.alicdn.com/t/webfont_abn5uplb6a.eot"); /* IE9*/
+  src: url("//at.alicdn.com/t/webfont_abn5uplb6a.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("//at.alicdn.com/t/webfont_abn5uplb6a.woff2")
+      format("woff2"),
+    url("//at.alicdn.com/t/webfont_abn5uplb6a.woff") format("woff"),
+    /* chrome、firefox */ url("//at.alicdn.com/t/webfont_abn5uplb6a.ttf")
+      format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url("//at.alicdn.com/t/webfont_abn5uplb6a.svg#杨任东竹石体-Bold")
+      format("svg"); /* iOS 4.1- */
 }
-.child
-.brushteeth
-.title {
+.child .brushteeth .title {
   color: lightyellow;
   font-size: 60rpx;
   padding-left: 80rpx;
@@ -397,9 +376,7 @@ page{
   font-family: "brushteeth_title";
 }
 
-.child
-.brushteeth
-.time{
+.child .brushteeth .time {
   position: absolute;
   margin-top: -480rpx;
   font-size: 60rpx;
@@ -407,8 +384,7 @@ page{
   color: white;
 }
 
-.child
-.button3{
+.child .button3 {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -423,8 +399,7 @@ page{
   border-radius: 50rpx;
 }
 
-.child
-.lwai{
+.child .lwai {
   background-color: lightyellow;
   height: 150rpx;
   width: 150rpx;
@@ -434,8 +409,7 @@ page{
   align-items: center;
 }
 
-.child
-.midwai{
+.child .midwai {
   background-color: lightyellow;
   height: 240rpx;
   width: 240rpx;
@@ -445,8 +419,7 @@ page{
   align-items: center;
 }
 
-.child
-.rwai{
+.child .rwai {
   background-color: lightyellow;
   height: 150rpx;
   width: 150rpx;
@@ -456,8 +429,7 @@ page{
   align-items: center;
 }
 
-.child
-.lnei{
+.child .lnei {
   background-color: tomato;
   height: 140rpx;
   width: 140rpx;
@@ -467,8 +439,7 @@ page{
   align-items: center;
 }
 
-.child
-.midnei{
+.child .midnei {
   background-color: tomato;
   height: 230rpx;
   width: 230rpx;
@@ -478,8 +449,7 @@ page{
   align-items: center;
 }
 
-.child
-.rnei{
+.child .rnei {
   background-color: tomato;
   height: 140rpx;
   width: 140rpx;

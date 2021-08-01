@@ -77,6 +77,9 @@ Component({
       //触发取消回调
       this.triggerEvent("error")
     },
+    onClickBegin(){
+      this.triggerEvent("click",{},{});
+    }
 
   }
 })
