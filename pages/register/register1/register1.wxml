@@ -1,7 +1,7 @@
 <!--pages/register/register1/register1.wxml-->
 <view class="contain">
-  <view class="title">成人/儿童模式自由切换</view>
-  <view class="tip">再也不为孩子刷牙而烦恼</view>
+  <view class="title">个性化定制刷牙方案</view>
+  <view class="tip">根据口腔状况定制专属于您的刷牙计划</view>
   <image class="image" src="http://oss.raynor.top/teethb/register_1.png"></image>
   <view bindtap="toNext" class="next">
     <view class="jixu">继续</view>

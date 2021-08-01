@@ -3,8 +3,8 @@
   <!-- <view class="title">现在，为自己取个名字吧</view> -->
   <!-- <view class="tip">一个新的名字，带来新的开始</view> -->
 
-  <view class="title">您愿意将微信授权给我们吗</view>
-  <view class="tip">登录解锁更多功能</view>
+  <view class="title">点击登录，开启您的刷牙时间</view>
+  <view class="tip">请于“我的”页面完善个人信息</view>
 
   <!-- <view class="myInput">
     <view class="name">你的名字</view>

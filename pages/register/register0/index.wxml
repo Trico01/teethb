@@ -1,0 +1,12 @@
+<!--pages/register/register0/index.wxml-->
+<view style="margin: 53% 215rpx 0 235rpx">
+  <image src="./image/avatar.png"  class="avatar"></image>
+</view>
+
+<view class="spinner">
+  <view class="bounce1 syf"></view>
+  <view class="bounce2 syf"></view>
+  <view class="bounce3 syf"></view>
+</view>
+
+

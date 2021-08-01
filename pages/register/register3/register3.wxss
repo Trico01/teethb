@@ -12,9 +12,9 @@ page {
 .title {
   position: absolutes;
   margin-top: 150rpx;
-  margin-left: 30rpx;
+  margin-left: 28rpx;
   color: rgb(84,158,231);
-  font-size: 58rpx;
+  font-size: 54rpx;
   font-weight: 700;
 }
 .tip {

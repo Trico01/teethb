@@ -746,10 +746,80 @@ Page({
    * 当改变月份时触发
    * => current 当前年月 / next 切换后的年月
    */
-  whenChangeMonth(e) {
-    let curYear = e.detail.current.year
-    let curMonth = e.detail.current.month
+  async whenChangeMonth(e) {
+    let curYear = e.detail.next.year
+    let curMonth = e.detail.next.month
+    let queryDateString=""
+    if(curMonth<10){
+      queryDateString=curYear+"-0"+curMonth+"-"
+    }
+    else{
+      queryDateString=curYear+"-"+curMonth+"-"
+    }
+    console.log(queryDateString)
+    var toset = []
+    const currentUser = AV.User.current();
+    let username = currentUser.attributes.username
+    const query = new AV.Query('BrushRecord')
+    query.equalTo('username', username)
+    query.contains('date',queryDateString)
+
+    //await异步改同步
+    let setRecords = await query.find().catch(e => {
+      console.log(e);
+    });
+    console.log(setRecords);
+    if (setRecords && setRecords.length) {
+      toset.push(setRecords[0].attributes.date)
+    }
+    let i = 1
+    let len = setRecords.length
+    for (i = 1; i < len; i++) {
+      if (toset.indexOf(setRecords[i].attributes.date) == -1) {
+        toset.push(setRecords[i].attributes.date)
+      }
+    }
+    console.log("日期")
+    console.log(toset)
+    len = toset.length
+    let tosetData = []
+    for (i = 0; i < len; i++) {
+      const query2 = new AV.Query('BrushRecord')
+      query2.equalTo('username', username)
+      query2.equalTo('date', toset[i])
+      const myDate = new Date(toset[i].replace(/-/g, "/"))
+      let year = myDate.getFullYear()
+      let month = myDate.getMonth() + 1
+      let date = myDate.getDate();
+      //异步改同步
+      let count = await query2.count();
+      if (count < 2 && count > 0) {
+        tosetData.push({
+          "year": year,
+          "month": month,
+          "date": date,
+          "class": "normal-date",
+        })
+        this.setData({
+          toSet: tosetData
+        })
+      }
+      else {
+        tosetData.push({
+          "year": year,
+          "month": month,
+          "date": date,
+          "class": "good-date",
+        })
+        this.setData({
+          toSet: tosetData
+        })
+      }
+    }
+    console.log(tosetData)
+
     const calendar = this.selectComponent('#calendar').calendar
+    //直接设置数据
     calendar.setDateStyle(this.data.toSet)
   },
 
@@ -770,7 +840,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
- 
+
     this.ecComponent1 = this.selectComponent('#mychart-dom-bar1');
     this.ecComponent2 = this.selectComponent('#mychart-dom-bar2');
     this.ecComponent3 = this.selectComponent('#mychart-dom-bar3');
@@ -783,139 +853,146 @@ Page({
    */
   onShow: async function () {
     this.getTabBar().init();
-
+    // mock数据
+    // const query = new AV.Query('Mock');
+    // query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
+    //   const tmp = mockInfo.get('toSet')
+    //   calendar.setDateStyle(tmp)
+    // });
+    let d= new Date()
+    let month=d.getMonth()+1
+    let year=d.getFullYear()
+    let queryDateString=""
+    if(month<10){
+      queryDateString=year+"-0"+month+"-"
+    }
+    else{
+      queryDateString=year+"-"+month+"-"
+    }
     
+    var toset = []
+    const currentUser = AV.User.current();
+    let username = currentUser.attributes.username
+    const query = new AV.Query('BrushRecord')
+    query.equalTo('username', username)
+    query.contains('date',queryDateString)
+
+    //await异步改同步
+    let setRecords = await query.find().catch(e => {
+      console.log(e);
+    });
+    console.log(setRecords);
+    if (setRecords && setRecords.length) {
+      toset.push(setRecords[0].attributes.date)
+    }
+    let i = 1
+    let len = setRecords.length
+    for (i = 1; i < len; i++) {
+      if (toset.indexOf(setRecords[i].attributes.date) == -1) {
+        toset.push(setRecords[i].attributes.date)
+      }
+    }
+    console.log("日期")
+    console.log(toset)
+    len = toset.length
+    let tosetData = []
+    for (i = 0; i < len; i++) {
+      const query2 = new AV.Query('BrushRecord')
+      query2.equalTo('username', username)
+      query2.equalTo('date', toset[i])
+      const myDate = new Date(toset[i].replace(/-/g, "/"))
+      let year = myDate.getFullYear()
+      let month = myDate.getMonth() + 1
+      let date = myDate.getDate();
+      //异步改同步
+      let count = await query2.count();
+      if (count < 2 && count > 0) {
+        tosetData.push({
+          "year": year,
+          "month": month,
+          "date": date,
+          "class": "normal-date",
+        })
+        this.setData({
+          toSet: tosetData
+        })
+      }
+      else {
+        tosetData.push({
+          "year": year,
+          "month": month,
+          "date": date,
+          "class": "good-date",
+        })
+        this.setData({
+          toSet: tosetData
+        })
+      }
+    }
+    console.log(tosetData)
+
+    const calendar = this.selectComponent('#calendar').calendar
+    //直接设置数据
+    calendar.setDateStyle(this.data.toSet)
 
 
-      // mock数据
-      // const query = new AV.Query('Mock');
-      // query.get('60fb7cae34bfda01e0e83025').then((mockInfo) => {
-      //   const tmp = mockInfo.get('toSet')
-      //   calendar.setDateStyle(tmp)
-      // });
-      var toset = []
-      const currentUser = AV.User.current();
-      let username = currentUser.attributes.username
-      const query = new AV.Query('BrushRecord')
-      query.equalTo('username', username)
-      query.ascending('date');
-
-      //await异步改同步
-      let setRecords = await query.find().catch(e=>{
+    // -------------------------------------
+    var now = new Date(); //当前日期 
+    var nowDayOfWeek = now.getDay(); //今天本周的第几天 
+    if(nowDayOfWeek==0){
+      nowDayOfWeek=7
+    }
+    var startTime = now.getTime() - ((nowDayOfWeek - 1) * 24 * 60 * 60 * 1000)
+    var startDate = new Date()
+    startDate.setTime(startTime);
+    for (let i = 0; i < 7; i++) {
+      const queryChart1AM = new AV.Query('BrushRecord')
+      queryChart1AM.equalTo('username', username)
+      var ye = startDate.getFullYear();
+      var mo = (startDate.getMonth() + 1).toString().padStart(2, '0');
+      var da = startDate.getDate().toString().padStart(2, '0');
+      var formatDate = ye + '-' + mo + '-' + da;
+      queryChart1AM.equalTo('date', formatDate)
+      queryChart1AM.equalTo('day_or_night', "AM")
+      let res = await queryChart1AM.first().catch(e => {
         console.log(e);
       });
-      console.log(setRecords);
-      if(setRecords&&setRecords.length){
-        toset.push(setRecords[0].attributes.date)
-      }
-      let i = 1
-      let len = setRecords.length
-      for (i = 1; i < len; i++) {
-        if (toset.indexOf(setRecords[i].attributes.date) == -1) {
-          toset.push(setRecords[i].attributes.date)
-        }
-      }
-      len = toset.length
-      let tosetData = []
-      for (i = 0; i < len; i++) {
-        const query2 = new AV.Query('BrushRecord')
-        query2.equalTo('username', username)
-        query2.equalTo('date', toset[i])
-        const myDate = new Date(toset[i].replace(/-/g, "/"))
-        let year = myDate.getFullYear()
-        let month = myDate.getMonth() + 1
-        let date = myDate.getDate();
-        //异步改同步
-        let count = await query2.count();
-        if (count < 2 && count > 0) {
-          tosetData.push({
-            "year": year,
-            "month": month,
-            "date": date,
-            "class": "normal-date",
-          })
-          this.setData({
-            toSet: tosetData
-          })
-        }
-        else {
-          tosetData.push({
-            "year": year,
-            "month": month,
-            "date": date,
-            "class": "good-date",
-          })
-          this.setData({
-            toSet: tosetData
-          })
-        }
+      if (res) {
+        console.log(res);
+        chrt1AM.splice(i, 1, (res.attributes.t_total / 60).toFixed(2));
+        chrt4AM.splice(i, 1, -res.attributes.gumBleed)
+        chrt4AM_F.splice(i, 1, res.attributes.gumBleed - 1)
       }
 
-      const calendar = this.selectComponent('#calendar').calendar
-      //直接设置数据
-      calendar.setDateStyle(this.data.toSet)
 
 
-      // -------------------------------------
+      const queryChart1PM = new AV.Query('BrushRecord')
+      queryChart1PM.equalTo('username', username)
+      queryChart1PM.equalTo('date', formatDate)
+      queryChart1PM.equalTo('day_or_night', "PM")
 
-      var now = new Date(); //当前日期 
-      var nowDayOfWeek = now.getDay(); //今天本周的第几天 
-      var startTime = now.getTime() - ((nowDayOfWeek - 1) * 24 * 60 * 60 * 1000)
-      var startDate = new Date()
-      startDate.setTime(startTime);
-
-
-      for (let i = 0; i < 7; i++) {
-        const queryChart1AM = new AV.Query('BrushRecord')
-        queryChart1AM.equalTo('username', username)
-
-        var ye = startDate.getFullYear();
-        var mo = (startDate.getMonth() + 1).toString().padStart(2, '0');
-        var da = startDate.getDate().toString().padStart(2, '0');
-        var formatDate = ye + '-' + mo + '-' + da;
-
-        queryChart1AM.equalTo('date', formatDate)
-        queryChart1AM.equalTo('day_or_night', "AM")
-
-        let res = await queryChart1AM.first().catch(e => {
-          console.log(e);
-        });
-        if (res) {
-          console.log(res);
-          chrt1AM.splice(i, 1, (res.attributes.t_total / 60).toFixed(2));
-          chrt4AM.splice(i, 1, -res.attributes.gumBleed)
-          chrt4AM_F.splice(i, 1, res.attributes.gumBleed - 1)
-        }
-
-
-
-        const queryChart1PM = new AV.Query('BrushRecord')
-        queryChart1PM.equalTo('username', username)
-        queryChart1PM.equalTo('date', formatDate)
-        queryChart1PM.equalTo('day_or_night', "PM")
-
-        let res2 = await queryChart1PM.first().catch(e => {
-          console.log(e);
-        });
-        console.log(res2, i);
-        if (res2) {
-          chrt1PM.splice(i, 1, (res2.attributes.t_total / 60).toFixed(2));
-          chrt4PM.splice(i, 1, res2.attributes.gumBleed)
-          chrt4PM_F.splice(i, 1, 1 - res2.attributes.gumBleed)
-        }
-
-
-
-        var tmpTime = startDate.getTime() + (24 * 60 * 60 * 1000)
-        startDate.setTime(tmpTime)
+      let res2 = await queryChart1PM.first().catch(e => {
+        console.log(e);
+      });
+      console.log(res2, i);
+      if (res2) {
+        chrt1PM.splice(i, 1, (res2.attributes.t_total / 60).toFixed(2));
+        chrt4PM.splice(i, 1, res2.attributes.gumBleed)
+        chrt4PM_F.splice(i, 1, 1 - res2.attributes.gumBleed)
       }
-      wx.hideLoading({
-        success: (res) => {},
-      })
 
 
-      this.ecComponent1.init(initChart1);
-      this.ecComponent4.init(initChart4);
+
+      var tmpTime = startDate.getTime() + (24 * 60 * 60 * 1000)
+      startDate.setTime(tmpTime)
+    }
+    wx.hideLoading({
+      success: (res) => { },
+    })
+
+
+    this.ecComponent1.init(initChart1);
+    this.ecComponent4.init(initChart4);
 
   },
 

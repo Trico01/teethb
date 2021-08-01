@@ -96,7 +96,7 @@ Page({
     var day = success_record[1].substr(8)
     var time = success_record[2].substr(0,5)
     var day_or_night = success_record[4]
-    console.log(day_or_night)
+    // console.log(day_or_night)
     if (day_or_night=="AM") {
       this.setData({
         amorpm: 0,
@@ -169,7 +169,7 @@ Page({
       jiesuo=0
       // console.log('hi')
       var today=success_record[1].substr(0,10)
-      console.log(today)
+      // console.log(today)
       var sum_today=0
       var sum_today_am=0
       var sum_today_pm=0
@@ -197,10 +197,10 @@ Page({
           }
         }
       }
-      console.log('sumtoday: '+sum_today)
-      console.log("days"+days)
-      console.log("am"+am)
-      console.log("pm"+pm)
+      // console.log('sumtoday: '+sum_today)
+      // console.log("days"+days)
+      // console.log("am"+am)
+      // console.log("pm"+pm)
       sum = days.length
       // loop1:
       if(sum<1) sum=1
@@ -256,9 +256,9 @@ Page({
       for(var d=0;d<days.length;d++){
         if(am[d]&&pm[d]) sum++
       }
-      console.log(sum)
-      console.log('sum am:'+sum_today_am)
-      console.log('sum pm:'+sum_today_pm)
+      // console.log(sum)
+      // console.log('sum am:'+sum_today_am)
+      // console.log('sum pm:'+sum_today_pm)
       // loop2:
       if(sum<3) sum=3
       else if(sum==3) jiesuo=1
@@ -342,7 +342,7 @@ Page({
     })
     if(currentUser.attributes.brushReminder){
       const dueDate=new Date(currentUser.attributes.dueDate)
-      console.log(currentUser.attributes.dueDate)
+      // console.log(currentUser.attributes.dueDate)
       const today= new Date()
       const s1=dueDate.getTime()
       const s2=today.getTime()
