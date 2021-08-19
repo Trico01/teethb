@@ -183,6 +183,7 @@ Page({
         lastTime: thisTime,
         timestamp: this.data.bursh_time[this.data.brush_state],
         time: "0:" + String(this.data.bursh_time[this.data.brush_state]),
+        brush_method: 0,
       });
 
       this.onClickPause();
@@ -195,6 +196,7 @@ Page({
       brush_state: -1,
       start_flag: false,
       playedFlag: 0,
+      brush_method: 0,
     });
     if (setTimer) {
       clearInterval(setTimer);
@@ -293,7 +295,7 @@ Page({
   title_change_fun() {
     var t_ = this.data.timestamp;
     var t = this.data.bursh_time[this.data.brush_state] - t_; //t表示过了多长时间
-
+    console.log("time is ", t);
     var t1 = 10,
       t2 = 14,
       t3 = 26; // 三个刷牙时间分割点，小于t1时为外侧，大于t1小于t2时为咬合，大于t2小于t3时为内侧，大于t3时为远端
@@ -324,16 +326,20 @@ Page({
     }
     if (this.data.brush_state == 0 || this.data.brush_state == 1) {
       //刷门牙时
-      if (t > t1 && t <= t2) {
-        this.data.title_change[this.data.brush_state] = 2;
+      if (t <= t1) {
+        this.data.title_change[this.data.brush_state] = 1;
         this.setData({
-          brush_method: 1,
+          brush_method: 0,
         });
-      }
-      if (t > t2) {
+      } else if (t > t2) {
         this.data.title_change[this.data.brush_state] = 3;
         this.setData({
           brush_method: 2,
+        });
+      } else {
+        this.data.title_change[this.data.brush_state] = 2;
+        this.setData({
+          brush_method: 1,
         });
       }
 
@@ -356,7 +362,7 @@ Page({
         }
       }
       if (this.data.zjType == 3) {
-        if (t2 + t > 0 && t2 + t <= 4) {
+        if (t2 + t >= 0 && t2 + t <= 4) {
           this.setData({
             brush_method: 4,
           });
@@ -373,20 +379,22 @@ Page({
         }
       }
     } else {
-      //刷侧牙时
-      if (t > t1 && t <= t2 + 1) {
+      if (t <= t1) {
+        this.data.title_change[this.data.brush_state] = 1;
+        this.setData({
+          brush_method: 0,
+        });
+      } else if (t > t1 && t <= t2 + 1) {
         this.data.title_change[this.data.brush_state] = 2;
         this.setData({
           brush_method: 1,
         });
-      }
-      if (t > t2 + 1 && t <= t3 + 1) {
+      } else if (t > t2 + 1 && t <= t3 + 1) {
         this.data.title_change[this.data.brush_state] = 3;
         this.setData({
           brush_method: 2,
         });
-      }
-      if (t > t3 + 1) {
+      } else {
         this.data.title_change[this.data.brush_state] = 4;
         this.setData({
           brush_method: 3,
