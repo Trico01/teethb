@@ -21,6 +21,7 @@ Page({
     useDate:'',
     dueDate:'',
     useTime:0,
+    useMin:0,
   },
 
   bindchangeReminder(e){
@@ -47,8 +48,12 @@ Page({
     })
   },
   bindtapReset:function(e){
-    var today=new Date()
     const currentUser = AV.User.current();
+    currentUser.set('brushUseTotal',0)
+    this.setData({
+      useMin: 0
+    })
+    var today=new Date()
     currentUser.set('useDate',today.toLocaleDateString())
     this.setData({
       useDate:today.toLocaleDateString()
@@ -86,6 +91,7 @@ Page({
       useReminder:currentUser.attributes.brushReminder,
       useDate:currentUser.attributes.useDate,
       dueDate:currentUser.attributes.dueDate,
+      useMin: (currentUser.attributes.brushUseTotal/60).toFixed(0)
     })
     if(currentUser.attributes.useTimeIndex==0){
       this.setData({

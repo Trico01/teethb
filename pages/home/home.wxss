@@ -81,12 +81,12 @@ page {
   margin-top: -480rpx;
   font-size: 60rpx;
   margin-left: 330rpx;
-  color: #1296db;
+  color: #559eea;
 }
 
 .brush_gif {
   position: absolute;
-  color: #1296db;
+  color: #559eea;
 }
 
 .gif1 {

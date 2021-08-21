@@ -44,6 +44,7 @@ Page({
           user.set('dueDate','')
           user.set('setTimeIndex',[2,0])
           user.set('useTimeIndex',0)
+          user.set('brushUseTotal',0)
           user.save() // 别忘了save
           wx.switchTab({
             url: '../../home/home',

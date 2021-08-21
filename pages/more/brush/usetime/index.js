@@ -20,10 +20,13 @@ Page({
 
   
   bindclickOK: function(e){
+    const currentUser = AV.User.current();
+    if(this.data.selectedTime==1){
+      currentUser.set('brushUseTotal',0)
+    }
     var tempDate= new Date()
     tempDate.setTime(tempDate.getTime()-24*60*60*1000*this.data.dateList[this.data.selectedTime-1])
 
-    const currentUser = AV.User.current();
     currentUser.set('useDate',tempDate.toLocaleDateString())
 
     tempDate.setTime(tempDate.getTime()+24*60*60*1000*90)

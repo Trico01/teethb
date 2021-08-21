@@ -6,10 +6,10 @@
       <text class="title">
         <text style="padding-left: 50rpx;" wx:if="{{brush_state==-1}}">开始刷牙吧！</text>
         <text wx:if="{{brush_state>-1}}">{{brush_state%2 == 0? '上':'下'}}颌牙齿</text>
-        <text wx:if="{{brush_state>-1  && title_change[brush_state]==1 }}">外侧面</text>
-        <text wx:if="{{brush_state>-1  && title_change[brush_state]==2}}">咬合面</text>
-        <text wx:if="{{brush_state>-1  && title_change[brush_state]==3}}">内侧面</text>
-        <text wx:if="{{brush_state>-1  && title_change[brush_state]==4}}">远端面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==1 }}" style="color: #83c75e">外侧面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==2}}" style="color: #e7b52c">咬合面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==3}}" style="color: #c387cc">内侧面</text>
+        <text wx:if="{{brush_state>-1  && title_change[brush_state]==4}}" style="color: #387ee6">远端面</text>
       </text>
     </view>
     <image class="teeth" src="http://oss.raynor.top/teethb/teeth.png" style="display:{{playedFlag==0?'':'none'}}"></image>
@@ -44,8 +44,8 @@
     </view>
     <view class="button3">
       <image src="http://oss.raynor.top/teethb/stop.png" class="stop" bindtap="onClickStop"></image>
-      <image src="http://oss.raynor.top/teethb/play.png" class="play" bindtap="onClickPlay" wx:if="{{start_flag==0}}"></image>
-      <image src="http://oss.raynor.top/teethb/pause.png" class="pause" bindtap="onClickPause" wx:if="{{start_flag==1}}">
+      <image src="http://oss.raynor.top/teethb/play.png" class="play" bindtap="onClickPlay" wx:if="{{!start_flag}}"></image>
+      <image src="http://oss.raynor.top/teethb/pause.png" class="pause" bindtap="onClickPause" wx:if="{{start_flag}}">
       </image>
       <image src="http://oss.raynor.top/teethb/reset.png" class="reset" bindtap="onClickReset"></image>
     </view>

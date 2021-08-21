@@ -44,10 +44,10 @@
       <switch checked="{{prsnl_4}}" color="#1989FA" bindchange="bindPrsnlChange4" />
     </view>
   </van-cell>
-  <van-cell title="播放音乐" size="large">
+  <!-- <van-cell title="播放音乐" size="large">
     <view slot="icon" class="iconfont icon-a-yinle" style="margin:0 20rpx 0 0; color:#549EE7"></view>
     <view slot="extra">
       <switch checked="{{prsnl_3}}" color="#1989FA" bindchange="bindPrsnlChange3" />
     </view>
-  </van-cell>
+  </van-cell> -->
 </van-cell-group>

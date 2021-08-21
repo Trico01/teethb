@@ -1,7 +1,7 @@
 <!--pages/register/register2/register2.wxml-->
 <view class="contain">
   <view class="title">每日打卡，成就勋章领不停</view>
-  <view class="tip">健康+激励，让刷牙不再抗拒</view>
+  <view class="tip">健康+激励，培养刷牙好习惯</view>
   <image class="image" src="http://oss.raynor.top/teethb/register_2.png"></image>
   <view bindtap="toNext" class="next">
     <view class="jixu">继续</view>

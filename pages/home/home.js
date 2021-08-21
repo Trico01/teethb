@@ -1,5 +1,4 @@
 // pages/home/home.js
-const app = getApp();
 var setTimer = null; //把时间函数变量设为全局
 
 const AV = require("../../libs/av-core-min.js");
@@ -44,6 +43,7 @@ Page({
       "牙颈部水平颤动",
       "托槽上部垂直于托槽、颤动",
       "咬合面侧水平颤动",
+      "大张口、拂刷"
     ],
 
     //改变刷牙时间的参数
@@ -63,6 +63,7 @@ Page({
     seccess_record: 0, // 刷牙成功记录内容
 
     playedFlag: 0, //是否点击了开始
+    brushType: [0,0] // 牙刷类型
   },
 
   onClickPlay: function () {
@@ -264,6 +265,9 @@ Page({
         this.data.bursh_time[this.data.brush_state] -
         this.data.timestamp;
     }
+    let tempUseTime=currentUser.attributes.brushUseTotal+t_total
+    currentUser.set('brushUseTotal',tempUseTime)
+    currentUser.save()
     this.setData({
       success_record: [
         this.data.username,
@@ -299,7 +303,11 @@ Page({
     var t1 = 10,
       t2 = 14,
       t3 = 26; // 三个刷牙时间分割点，小于t1时为外侧，大于t1小于t2时为咬合，大于t2小于t3时为内侧，大于t3时为远端
-
+    if(!(this.data.brushType[0]&&this.data.brushType[1])){
+      t1 = t1 + 1;
+      t2 = t2 + 1;
+      t3 = t3 + 1;
+    }
     // 先判断正畸，若无再判断龋齿
     if (this.data.zjType != 0) {
       // 正畸处理
@@ -334,7 +342,7 @@ Page({
       } else if (t > t2) {
         this.data.title_change[this.data.brush_state] = 3;
         this.setData({
-          brush_method: 2,
+          brush_method: 7,
         });
       } else {
         this.data.title_change[this.data.brush_state] = 2;
@@ -446,12 +454,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) { },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {},
+  onReady: function () { },
 
   //修改刷牙时间
   change_time() {
@@ -502,7 +510,6 @@ Page({
         sec = "0" + String(sec);
       }
       this.setData({
-        start_flag: false,
         // time: '0:' + String(this.data.bursh_time[this.data.brush_state]) // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
         time: min + ":" + sec,
       });
@@ -513,6 +520,11 @@ Page({
     this.setData({
       bursh_time: [26, 26, 32, 32, 32, 32],
     });
+    if(!(this.data.brushType[0]&&this.data.brushType[1])){
+      this.setData({
+        bursh_time: [27, 27, 33, 33, 33, 33],
+      });
+    }
     // 先判断是否有龋齿，若有则不判断正畸
     if (this.data.zjType != 0) {
       if (this.data.zjType == 1 || this.data.zjType == 2) {
@@ -568,7 +580,6 @@ Page({
       sec = "0" + String(sec);
     }
     this.setData({
-      start_flag: false,
       // time: '0:' + String(this.data.bursh_time[this.data.brush_state]) // 从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
       time: min + ":" + sec,
     });
@@ -606,6 +617,37 @@ Page({
         night_popup_flag: 1,
       });
     }
+    if (!this.data.playedFlag) {
+      this.setData({
+        start_flag: false
+      })
+      const currentUser = AV.User.current();
+      if (currentUser !== null) {
+        const hand = currentUser.attributes.hand
+        if (hand == 0) {
+          this.setData({
+            change_order: [4, 5, 0, 1, 2, 3],
+          })
+        }
+        else {
+          this.setData({
+            change_order: [2, 3, 0, 1, 4, 5],
+          })
+        }
+        this.setData({
+          // 读取云端数据
+          hand: currentUser.attributes.hand,
+          zjType: currentUser.attributes.zhengji,
+          yagao: currentUser.attributes.pasteType,
+          prsnl_2: currentUser.attributes.prsnl_2,
+          prsnl_3: currentUser.attributes.prsnl_3,
+          prsnl_4: currentUser.attributes.prsnl_4,
+          multiIndex: currentUser.attributes.setTimeIndex,
+          quchi: currentUser.attributes.quchi,
+          brushType: currentUser.attributes.brushType
+        });
+      }
+    }
     //修改刷牙时间
     this.change_time();
   },
@@ -613,25 +655,25 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {},
+  onHide: function () { },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {},
+  onUnload: function () { },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {},
+  onPullDownRefresh: function () { },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {},
+  onReachBottom: function () { },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {},
+  onShareAppMessage: function () { },
 });

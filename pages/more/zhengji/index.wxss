@@ -69,9 +69,6 @@ page{
   margin-top: 6rpx;
 }
 
-.imagelist{
-  padding-left: 27rpx;
-}
 
 .bttnlist{
   display: flex;

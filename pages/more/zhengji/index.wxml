@@ -6,7 +6,7 @@
 
 <view class="imagelist">
   <view style="display:flex; flex-direction:row;">
-    <view style="display:flex; flex-direction:column; justify-align:center">
+    <view style="display:flex; flex-direction:column; justify-align:center;">
       <image class="{{selected===1?'im_highlight':'im'}}" src="http://oss.raynor.top/teethb/zj2.png"
         bindtap="bindtapYatao" data-id="{{1}}"></image>
       <view class="imagename">唇侧金属托槽</view>

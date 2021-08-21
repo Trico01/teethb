@@ -22,7 +22,7 @@
     <van-cell title="使用时间" value="已使用{{useTime}}天">
       <view slot="icon" class="" style="margin:0 20rpx 0 35rpx; color:#549EE7"></view>
     </van-cell>
-    <van-cell title="已刷时间" value="0分钟">
+    <van-cell title="已刷时间" value="{{useMin}}分钟">
       <view slot="icon" class="" style="margin:0 20rpx 0 35rpx; color:#549EE7"></view>
     </van-cell>
     <van-cell title="预计更换时间" value="{{dueDate}}">
@@ -30,7 +30,7 @@
     </van-cell>
 <view class="bttnbox">
   <van-button round customClass="resetbutton" color="#1989FA" bindtap="bindtapReset">重新启动提醒</van-button>
-  <view class="buttonlabel">如果您已经更换了刷头，请重新启动提醒</view>
+  <view class="buttonlabel">如果您已经更换了牙刷，请重新启动提醒</view>
 </view>
   </view>
 </view>

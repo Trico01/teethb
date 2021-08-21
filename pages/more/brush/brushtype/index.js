@@ -14,17 +14,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    yagaoList:[
-      { url: "./image/1.png", name: '美白',id:"0"},
-      { url: "./image/2.png", name: '清新',id:"1"},
-      { url: "./image/3.png", name: '防蛀',id:"2"},
-      { url: "./image/4.png", name: '固齿',id:"3"},
-      { url: "./image/5.png", name: '抗敏感',id:"4"},
-      { url: "./image/6.png", name: '护龈' ,id:"5"},
-      { url: "./image/7.png", name: '竹盐',id:"6"},
-      { url: "./image/8.png", name: '药用',id:"7"},
-      { url: "./image/9.png", name: '多效',id:"8"},
-    ],
     selectedHard:0,
     selectedSize:0,
   },
